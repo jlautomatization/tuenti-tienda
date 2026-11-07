@@ -1,0 +1,38 @@
+/* portada.css · r4 (29/10/2026, hora de date en _BANDEJA.md) · portada a PANTALLA COMPLETA del inicio.
+   Clona la forma de la portada publicada de agosto (demo_portada_2/tuenti-web/portada.css, commit c3ad312: foto a sangre,
+   velo oscuro abajo en celular, foto al 62 % con fundido a la izquierda en computador) y la llena con las dos escenas de noche
+   que Jose eligió el 28/10/2026 22:35 («estas me gustan»: cebra y azotea, Guns N' Roses logo, modelo E). 0 créditos.
+   Solo tokens de sistema.css. Se carga DESPUÉS de inicio.css y solo afecta .hero del inicio. */
+body.ds.is-inicio{--chrome:104px}   /* anuncio 40 + nav 64 */
+.is-inicio .hero{position:relative;display:block;padding:0;overflow:hidden;background:var(--s-bg);
+  height:calc(100vh - var(--chrome));height:calc(100svh - var(--chrome));min-height:560px;max-height:900px}
+.is-inicio .portada{position:absolute;inset:0;z-index:0;background:var(--s-panel)}
+.is-inicio .portada .hero-capa{position:absolute;inset:0;background-size:cover;background-position:50% 0;opacity:0;transition:opacity 1.6s ease}
+.is-inicio .portada .hero-capa.on{opacity:1}
+/* velo para que el texto se lea: oscuro abajo (celular) */
+.is-inicio .hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(27,29,30,.97) 0%,rgba(27,29,30,.9) 30%,rgba(27,29,30,.45) 54%,rgba(27,29,30,0) 72%)}
+.is-inicio .hero-in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;
+  gap:0;padding-bottom:var(--e6)}
+.is-inicio .hero-txt{max-width:none}
+.is-inicio .hero-in h1,.is-inicio .hero-in .baja{text-shadow:0 1px 14px rgba(0,0,0,.55)}
+.is-inicio .hero-in .baja{color:var(--s-ink)}
+.is-inicio .hero-sello{position:absolute;z-index:2;right:0;bottom:0;max-width:60%;border-radius:var(--r) 0 0 0}
+@media (max-width:899px){
+  .is-inicio .hero-sello{display:none}        /* como en agosto: en celular no se tapa la foto */
+  .is-inicio .hero-in h1{font-size:clamp(40px,11vw,56px)}
+  .is-inicio .hero-in .baja{font-size:var(--f-md);margin-top:var(--e2)}
+  .is-inicio .hero-btns{margin-top:var(--e4);gap:var(--e2)}
+  .is-inicio .hero-in{padding-bottom:var(--e5)}
+}
+@media (min-width:900px){
+  body.ds.is-inicio{--chrome:111px}   /* anuncio 40 + nav 71 */
+  .is-inicio .hero{height:clamp(600px,calc(100svh - var(--chrome)),820px)}
+  .is-inicio .portada{left:auto;right:0;width:62%;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 34%);mask-image:linear-gradient(to right,transparent 0,#000 34%)}
+  .is-inicio .portada .hero-capa{background-position:50% 0}
+  .is-inicio .hero::before{background:linear-gradient(to top,rgba(27,29,30,.6) 0%,rgba(27,29,30,0) 34%)}
+  .is-inicio .hero-in{justify-content:center;align-items:flex-start;padding-bottom:0}
+  .is-inicio .hero-txt{max-width:min(34rem,46%)}
+}
+@media (prefers-reduced-motion:reduce){.is-inicio .portada .hero-capa{transition:none}}

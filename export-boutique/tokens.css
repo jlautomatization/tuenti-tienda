@@ -1,0 +1,227 @@
+/* ================================================================
+   TUENTI  ·  tokens.css
+   Adaptación del sistema Boutique a la identidad TUENTI (F0).
+   Enlaza este archivo ANTES que componentes.css.
+
+   Jerarquía aplicada: F0 > tokens.css > SISTEMA.md > EXPORT_TIPOGRAFIA.md
+   Contraste recalculado para la paleta TUENTI (ver ratios en línea).
+   Base heredada: sistema de diseño Boutique (Archivo, monocromo).
+   ================================================================ */
+:root{
+
+  /* ============================================================
+     COLOR  ·  paleta TUENTI  —  FUENTE: «2 TUENTI BRIEF.pdf», p. 1
+
+     Los tres colores de la marca, copiados literales del brief:
+       Verde  CMYK 25, 0, 100, 5   ·  RGB 192, 208, 40  ·  #C0D028
+       Gris   CMYK 78, 68, 54, 52  ·  RGB  45,  52, 62  ·  #2D343E
+       Blanco CMYK  0,  0,   0, 0  ·  RGB 255, 255, 255 ·  #FFFFFF
+
+     El manual de marketing los nombra (p. 17): «gris ratón» y «verde manzana».
+     SON TRES. No hay un cuarto, y no hay negro puro en la marca.
+
+     REGLA DE USO DEL VERDE — la que sostiene la identidad:
+     el verde NO va en texto de párrafo ni en bloques grandes de color.
+     Va SOLO en: acento del logo (las letras EN), precios, líneas divisorias,
+     iconos, bordes de botón y estados activos. Fondo gris, texto blanco,
+     verde puntual.
+
+     Ratios medidos sobre el gris de marca: blanco 12.56:1 · verde 7.35:1.
+     Bajan respecto al negro puro que había antes (21:1 y 15.36:1) porque el
+     gris es más claro, pero todos siguen por encima de AA. Ver §7 de SISTEMA.md.
+     ============================================================ */
+
+  /* -- Superficies -- */
+  --c-bg:#1B1D1E;        /* CARBÓN de las redes (medido de las piezas de Jose, 13/10/2026). Fondo de página. */
+  --c-surface:#26292B;   /* Paneles: un paso por encima del fondo. */
+  --c-fill:#2F3335;      /* Fondo de foto y placeholders (la foto va contain encima). */
+  --c-dark:#141617;      /* Franjas más oscuras: anuncio, cita, footer. */
+  --c-veil:rgba(27,29,30,.92); /* Fondo translúcido de la nav (gris + blur). */
+
+  /* -- Texto sobre fondo oscuro (que aquí es TODO el sitio) -- */
+  --c-ink:#FFFFFF;                  /* Texto principal.                   21.00:1 · AAA */
+  --c-muted:rgba(255,255,255,.72);  /* Texto secundario (bajadas, metadatos). 10.54:1 · AAA */
+  --c-faint:rgba(255,255,255,.60);  /* Texto terciario (descripciones).       7.37:1 · AAA */
+
+  /* Mismos valores: el sistema tiene dos juegos (claro/oscuro) y en esta
+     identidad ambos caen sobre negro. Se conservan para no romper componentes. */
+  --c-on-dark:#FFFFFF;                     /* 21.00:1 · AAA */
+  --c-on-dark-muted:rgba(255,255,255,.72); /* 10.54:1 · AAA */
+  --c-on-dark-faint:rgba(255,255,255,.60); /*  7.37:1 · AAA */
+
+  /* -- ACENTO -- verde manzana del brief. Puntual, nunca en párrafo ni bloque. */
+  --c-accent:#B3C300;      /* VERDE de las redes (medido de las piezas de Jose). Logo (EN), precio, iconos, botones. */
+  --c-accent-ink:#1B1D1E;  /* Texto sobre un relleno verde. */
+
+  /* -- Estados --
+     Recalculados sobre el gris de marca. El #FF6B4A que servía sobre negro
+     baja a 4.46:1 sobre el gris y se queda JUSTO por debajo de AA en el
+     marcador [[campo]], que es texto pequeño. Se aclara. */
+  --c-alert:#FF8566;   /* Alerta y marcador [[campo]].  5.26:1 sobre el gris · AA. */
+  --c-ok:#6FC47F;      /* Estado “disponible” (SOLO punto de color, nunca texto). */
+
+  /* -- Líneas -- */
+  --c-line:rgba(255,255,255,.18);      /* Borde estándar (nav, grilla, ficha). */
+  --c-line-soft:rgba(255,255,255,.10); /* Separador sutil (filas de detalle). */
+  --c-line-on-dark:rgba(255,255,255,.18); /* Borde sobre franja oscura (footer). */
+
+  /* ============================================================
+     TIPOGRAFÍA  ·  tríada F0
+     Fraunces (display) · Manrope (texto) · IBM Plex Mono (datos)
+     Fraunces y Plex Mono NO se usan por defecto en ningún selector:
+     se aplican por nivel desde componentes.css.
+     ============================================================ */
+  --font:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-display:"Anton",Impact,"Arial Narrow",sans-serif;
+  --font-hand:"Caveat","Segoe Script",cursive;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+
+  /* -- Pesos -- */
+  --w-regular:400;   /* cuerpo */
+  --w-medium:500;    /* datos en mono */
+  --w-semibold:600;  /* antetítulos, nav, nombre de producto */
+  --w-bold:700;      /* H1, H2, banner (Fraunces) · botones y tags (Manrope) */
+  --w-black:800;     /* wordmark TUENTI (Manrope, según F0) */
+
+  /* -- Escala de tamaños (rem sobre 16px) -- */
+  --fs-tag:.58rem;     /* 9.3px  — etiqueta de categoría sobre la foto */
+  --fs-eyebrow:.66rem; /* 10.6px — antetítulos / barra de anuncio */
+  --fs-nav:.72rem;     /* 11.5px — enlaces de navegación */
+  --fs-button:.74rem;  /* 11.8px — texto de botón */
+  --fs-small:.75rem;   /* 12px   — descripción / talla / referencia */
+  --fs-label:.82rem;   /* 13.1px — nombre y precio de producto, links de footer */
+  --fs-body:1rem;      /* 16px   — cuerpo base */
+  --fs-lead:1.05rem;   /* 16.8px — texto destacado */
+  --fs-h3:1.1rem;      /* 17.6px — encabezado de grupo / categoría */
+  --fs-logo:1.4rem;    /* 22.4px — wordmark (F0: texto vivo, NO svg) */
+  --fs-h2:clamp(2rem,5.5vw,3.6rem);   /* 32 → 57.6px — títulos de sección */
+  --fs-banner:clamp(2rem,6vw,4rem);   /* 32 → 64px   — titulares de banner */
+  --fs-h1:clamp(2.2rem,7vw,5.4rem);   /* 35.2 → 86px — héroe. Mínimo bajado de 2.6rem
+                                         para que el eslogan quepa legible a 375px. */
+
+  /* -- Interlineado --
+     Subidos respecto al sistema Boutique: el display pasa a CAJA DE FRASE
+     (Opción A) y las descendentes de Fraunces chocaban con lh .9 / .98. */
+  --lh-body:1.6;    /* texto corrido */
+  --lh-tight:1.05;  /* títulos de sección y banner  (antes .98) */
+  --lh-hero:1;      /* H1 del héroe                 (antes .9)  */
+
+  /* -- Tracking (letter-spacing) -- */
+  --tr-eyebrow:.24em; /* antetítulos (el más abierto) */
+  --tr-wide:.2em;     /* labels sobre foto, barra de anuncio, wordmark del footer */
+  --tr-logo:-.02em;   /* wordmark TUENTI. F0 usa -.045em a 96pt; a 22px se suaviza. */
+  --tr-label:.14em;   /* nav, botones, columnas de footer */
+  --tr-tight:.02em;   /* titulares grandes (Anton necesita aire, no tracking negativo) */
+
+  /* ============================================================
+     ESPACIADO Y LAYOUT
+     ============================================================ */
+  --sp-1:.25rem;  /* 4px  */
+  --sp-2:.5rem;   /* 8px  */
+  --sp-3:.8rem;   /* 12.8px */
+  --sp-4:1rem;    /* 16px */
+  --sp-5:1.6rem;  /* 25.6px */
+  --sp-6:2.4rem;  /* 38.4px — separación cabecera→contenido */
+  --sp-7:3rem;    /* 48px  — separación entre grupos */
+  --sp-section:clamp(4rem,8vw,6.5rem); /* 64 → 104px — padding vertical de cada sección */
+  --wrap:min(1320px,94vw);             /* ancho máximo de columna + margen fluido */
+  --grid-min:232px;                    /* ancho mínimo de tarjeta en la grilla de producto */
+
+  /* ============================================================
+     RADIOS  ·  la firma del sistema es RECTO
+     ============================================================ */
+  --radius:0;          /* Por defecto: esquinas rectas en TODO. No cambiar. */
+  --radius-pill:999px; /* Única excepción: puntos/indicadores redondos. */
+
+  /* ============================================================
+     SOMBRAS  ·  el sistema es PLANO
+     ============================================================ */
+  --shadow-none:none;  /* Por defecto no hay sombras. La profundidad la da el contraste y la foto. */
+  --shadow-drawer:-20px 0 60px -30px rgba(0,0,0,.6); /* Única excepción: paneles deslizantes. */
+
+  /* ============================================================
+     FOTO  ·  veladuras y filtros
+     ============================================================ */
+  /* Velo del héroe: DIRECCIONAL, no plano. Casi-negro denso en la esquina
+     inferior izquierda (donde va el texto) y transparente hacia arriba y a la
+     derecha, que es donde queda la prenda. Así el texto tiene contraste sin
+     apagar la camiseta. */
+  /* Dos capas lineales que se suman: una sube desde abajo y otra entra desde
+     la izquierda. El resultado es denso en la esquina inferior izquierda —bajo
+     el bloque de texto— y transparente hacia arriba y a la derecha, donde queda
+     la prenda. Dos gradientes en vez de uno diagonal porque el diagonal
+     concentra lo oscuro en la punta de la esquina y deja el texto desprotegido
+     en formatos verticales. */
+  --overlay-hero:
+      linear-gradient(to top,
+        rgba(0,0,0,.94) 0%,
+        rgba(0,0,0,.86) 18%,
+        rgba(0,0,0,.62) 34%,
+        rgba(0,0,0,.28) 50%,
+        rgba(0,0,0,0)   68%),
+      linear-gradient(to right,
+        rgba(0,0,0,.55) 0%,
+        rgba(0,0,0,.30) 26%,
+        rgba(0,0,0,.10) 46%,
+        rgba(0,0,0,0)   64%);
+  /* Velo del banner: MISMA regla que el héroe. Era un velo plano
+     rgba(0,0,0,.34) sobre toda la foto, con el texto centrado; apagaba la
+     prenda entera para dar contraste a cuatro líneas de texto. Ahora el texto
+     baja a la esquina inferior izquierda y el degradado se concentra ahí.
+     El bloque del banner es MÁS ALTO que el del héroe (antetítulo + titular +
+     bajada + botón), así que la zona densa tiene que subir más: a 21/9 el
+     antetítulo queda hacia el 50% de la altura. Medido: con las paradas del
+     héroe el titular daba 2,83:1 a 1280px. */
+  --overlay-banner:
+      linear-gradient(to top,
+        rgba(0,0,0,.94) 0%,
+        rgba(0,0,0,.90) 20%,
+        rgba(0,0,0,.82) 38%,
+        rgba(0,0,0,.66) 54%,
+        rgba(0,0,0,.40) 68%,
+        rgba(0,0,0,.16) 80%,
+        rgba(0,0,0,0)   92%),
+      linear-gradient(to right,
+        rgba(0,0,0,.60) 0%,
+        rgba(0,0,0,.38) 24%,
+        rgba(0,0,0,.18) 44%,
+        rgba(0,0,0,.05) 62%,
+        rgba(0,0,0,0)   76%);
+
+  /* Velo de los atajos de categoría: banda inferior, no capa uniforme.
+     El nombre de la categoría va abajo a la izquierda; la prenda queda
+     encuadrada arriba (object-position:center 38%) y no se toca. */
+  --overlay-cat:
+      linear-gradient(to top,
+        rgba(0,0,0,.94) 0%,
+        rgba(0,0,0,.86) 18%,
+        rgba(0,0,0,.60) 34%,
+        rgba(0,0,0,.26) 50%,
+        rgba(0,0,0,0)   68%);
+
+  /* Se conserva por compatibilidad con el sistema exportado, pero el sitio
+     TUENTI ya NO lo aplica: oscurecía la prenda entera en los atajos de
+     categoría. Sustituido por --overlay-cat. */
+  --img-dim:brightness(.72);
+  --img-map:grayscale(1) contrast(1.05); /* tratamiento del mapa embebido */
+
+  /* ============================================================
+     MOTION
+     ============================================================ */
+  --ease:cubic-bezier(.22,.61,.18,1);      /* entradas y hovers */
+  --ease-out:cubic-bezier(.32,.72,0,1);    /* elementos que “aterrizan” */
+  --dur-fast:.3s;
+  --dur:.4s;
+  --dur-slow:.9s;   /* reveals y zoom de foto */
+}
+
+/* Fraunces es variable (opsz 9..144). Con la URL de carga declarada
+   —solo ejes opsz y wght— los ejes SOFT y WONK quedan en su valor por
+   defecto 0, que es exactamente lo pedido: SOFT bajo, WONK apagado.
+   El tamaño óptico lo resuelve el navegador según el font-size. */
+:root{ font-optical-sizing:auto; }
+
+/* Respeta a quien pide menos movimiento: anula duraciones globalmente. */
+@media (prefers-reduced-motion: reduce){
+  :root{ --dur-fast:0s; --dur:0s; --dur-slow:0s; }
+}

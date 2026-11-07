@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- MAQUETA para revisión: el sitio todavía NO debe indexarse.
+     Quitar esta línea al publicar. Ver docs/TRASPASO_WEB.md §0.3 -->
+<meta name="robots" content="noindex, nofollow">
+<title>—</title>
+<meta name="description" content="">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%95%3C/text%3E%3C/svg%3E">
+
+
+<link rel="preload" href="fuentes/Anton-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="export-boutique/tokens.css">
+<link rel="stylesheet" href="export-boutique/componentes.css">
+<link rel="stylesheet" href="tienda.css">
+<link rel="stylesheet" href="landing.css">
+<link rel="stylesheet" href="rediseno.css">
+<link rel="stylesheet" href="sistema.css">
+<link rel="stylesheet" href="catalogo.css">
+<link rel="stylesheet" href="reserva.css">
+
+<style>
+:root{
+  --t-bg:var(--c-bg); --t-panel:var(--c-surface); --t-text:var(--c-ink);
+  --t-muted:var(--c-muted); --t-line:var(--c-line);
+  --t-accent:var(--c-accent); --t-accent-txt:var(--c-accent-ink);
+  --t-wa:var(--c-accent); --t-wa-txt:var(--c-accent-ink);
+  --t-radius:0; --t-font:var(--font); --t-ease:var(--ease);
+}
+</style>
+
+<!-- tienda.js NO se carga: ver docs/TRASPASO_WEB.md §0.12 -->
+<script src="imagenes.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body class="ds pg-legal">
+
+<div class="page">
+
+  <div class="ds-announce" id="anuncio"></div>
+
+  <nav class="ds-nav" id="top">
+    <div class="ds-wrap ds-nav__in">
+      <button class="ds-nav__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span></button>
+      <div class="ds-nav__links" id="nav-links"></div>
+      <a class="ds-nav__logo" href="index.html" id="nav-logo"></a>
+      <div class="ds-nav__end">
+        <button class="t-cart-btn" aria-label="Ver carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span class="t-count" data-n="0"></span></button>
+        <a class="ds-btn ds-btn--outline ds-btn--sm" id="nav-cta" href="index.html#contacto"></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- cabecera -->
+  <section class="legal-cab">
+    <div class="ds-wrap">
+      <h1 class="ds-title" id="legal-titulo"></h1>
+      <p class="ds-intro" id="legal-bajada"></p>
+      <p class="legal-aviso" id="legal-aviso"></p>
+      <p class="legal-fecha" id="legal-fecha"></p>
+      <nav class="legal-indice" id="legal-indice" aria-label="Índice"></nav>
+    </div>
+  </section>
+
+  <!-- los tres documentos, pintados desde legal.json -->
+  <section class="legal-cuerpo">
+    <div class="ds-wrap" id="legal-docs"></div>
+  </section>
+
+  <footer class="ds-footer">
+    <div class="ds-wrap">
+      <div class="ds-footer__top">
+        <span class="ds-footer__logo" id="pie-logo"></span>
+        <div class="ds-footer__cols" id="pie-cols"></div>
+      </div>
+      <div class="ds-footer__bottom"><span id="pie-nombre"></span><span id="pie-legal"></span></div>
+    </div>
+  </footer>
+
+</div><!-- /.page -->
+
+<div class="ds-menu__backdrop" id="menu-bd"></div>
+<aside class="ds-menu" id="menu" aria-label="Menú">
+  <div class="ds-menu__head">
+    <span class="ds-menu__logo" id="menu-logo"></span>
+    <button class="ds-menu__close" id="menu-x" type="button" aria-label="Cerrar menú">&times;</button>
+  </div>
+  <nav class="ds-menu__links" id="menu-links"></nav>
+  <div class="ds-menu__foot"><a class="ds-btn ds-btn--solid ds-btn--block" id="menu-cta" href="index.html#contacto"></a></div>
+</aside>
+
+<div class="flota">
+  <button class="arriba" id="arriba" type="button" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  <a class="wa-flota" id="wa-flota" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.2 1.1 1.1-4.1-.2-.4C6.4 18.9 6 17.2 6 15.5 6 9.7 10.7 5 16 5s10 4.7 10 10.5S21.3 25 16 25zm5.7-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg></a>
+</div>
+
+</body>
+</html>

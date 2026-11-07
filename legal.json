@@ -1,0 +1,219 @@
+{
+  "_meta": {
+    "version": 1,
+    "actualizado": "2026-08-05",
+    "estado": "BORRADOR — PENDIENTE DE REVISIÓN POR ABOGADO",
+    "nota": "Los tres documentos son borradores. Se redactaron siguiendo la Ley 1480 de 2011 (Estatuto del Consumidor) y la Ley 1581 de 2012 (protección de datos personales), pero NO los ha revisado un abogado. No publicar sin esa revisión.",
+    "fuentes_citadas": [
+      "Ley 1480 de 2011, Estatuto del Consumidor — art. 47 (retracto en venta a distancia)",
+      "Ley 1581 de 2012 y su reglamentación — tratamiento de datos personales"
+    ]
+  },
+
+  "titulo": "Documentos legales",
+  "bajada": "Cambios y envíos, tratamiento de datos y términos del registro.",
+  "aviso_borrador": "Estos tres documentos son BORRADORES pendientes de revisión por un abogado. Están redactados siguiendo la Ley 1480 de 2011 y la Ley 1581 de 2012, pero todavía no tienen validación jurídica.",
+  "actualizado_texto": "Última actualización: 5 de agosto de 2026",
+  "volver": "Volver al inicio",
+
+  "documentos": [
+    {
+      "id": "cambios",
+      "titulo": "Política de cambios, devoluciones y envíos",
+      "intro": "Aquí está, en claro, qué pasa cuando compras: cómo te llega, en cuánto tiempo puedes cambiar y en qué casos te devolvemos el dinero.",
+      "secciones": [
+        {
+          "titulo": "Envíos",
+          "parrafos": [
+            "Enviamos a toda Colombia por Interrapidísimo.",
+            "El envío lo pagas cuando te llega el pedido, directamente a la transportadora. El valor depende de tu ciudad y lo define Interrapidísimo, no nosotros.",
+            "La guía te llega por WhatsApp o al correo que dejes al hacer el pedido. Con ella puedes seguir el envío en la página de la transportadora."
+          ]
+        },
+        {
+          "titulo": "Cambios",
+          "parrafos": [
+            "Tienes 8 días hábiles desde que recibes la prenda para pedir un cambio."
+          ],
+          "lista_titulo": "La prenda tiene que estar:",
+          "lista": [
+            "Sin uso.",
+            "Sin lavar.",
+            "Con el estampado intacto.",
+            "Con sus etiquetas, si las traía."
+          ],
+          "parrafos_final": [
+            "El cambio lo haces en nuestro punto del Gran San Victorino, locales 2152 y 2153. Si prefieres que te lo mandemos, el domicilio de ida y vuelta va por tu cuenta.",
+            "Los cambios están sujetos a que haya existencia del diseño, color o talla que quieres. Si no hay, puedes escoger otro del mismo valor."
+          ]
+        },
+        {
+          "titulo": "Derecho de retracto — compras por internet o WhatsApp",
+          "destacado": true,
+          "parrafos": [
+            "Si compraste a distancia (por la página, por WhatsApp o por redes), la ley te da el derecho de retracto: puedes deshacer la compra y te devolvemos el dinero.",
+            "Es un derecho tuyo, reconocido en el artículo 47 de la Ley 1480 de 2011, el Estatuto del Consumidor. No tienes que explicar por qué."
+          ],
+          "lista_titulo": "Cómo funciona:",
+          "lista": [
+            "Tienes 5 días hábiles contados desde que recibes la prenda.",
+            "Nos avisas por WhatsApp dentro de ese plazo.",
+            "Devuelves la prenda en el mismo estado en que la recibiste.",
+            "Te devolvemos el dinero que pagaste por la prenda.",
+            "El transporte de la devolución corre por tu cuenta, como lo permite la misma ley."
+          ],
+          "parrafos_final": [
+            "La devolución del dinero se hace por el mismo medio en que pagaste, dentro de los treinta días calendario siguientes a que recibamos la prenda."
+          ]
+        },
+        {
+          "titulo": "Fuera del retracto",
+          "parrafos": [
+            "Pasados esos 5 días hábiles, la compra a distancia ya no se deshace: lo que aplica es el cambio, con las condiciones de arriba. No hay devolución de dinero.",
+            "Esto no toca tus derechos por garantía. Si la prenda te llegó con un defecto de fábrica, escríbenos: eso se resuelve aparte y no depende de estos plazos."
+          ]
+        },
+        {
+          "titulo": "Compras en el local",
+          "parrafos": [
+            "Si compraste presencialmente en el Gran San, aplican cambios dentro de los 8 días hábiles y con las mismas condiciones de la prenda. En compra presencial no hay devolución de dinero: el derecho de retracto es para venta a distancia."
+          ]
+        },
+        {
+          "titulo": "Cómo pedir un cambio o un retracto",
+          "parrafos": [
+            "Por WhatsApp, al número de la marca. Ten a la mano el número de tu pedido o la guía, y cuéntanos qué pasó. Te respondemos y te decimos el paso siguiente."
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "datos",
+      "titulo": "Política de tratamiento de datos personales",
+      "intro": "Qué datos te pedimos, para qué los usamos y cómo puedes pedir que los cambiemos o los borremos. Escrita conforme a la Ley 1581 de 2012.",
+      "secciones": [
+        {
+          "titulo": "Quién responde por tus datos",
+          "parrafos": [
+            "El responsable del tratamiento es Veinte/veinte, marca TUENTI, con punto de venta en el Centro Comercial El Gran San, locales 2152 y 2153, Bogotá.",
+            "El canal de contacto para todo lo relacionado con tus datos es el WhatsApp de la marca, publicado en la página de contacto."
+          ]
+        },
+        {
+          "titulo": "Qué datos recogemos",
+          "lista": [
+            "Nombre.",
+            "Teléfono o WhatsApp.",
+            "Correo electrónico.",
+            "Dirección de entrega.",
+            "Historial de compra: qué compraste, cuándo y por qué canal."
+          ],
+          "parrafos_final": [
+            "No pedimos datos sensibles. No pedimos datos de niñas, niños ni adolescentes de forma deliberada."
+          ]
+        },
+        {
+          "titulo": "Para qué los usamos",
+          "lista_titulo": "Estas son todas las finalidades, declaradas de forma expresa:",
+          "lista": [
+            "Gestionar tu pedido y coordinar el envío.",
+            "Comunicarnos contigo sobre esa compra.",
+            "Analizar el comportamiento de compra: qué se compra, en qué zonas y cada cuánto.",
+            "Personalizar las ofertas y recomendaciones que te hacemos.",
+            "Enviarte comunicaciones de mercadeo por WhatsApp y por correo.",
+            "Mejorar el servicio y el catálogo, apoyándonos en herramientas de análisis y de inteligencia artificial."
+          ],
+          "parrafos_final": [
+            "Si en algún momento queremos usar tus datos para algo distinto de esta lista, te lo pedimos aparte."
+          ]
+        },
+        {
+          "titulo": "Tus derechos",
+          "lista_titulo": "Como titular de los datos puedes, en cualquier momento:",
+          "lista": [
+            "Conocer qué datos tuyos tenemos.",
+            "Actualizarlos.",
+            "Rectificarlos si están equivocados.",
+            "Solicitar que los suprimamos.",
+            "Revocar la autorización que nos diste.",
+            "Presentar quejas ante la Superintendencia de Industria y Comercio."
+          ],
+          "parrafos_final": [
+            "Para ejercerlos, escríbenos por WhatsApp al número de la marca. Te respondemos y te confirmamos qué hicimos.",
+            "Revocar la autorización o pedir la supresión puede impedirnos seguir atendiendo un pedido en curso. Te lo decimos antes de hacerlo."
+          ]
+        },
+        {
+          "titulo": "Tu autorización",
+          "parrafos": [
+            "Tu autorización es previa, expresa e informada. En el formulario de registro encuentras una casilla que tienes que marcar tú: no viene marcada de antemano, y sin marcarla no se completa el registro.",
+            "Junto a la casilla está el enlace a esta política, para que puedas leerla antes de autorizar."
+          ]
+        },
+        {
+          "titulo": "Cuánto tiempo los guardamos",
+          "parrafos": [
+            "Mientras tengas cuenta con nosotros y por el tiempo necesario para cumplir con las obligaciones legales y contables que nos apliquen. Después los eliminamos o los anonimizamos."
+          ]
+        },
+        {
+          "titulo": "Con quién los compartimos",
+          "parrafos": [
+            "Solo con quien hace falta para que te llegue el pedido y para operar la marca: la transportadora que hace el envío y los proveedores de herramientas de mensajería y análisis que usamos. No vendemos tus datos."
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "terminos",
+      "titulo": "Términos y condiciones del registro",
+      "intro": "Qué es la cuenta, para qué sirve y qué te llevas por registrarte.",
+      "secciones": [
+        {
+          "titulo": "Qué es la cuenta",
+          "parrafos": [
+            "Registrarte es dejarnos tus datos de contacto para que podamos atenderte mejor: agilizar tus pedidos, avisarte cuando entren diseños nuevos y hacerte llegar ofertas que tengan que ver con lo que te gusta.",
+            "El registro es gratuito y voluntario. Puedes comprar sin registrarte, escribiéndonos por WhatsApp."
+          ]
+        },
+        {
+          "titulo": "Tu beneficio de bienvenida",
+          "destacado": true,
+          "parrafos": [
+            "Al registrarte te damos 10% de descuento en tu primera camiseta.",
+            "Se aplica una sola vez, sobre tu primera compra, y no se acumula con otras promociones.",
+            "Por ahora el descuento se aplica a mano: cuando vayas a hacer tu pedido, menciona por WhatsApp que estás registrada y te lo descontamos."
+          ]
+        },
+        {
+          "titulo": "Tus responsabilidades",
+          "lista": [
+            "Que los datos que nos des sean tuyos y estén correctos.",
+            "Avisarnos si cambian, sobre todo el teléfono y la dirección.",
+            "No usar la cuenta para nada distinto de comprar y comunicarte con nosotros."
+          ]
+        },
+        {
+          "titulo": "Cómo se cancela",
+          "parrafos": [
+            "Escribiéndonos por WhatsApp. Damos de baja la cuenta y suprimimos tus datos, salvo lo que la ley nos obligue a conservar."
+          ]
+        },
+        {
+          "titulo": "Cambios en estos términos",
+          "parrafos": [
+            "Si cambiamos algo, actualizamos la fecha de esta página. Si el cambio es de fondo, te avisamos por el canal que hayas registrado."
+          ]
+        },
+        {
+          "titulo": "Documentos relacionados",
+          "parrafos": [
+            "Este registro se rige además por la Política de cambios, devoluciones y envíos y por la Política de tratamiento de datos personales, ambas en esta misma página."
+          ]
+        }
+      ]
+    }
+  ]
+}

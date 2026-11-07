@@ -1,0 +1,429 @@
+/* ================================================================
+   TUENTI  ·  componentes.css
+   Piezas reutilizables con nombres de clase genéricos (prefijo ds-).
+   Sin dependencia del HTML del proyecto. Requiere tokens.css antes.
+
+   Cambios respecto al sistema Boutique original:
+   · Tríada tipográfica F0 aplicada por nivel (display / texto / datos).
+   · Display en CAJA DE FRASE (Opción A): sin text-transform en títulos.
+   · Tarjeta de producto 1:1 con object-fit:contain (no se recorta la foto).
+   · Seis componentes nuevos: ficha, galería, filtros, tallas, WhatsApp, menú.
+   Ningún token nuevo: los valores sueltos (1.3, .02em, .08em, .06em…)
+   se declaran inline, igual que ya hacía el sistema original.
+   ================================================================ */
+
+/* ---------- Base opcional (para usar el sistema por sí solo) ---------- */
+.ds, body.ds{
+  background:var(--c-bg);color:var(--c-ink);
+  font-family:var(--font);font-size:var(--fs-body);line-height:var(--lh-body);
+  -webkit-font-smoothing:antialiased;
+}
+.ds *{box-sizing:border-box}
+.ds img{display:block;max-width:100%}
+.ds a{text-decoration:none}
+/* `color:inherit` NO debe alcanzar a los botones: `.ds a` (0,1,1) le gana a
+   `.ds-btn--solid` (0,1,0) y dejaba el texto del botón en color heredado
+   (tinta sobre tinta). Excluyendo .ds-btn, cada variante recupera su color. */
+.ds a:not(.ds-btn){color:inherit}
+.ds :focus-visible{outline:2px solid var(--c-ink);outline-offset:3px}
+
+/* ---------- Layout ---------- */
+.ds-wrap{width:var(--wrap);margin-inline:auto}
+.ds-section{padding:var(--sp-section) 0}
+.ds-section--dark{background:var(--c-dark);color:var(--c-on-dark)}
+.ds-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--grid-min),1fr));gap:1.4rem 1rem}
+
+/* ================================================================
+   TIPOGRAFÍA / ENCABEZADO DE SECCIÓN
+   Display = Fraunces, caja de frase. Texto = Manrope.
+   ================================================================ */
+.ds-eyebrow{font-size:var(--fs-eyebrow);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:var(--tr-eyebrow);color:var(--c-muted)}
+.ds-title{font-family:var(--font-display);font-size:var(--fs-h2);font-weight:var(--w-bold);
+  line-height:var(--lh-tight);letter-spacing:var(--tr-tight);color:var(--c-ink)}
+.ds-intro{font-size:.95rem;color:var(--c-muted);max-width:46ch}
+
+/* Encabezado: título a la izquierda, bajada a la derecha (colapsa en móvil) */
+.ds-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;
+  flex-wrap:wrap;margin-bottom:var(--sp-6)}
+.ds-head .ds-title{margin-top:var(--sp-2)}
+.ds-head .ds-intro{margin-top:.6rem}
+.ds-section--dark .ds-eyebrow{color:var(--c-on-dark-muted)}
+.ds-section--dark .ds-title{color:var(--c-on-dark)}
+.ds-section--dark .ds-intro{color:var(--c-on-dark-muted)}
+
+/* Héroe y banner: mismo tratamiento de display, otro tamaño */
+.ds-h1{font-family:var(--font-display);font-size:var(--fs-h1);font-weight:var(--w-bold);
+  line-height:var(--lh-hero);letter-spacing:var(--tr-tight);color:var(--c-ink)}
+.ds-banner-title{font-family:var(--font-display);font-size:var(--fs-banner);font-weight:var(--w-bold);
+  line-height:var(--lh-tight);letter-spacing:var(--tr-tight)}
+
+/* ================================================================
+   DATOS EN MONO  ·  IBM Plex Mono
+   Solo cifras y códigos: precio, talla, referencia, contadores.
+   Nunca párrafos ni titulares.
+   ================================================================ */
+/* El precio va en ACENTO: es uno de los usos que fija la identidad. */
+.ds-price{font-family:var(--font-mono);font-weight:var(--w-medium);
+  font-size:var(--fs-label);line-height:1.3;letter-spacing:.02em;color:var(--c-accent)}
+.ds-price--lg{font-size:var(--fs-lead)}
+.ds-ref{font-family:var(--font-mono);font-weight:var(--w-regular);
+  font-size:var(--fs-small);line-height:1.3;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--c-muted)}
+
+/* ================================================================
+   BOTONES
+   base: recto, mayúsculas, tracking. Variantes por color.
+   ================================================================ */
+.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  font-family:var(--font);font-size:var(--fs-button);font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:var(--tr-label);
+  padding:.95rem 1.6rem;border:1px solid transparent;border-radius:var(--radius);
+  background:none;color:var(--c-ink);cursor:pointer;transition:all var(--dur) var(--ease)}
+.ds-btn svg{width:18px;height:18px}
+.ds-btn--sm{padding:.6rem 1.1rem;font-size:var(--fs-nav)}
+
+/* Primario: relleno tinta */
+/* Con la paleta invertida --c-ink y --c-on-dark son AMBOS blancos: el texto
+   desaparecía. El relleno es blanco y la letra, el fondo de página. */
+.ds-btn--solid{background:var(--c-ink);color:var(--c-bg);border-color:var(--c-ink)}
+.ds-btn--solid:hover{background:transparent;color:var(--c-ink)}
+
+/* Secundario: contorno */
+.ds-btn--outline{border-color:var(--c-ink);color:var(--c-ink)}
+.ds-btn--outline:hover{background:var(--c-ink);color:var(--c-bg)}
+
+/* Claro: para usar SOBRE foto o sobre fondo oscuro */
+.ds-btn--light{background:var(--c-bg);color:var(--c-ink);border-color:var(--c-bg)}
+.ds-btn--light:hover{background:var(--c-ink);color:var(--c-bg);border-color:var(--c-ink)}
+
+/* Contorno claro: sobre fondo oscuro */
+.ds-btn--ghost-dark{border-color:var(--c-line-on-dark);color:var(--c-on-dark)}
+.ds-btn--ghost-dark:hover{border-color:var(--c-on-dark)}
+
+/* Ancho completo (móvil) */
+.ds-btn--block{display:flex;width:100%}
+
+/* ================================================================
+   BARRA DE ANUNCIO + NAVEGACIÓN
+   ================================================================ */
+.ds-announce{background:var(--c-dark);color:var(--c-on-dark);text-align:center;
+  font-size:var(--fs-eyebrow);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:var(--tr-wide);padding:.6rem 1rem}
+
+.ds-nav{position:sticky;top:0;z-index:70;background:var(--c-veil);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--c-line)}
+.ds-nav__in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.1rem 0}
+.ds-nav__links{display:flex;gap:1.7rem;justify-self:start}
+.ds-nav__links a{font-size:var(--fs-nav);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:var(--tr-label);color:var(--c-ink);opacity:.75;
+  transition:opacity var(--dur-fast) var(--ease)}
+.ds-nav__links a:hover{opacity:1}
+/* Wordmark: Manrope 800 con tracking negativo, tal como lo fija F0. */
+.ds-nav__logo{justify-self:center;font-family:var(--font);font-size:var(--fs-logo);
+  font-weight:var(--w-black);text-transform:uppercase;letter-spacing:var(--tr-logo)}
+.ds-nav__end{justify-self:end;display:flex;align-items:center;gap:1.1rem}
+
+/* Botón hamburguesa: solo visible en móvil (ver bloque RESPONSIVE) */
+.ds-nav__burger{display:none;justify-self:start;align-items:center;justify-content:center;
+  width:40px;height:40px;margin-left:-8px;padding:0;border:0;background:none;
+  color:var(--c-ink);cursor:pointer}
+.ds-nav__burger span{display:block;width:20px;height:1.5px;background:currentColor;
+  position:relative;transition:background var(--dur-fast) var(--ease)}
+.ds-nav__burger span::before,.ds-nav__burger span::after{content:"";position:absolute;
+  left:0;width:20px;height:1.5px;background:currentColor;
+  transition:transform var(--dur-fast) var(--ease)}
+.ds-nav__burger span::before{top:-6px}
+.ds-nav__burger span::after{top:6px}
+.ds-nav__burger[aria-expanded="true"] span{background:transparent}
+.ds-nav__burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.ds-nav__burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* ================================================================
+   TARJETA DE PRODUCTO
+   Recuadro 1:1. La foto va COMPLETA (contain) sobre --c-fill:
+   el catálogo es casi todo cuadrado y no se recorta ninguna imagen.
+   markup mínimo:
+   <article class="ds-card">
+     <div class="ds-card__media">
+       <img class="ds-card__img" src=…>            (foto frontal)
+       <img class="ds-card__alt" src=…>            (foto alterna, opcional — hover)
+     </div>
+     <div class="ds-card__body">
+       <span class="ds-card__tag">Categoría</span> (opcional, DEBAJO de la foto)
+       <h4 class="ds-card__title">Nombre</h4>
+       <div class="ds-price">$0</div>
+       <div class="ds-card__desc">Descripción</div>
+     </div>
+   </article>
+   ================================================================ */
+.ds-card{cursor:pointer}
+.ds-card__media{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--c-fill);
+  touch-action:pan-y}
+/* Todas las fotos de color del mismo diseño se apilan; solo una está visible.
+   La rotación la maneja app.js (hover en escritorio, toque o swipe en móvil). */
+.ds-card__img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
+  opacity:0;transition:opacity var(--dur) var(--ease)}
+.ds-card__img.is-on{opacity:1}
+/* La etiqueta de categoría va DEBAJO de la foto, no encima.
+   Nada se superpone a la prenda: la foto de producto se ve completa. */
+.ds-card__tag{display:inline-block;background:var(--c-ink);color:var(--c-bg);
+  font-size:var(--fs-tag);font-weight:var(--w-bold);text-transform:uppercase;
+  letter-spacing:var(--tr-label);padding:.32rem .6rem;margin-bottom:var(--sp-2)}
+.ds-card__body{margin-top:var(--sp-3)}
+.ds-card__title{font-size:var(--fs-label);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:.06em}
+
+/* Puntos de color de la tarjeta: en móvil son el control (no hay hover);
+   en escritorio acompañan a la rotación automática. */
+.ds-card__dots{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap;
+  margin-top:var(--sp-2)}
+.ds-card__dot{width:16px;height:16px;padding:0;cursor:pointer;flex:none;
+  border-radius:var(--radius-pill);border:1px solid var(--c-line);
+  background:var(--c-fill);transition:box-shadow var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease)}
+.ds-card__dot.is-on{border-color:var(--c-accent);box-shadow:0 0 0 2px var(--c-bg),0 0 0 3px var(--c-accent)}
+.ds-card__dot--falta{background:repeating-linear-gradient(45deg,
+    var(--c-bg) 0 3px,var(--c-alert) 3px 5px);border-color:var(--c-alert)}
+.ds-card__price{margin-top:var(--sp-1);font-family:var(--font-mono);font-weight:var(--w-medium);
+  font-size:var(--fs-label);line-height:1.3;letter-spacing:.02em;color:var(--c-accent)}
+.ds-card__desc{margin-top:.15rem;font-size:var(--fs-small);color:var(--c-faint)}
+
+/* Encabezado de grupo dentro de la grilla (línea inferior tinta) */
+/* Línea divisoria en acento: otro uso permitido del verde. */
+.ds-group-head{display:flex;align-items:baseline;gap:1rem;border-bottom:1px solid var(--c-accent);
+  padding-bottom:.7rem;margin-bottom:var(--sp-5)}
+.ds-group-head h3{font-size:var(--fs-h3);font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:.06em}
+.ds-group-head .ds-group-count{margin-left:auto;font-family:var(--font-mono);
+  font-size:var(--fs-nav);line-height:1.3;color:var(--c-muted);letter-spacing:.08em}
+
+/* ================================================================
+   FILTROS POR CATEGORÍA
+   Fila de chips rectos. Scroll horizontal en móvil, sin barra visible.
+   markup:
+   <div class="ds-filters" role="group">
+     <button class="ds-chip is-on">Todas</button>
+     <button class="ds-chip">Con mangas</button>
+     …
+   </div>
+   ================================================================ */
+.ds-filters{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;margin-bottom:var(--sp-6);
+  padding-bottom:var(--sp-2)}
+.ds-filters::-webkit-scrollbar{display:none}
+.ds-chip{flex:0 0 auto;font-family:var(--font);font-size:var(--fs-nav);
+  font-weight:var(--w-semibold);text-transform:uppercase;letter-spacing:var(--tr-label);
+  padding:.55rem 1rem;border:1px solid var(--c-line);border-radius:var(--radius);
+  background:none;color:var(--c-ink);cursor:pointer;white-space:nowrap;
+  transition:all var(--dur-fast) var(--ease)}
+.ds-chip:hover{border-color:var(--c-ink)}
+/* Estado activo -> acento verde. Es uno de los sitios donde la identidad
+   permite el verde: estados activos, nunca párrafos ni bloques grandes. */
+.ds-chip.is-on{background:var(--c-accent);color:var(--c-accent-ink);border-color:var(--c-accent)}
+.ds-filters__count{flex:0 0 auto;align-self:center;margin-left:auto;padding-left:1rem;
+  font-family:var(--font-mono);font-size:var(--fs-nav);line-height:1.3;
+  letter-spacing:.08em;color:var(--c-muted);white-space:nowrap}
+
+/* ================================================================
+   FICHA DE PRODUCTO (PDP)
+   Una columna en móvil; galería + info en escritorio, info pegajosa.
+   markup:
+   <div class="ds-pdp">
+     <div class="ds-pdp__media">  … galería …  </div>
+     <div class="ds-pdp__info">   … datos …    </div>
+   </div>
+   ================================================================ */
+.ds-pdp{display:grid;grid-template-columns:1fr;gap:var(--sp-6)}
+.ds-pdp__info{display:flex;flex-direction:column;gap:var(--sp-4)}
+.ds-pdp__title{font-family:var(--font-display);font-size:var(--fs-h2);
+  font-weight:var(--w-bold);line-height:var(--lh-tight);letter-spacing:var(--tr-tight)}
+.ds-pdp__meta{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline}
+.ds-pdp__desc{font-size:var(--fs-body);color:var(--c-muted);max-width:52ch}
+.ds-pdp__block{border-top:1px solid var(--c-line-soft);padding-top:var(--sp-4)}
+.ds-pdp__label{font-size:var(--fs-eyebrow);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:var(--tr-eyebrow);color:var(--c-muted);
+  margin-bottom:var(--sp-3)}
+
+/* Fila de dato (composición, envío, cambios) */
+.ds-pdp__row{display:flex;justify-content:space-between;gap:1rem;
+  padding:.55rem 0;border-bottom:1px solid var(--c-line-soft);font-size:var(--fs-small)}
+.ds-pdp__row dt{color:var(--c-muted)}
+.ds-pdp__row dd{margin:0;text-align:right}
+
+/* ================================================================
+   GALERÍA DE PRODUCTO
+   Foto principal 1:1 (contain, sin recorte) + tira de miniaturas.
+   markup:
+   <div class="ds-gallery">
+     <div class="ds-gallery__main"><img src=…></div>
+     <div class="ds-gallery__thumbs">
+       <button class="ds-gallery__thumb is-on"><img src=…></button>
+     </div>
+   </div>
+   ================================================================ */
+.ds-gallery__main{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--c-fill)}
+.ds-gallery__main img{width:100%;height:100%;object-fit:contain}
+.ds-gallery__thumbs{display:flex;gap:.5rem;margin-top:.5rem;overflow-x:auto;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ds-gallery__thumbs::-webkit-scrollbar{display:none}
+.ds-gallery__thumb{flex:0 0 68px;aspect-ratio:1/1;padding:0;cursor:pointer;
+  background:var(--c-fill);border:1px solid transparent;border-radius:var(--radius);
+  transition:border-color var(--dur-fast) var(--ease)}
+.ds-gallery__thumb img{width:100%;height:100%;object-fit:contain}
+.ds-gallery__thumb:hover{border-color:var(--c-line)}
+.ds-gallery__thumb.is-on{border-color:var(--c-accent)}
+
+/* ================================================================
+   SELECTOR DE TALLA  ·  y de color
+   Cuadrados rectos. La talla va en mono (es un dato).
+   markup:
+   <div class="ds-sizes" role="group">
+     <button class="ds-size is-on">S</button>
+     <button class="ds-size" disabled>M</button>
+   </div>
+   ================================================================ */
+.ds-sizes{display:flex;flex-wrap:wrap;gap:.5rem}
+.ds-size{min-width:46px;padding:.6rem .7rem;cursor:pointer;
+  font-family:var(--font-mono);font-size:var(--fs-small);font-weight:var(--w-medium);
+  line-height:1.3;letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid var(--c-line);border-radius:var(--radius);
+  background:none;color:var(--c-ink);transition:all var(--dur-fast) var(--ease)}
+.ds-size:hover:not(:disabled){border-color:var(--c-ink)}
+.ds-size.is-on{background:var(--c-accent);color:var(--c-accent-ink);border-color:var(--c-accent)}
+.ds-size:disabled{color:var(--c-faint);border-color:var(--c-line-soft);cursor:not-allowed;
+  text-decoration:line-through}
+
+/* ================================================================
+   SELECTOR DE COLOR  ·  círculos con el hex de marca.json
+   El color del círculo sale del dato, nunca de la foto. Si falta el
+   hex, el círculo se marca en alerta y se muestra [[hex_color]].
+   ================================================================ */
+.ds-colors{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+.ds-color{position:relative;width:34px;height:34px;padding:0;cursor:pointer;flex:none;
+  border-radius:var(--radius-pill);border:1px solid var(--c-line);
+  background:var(--c-fill);
+  transition:box-shadow var(--dur-fast) var(--ease),border-color var(--dur-fast) var(--ease)}
+.ds-color:hover{border-color:var(--c-ink)}
+/* el activo va marcado con borde */
+.ds-color.is-on{border-color:var(--c-accent);
+  box-shadow:0 0 0 3px var(--c-bg),0 0 0 4px var(--c-accent)}
+.ds-color--falta{background:repeating-linear-gradient(45deg,
+    var(--c-bg) 0 4px,var(--c-alert) 4px 7px);border-color:var(--c-alert)}
+.ds-colors__nombre{font-size:var(--fs-small);color:var(--c-muted);
+  text-transform:uppercase;letter-spacing:.06em;margin-left:.3rem}
+
+/* ================================================================
+   BOTÓN DE WHATSAPP
+   En móvil queda FIJO al borde inferior: alcanzable con el pulgar
+   sin hacer scroll en producto.html. En escritorio vuelve al flujo.
+   Usa la tinta del sistema, no el verde de WhatsApp (ver nota en el
+   informe: el verde exigiría un token nuevo).
+   ================================================================ */
+.ds-wa{position:fixed;left:0;right:0;bottom:0;z-index:80;
+  padding-top:.7rem;
+  padding-inline:max(.8rem,calc((100vw - var(--wrap)) / 2));
+  padding-bottom:max(.7rem,env(safe-area-inset-bottom));
+  background:var(--c-veil);backdrop-filter:blur(10px);
+  border-top:1px solid var(--c-line)}
+.ds-wa__in{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+/* si falta un dato, su marcador se acomoda en la barra en vez de recortarse */
+.ds-wa__in .ds-missing{white-space:normal;overflow-wrap:anywhere;max-width:100%}
+.ds-wa__price{flex:0 0 auto;font-family:var(--font-mono);font-weight:var(--w-medium);
+  font-size:var(--fs-label);line-height:1.3;letter-spacing:.02em}
+.ds-wa .ds-btn{flex:1 1 auto}
+/* Colchón para que el contenido no quede tapado por la barra fija */
+.ds-wa-pad{height:76px}
+
+/* ================================================================
+   MENÚ MÓVIL (drawer)
+   Única excepción de sombra del sistema: --shadow-drawer.
+   markup: <div class="ds-menu" hidden> … </div> + backdrop
+   ================================================================ */
+.ds-menu__backdrop{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.4);
+  opacity:0;pointer-events:none;transition:opacity var(--dur) var(--ease)}
+.ds-menu__backdrop.is-open{opacity:1;pointer-events:auto}
+.ds-menu{position:fixed;top:0;right:0;bottom:0;z-index:95;
+  width:min(320px,86vw);padding:var(--sp-5);
+  background:var(--c-bg);border-left:1px solid var(--c-line);
+  box-shadow:var(--shadow-drawer);
+  transform:translateX(100%);transition:transform var(--dur) var(--ease-out);
+  display:flex;flex-direction:column;gap:var(--sp-4);overflow-y:auto}
+.ds-menu.is-open{transform:none}
+.ds-menu__head{display:flex;align-items:center;justify-content:space-between;
+  padding-bottom:var(--sp-4);border-bottom:1px solid var(--c-line)}
+.ds-menu__logo{font-family:var(--font);font-size:var(--fs-logo);font-weight:var(--w-black);
+  text-transform:uppercase;letter-spacing:var(--tr-logo)}
+.ds-menu__close{width:40px;height:40px;padding:0;border:0;background:none;
+  color:var(--c-ink);cursor:pointer;font-size:1.4rem;line-height:1}
+.ds-menu__links{display:flex;flex-direction:column}
+.ds-menu__links a{padding:.9rem 0;border-bottom:1px solid var(--c-line-soft);
+  font-size:var(--fs-h3);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:.06em}
+.ds-menu__foot{margin-top:auto;padding-top:var(--sp-4)}
+
+/* ================================================================
+   PIE (footer)
+   ================================================================ */
+.ds-footer{background:var(--c-dark);color:var(--c-on-dark-muted);padding:3.5rem 0 3rem}
+.ds-footer__top{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;
+  border-bottom:1px solid var(--c-line-on-dark);padding-bottom:2rem}
+.ds-footer__logo{font-family:var(--font);font-size:1.2rem;font-weight:var(--w-black);
+  color:var(--c-on-dark);text-transform:uppercase;letter-spacing:var(--tr-logo)}
+.ds-footer__cols{display:flex;gap:3rem;flex-wrap:wrap}
+.ds-footer__col b{display:block;color:var(--c-on-dark);font-size:.7rem;font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:var(--tr-label);margin-bottom:.9rem}
+.ds-footer__col a{display:block;font-size:var(--fs-label);padding:.2rem 0;
+  color:var(--c-on-dark-faint);transition:color var(--dur-fast) var(--ease)}
+.ds-footer__col a:hover{color:var(--c-on-dark)}
+.ds-footer__bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  margin-top:1.6rem;font-size:.68rem;text-transform:uppercase;letter-spacing:var(--tr-label);
+  color:var(--c-on-dark-faint)}
+
+/* ================================================================
+   CAMPO FALTANTE  ·  regla dura de F0
+   Si un dato de marca.json falta, se renderiza [[campo]] y TIENE
+   que notarse. Nada de texto de relleno.
+   ================================================================ */
+.ds-missing{display:inline-block;font-family:var(--font-mono);font-weight:var(--w-medium);
+  font-size:.75em;line-height:1.3;letter-spacing:.08em;
+  color:var(--c-alert);border:1px dashed var(--c-alert);
+  padding:.1em .4em;border-radius:var(--radius);white-space:nowrap}
+
+/* ================================================================
+   ENTRADA POR SCROLL (opcional)
+   añade la clase .in cuando el elemento entra en viewport.
+   ================================================================ */
+.ds-reveal{opacity:0;transform:translateY(22px);
+  transition:opacity var(--dur-slow) var(--ease),transform var(--dur-slow) var(--ease)}
+.ds-reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  .ds-reveal{opacity:1;transform:none}
+  .ds-card__img,.ds-card__alt{transition:none}
+  .ds-menu{transition:none}
+}
+
+/* ================================================================
+   RESPONSIVE
+   El sistema original es escritorio→móvil (max-width). Los componentes
+   nuevos se declaran móvil primero y escalan con min-width.
+   ================================================================ */
+@media (max-width:720px){
+  .ds-nav__links{display:none}       /* en móvil, nav se reduce a burger + logo + acción */
+  .ds-nav__burger{display:inline-flex}
+  .ds-head{align-items:flex-start}
+}
+
+/* Escritorio: la ficha pasa a dos columnas y WhatsApp deja de ser barra fija */
+@media (min-width:721px){
+  .ds-pdp{grid-template-columns:1.15fr .85fr;gap:var(--sp-7);align-items:start}
+  .ds-pdp__info{position:sticky;top:calc(var(--sp-6) + 3rem)}
+  .ds-gallery__thumb{flex-basis:84px}
+
+  .ds-wa{position:static;padding:0;background:none;backdrop-filter:none;border-top:0}
+  .ds-wa__in{display:block}
+  .ds-wa__price{display:none}        /* en escritorio el precio ya está en la ficha */
+  .ds-wa-pad{display:none}
+  .ds-menu,.ds-menu__backdrop{display:none}
+}

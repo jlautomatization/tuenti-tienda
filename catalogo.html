@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- MAQUETA para revisión: el sitio todavía NO debe indexarse.
+     Quitar esta línea al publicar. Ver docs/TRASPASO_WEB.md §0.3 -->
+<meta name="robots" content="noindex, nofollow">
+<title>—</title>
+<meta name="description" content="">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%95%3C/text%3E%3C/svg%3E">
+
+
+<link rel="preload" href="fuentes/Anton-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="export-boutique/tokens.css">
+<link rel="stylesheet" href="export-boutique/componentes.css">
+<link rel="stylesheet" href="tienda.css">
+<link rel="stylesheet" href="landing.css">
+<link rel="stylesheet" href="rediseno.css">
+<link rel="stylesheet" href="sistema.css?v=20261029">
+<link rel="stylesheet" href="catalogo.css?v=20261029n">
+<link rel="stylesheet" href="reserva.css">
+
+<style>
+:root{
+  --t-bg:var(--c-bg); --t-panel:var(--c-surface); --t-text:var(--c-ink);
+  --t-muted:var(--c-muted); --t-line:var(--c-line);
+  /* --t-accent era var(--c-ink) y --t-accent-txt var(--c-on-dark): con la
+     paleta invertida los dos son BLANCO y el texto desaparecía. El acento del
+     módulo pasa al verde de la identidad. */
+  --t-accent:var(--c-accent); --t-accent-txt:var(--c-accent-ink);
+  /* --t-wa y --t-wa-txt los usa el botón flotante de WhatsApp en landing.css
+     y NO estaban declarados en ninguna parte: el botón salía sin fondo. */
+  --t-wa:var(--c-accent); --t-wa-txt:var(--c-accent-ink);
+  --t-radius:0; --t-font:var(--font); --t-ease:var(--ease);
+}
+</style>
+
+<!-- tienda.js NO se carga: su carrito no guarda talla ni referencia, agrupa por
+     nombre visible, no tiene vaciar/cantidad editable/subtotal, y su pie empuja a
+     un checkout con envío (F4). El carrito propio vive en app.js. El módulo queda
+     intacto en disco por si se retoma. Ver docs/TRASPASO_WEB.md §0.12 -->
+<script src="imagenes.js?v=20261029" defer></script>
+<script src="app.js?v=20261029k" defer></script>
+</head>
+<body class="ds pg-cat cat-ref">
+<!-- r4e (29/10/2026 14:12:43): catálogo «como las referencias» de Jose; ?catalogo=a = el de anoche. -->
+<script>if(new URLSearchParams(location.search).get("catalogo")==="a")document.body.classList.remove("cat-ref");</script>
+
+<div class="page">
+
+  <div class="ds-announce" id="anuncio"></div>
+
+  <nav class="ds-nav" id="top">
+    <div class="ds-wrap ds-nav__in">
+      <button class="ds-nav__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span></button>
+      <div class="ds-nav__links" id="nav-links"></div>
+      <a class="ds-nav__logo" href="index.html" id="nav-logo"></a>
+      <div class="ds-nav__end">
+        <button class="t-cart-btn" aria-label="Ver carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span class="t-count" data-n="0"></span></button>
+        <a class="ds-btn ds-btn--outline ds-btn--sm" id="nav-cta" href="index.html#contacto"></a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="cat-cab">
+    <div class="ds-wrap">
+      <h1 class="ds-title" id="cat-titulo" data-reveal></h1>
+    </div>
+  </section>
+
+  <!-- buscador + filtros + grilla.
+       Escritorio: panel a la izquierda. Móvil: panel colapsable arriba. -->
+  <section class="cat-cuerpo">
+    <div class="ds-wrap cat-layout">
+
+      <aside class="cat-panel" id="cat-panel" aria-label="Buscar y filtrar">
+        <div class="cat-barra">
+          <div class="cat-grupo cat-grupo--buscar">
+            <label class="cat-buscar-label" for="cat-buscar" id="cat-buscar-label"></label>
+            <div class="cat-buscar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+              <input type="search" id="cat-buscar" autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+          <button class="cat-panel__toggle" id="cat-toggle" type="button" aria-expanded="false" aria-controls="cat-panel-in">
+            <span id="cat-toggle-txt"></span>
+            <span class="cat-panel__n" id="cat-activos" hidden></span>
+          </button>
+        </div>
+        <div class="cat-fondo" id="cat-fondo"></div>
+        <div class="cat-panel__in" id="cat-panel-in" role="group" aria-label="Filtros">
+          <div class="cat-grupo" id="cat-g-genero"></div>
+          <div class="cat-grupo" id="cat-g-categoria"></div>
+          <div class="cat-grupo" id="cat-g-tema"></div>
+          <div class="cat-grupo" id="cat-g-color"></div>
+          <div class="cat-acciones">
+            <button class="ds-btn ds-btn--acento cat-aplicar" id="cat-aplicar" type="button">Aplicar</button>
+            <button class="ds-btn ds-btn--outline cat-limpiar" id="cat-limpiar" type="button" hidden></button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="cat-resultados">
+        <!-- r4 (29/10/2026): las categorías siempre a la vista (en celular los demás filtros siguen en la hoja de abajo) -->
+        <div class="cat-chips" id="cat-chips" role="group" aria-label="Categorías"></div>
+        <div class="ds-group-head"><h2 id="cat-grupo-h"></h2><span class="cat-precio" id="cat-precio"></span><span class="ds-group-count" id="cat-conteo" aria-live="polite"></span></div>
+        <div id="catalogo-lista"></div>
+        <div class="cat-mas" id="cat-mas" hidden><button class="ds-btn ds-btn--outline" id="cat-mas-btn" type="button">Ver más diseños</button></div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="ds-footer">
+    <div class="ds-wrap">
+      <div class="ds-footer__top">
+        <span class="ds-footer__logo" id="pie-logo"></span>
+        <div class="ds-footer__cols" id="pie-cols"></div>
+      </div>
+      <div class="ds-footer__bottom"><span id="pie-nombre"></span><span id="pie-legal"></span></div>
+    </div>
+  </footer>
+
+</div><!-- /.page -->
+
+<div class="ds-menu__backdrop" id="menu-bd"></div>
+<aside class="ds-menu" id="menu" aria-label="Menú">
+  <div class="ds-menu__head">
+    <span class="ds-menu__logo" id="menu-logo"></span>
+    <button class="ds-menu__close" id="menu-x" type="button" aria-label="Cerrar menú">&times;</button>
+  </div>
+  <nav class="ds-menu__links" id="menu-links"></nav>
+  <div class="ds-menu__foot"><a class="ds-btn ds-btn--solid ds-btn--block" id="menu-cta" href="index.html#contacto"></a></div>
+</aside>
+
+<div class="flota">
+  <button class="arriba" id="arriba" type="button" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  <a class="wa-flota" id="wa-flota" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.2 1.1 1.1-4.1-.2-.4C6.4 18.9 6 17.2 6 15.5 6 9.7 10.7 5 16 5s10 4.7 10 10.5S21.3 25 16 25zm5.7-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg></a>
+</div>
+
+</body>
+</html>

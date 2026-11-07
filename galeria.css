@@ -1,0 +1,35 @@
+/* galeria.css · r4 (28/10/2026) · tomas de producto en la ficha: prenda sola primero, flechas para las demás.
+   Solo tokens de sistema.css (paleta, 8 pasos de espacio, radios, una sombra, táctil 48 px). */
+/* La caja manda sobre el contenido: ancho de la columna, alto por 4:5; nada de adentro la agranda
+   (el primer render midió 424×530 con la columna de 313: la imagen imponía su tamaño). */
+.pg-ficha .ds-pdp__media{min-width:0}
+.pg-ficha .ds-gallery__main.gal-on{aspect-ratio:4/5;width:100%;max-width:100%;background:#fff;contain:layout size}
+.gal{position:relative;width:100%;height:100%}
+.gal__pista{display:flex;width:100%;height:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.gal__pista::-webkit-scrollbar{display:none}
+.gal__pista:focus-visible{outline:2px solid var(--s-lime);outline-offset:-2px}
+.gal__item{position:relative;flex:0 0 100%;width:100%;min-width:100%;height:100%;margin:0;scroll-snap-align:start;scroll-snap-stop:always;background:#fff}
+.gal__item img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
+.gal__flecha{position:absolute;top:50%;transform:translateY(-50%);width:var(--tap);height:var(--tap);padding:0;border:0;
+  border-radius:var(--r-pill);background:rgba(27,29,30,.78);color:var(--s-ink);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;box-shadow:var(--sh);transition:background .15s ease,color .15s ease,opacity .15s ease}
+.gal__flecha svg{width:22px;height:22px}
+.gal__flecha--izq{left:var(--e3)}
+.gal__flecha--der{right:var(--e3)}
+.gal__flecha:hover,.gal__flecha:focus-visible{background:var(--s-lime);color:var(--s-on-lime);outline:none}
+.gal__flecha:disabled{opacity:0;pointer-events:none}
+.gal__pie{position:absolute;left:var(--e3);right:var(--e3);bottom:var(--e3);display:flex;justify-content:space-between;
+  align-items:center;gap:var(--e2);pointer-events:none}
+.gal__vista,.gal__n{padding:var(--e1) var(--e3);border-radius:var(--r-pill);background:rgba(27,29,30,.78);color:var(--s-ink);
+  font-size:var(--f-xs);font-weight:700;letter-spacing:.04em;line-height:1.6}
+.gal__n{font-variant-numeric:tabular-nums;margin-left:auto}
+.pg-ficha .ds-gallery__thumbs.is-tomas .ds-gallery__thumb{background:#fff}
+.pg-ficha .ds-gallery__thumbs.is-tomas .ds-gallery__thumb img{object-fit:cover}
+@media(prefers-reduced-motion:reduce){.gal__flecha{transition:none}}
+
+/* lupa: 2x donde está el puntero; la pista deja de deslizar mientras está acercada */
+.gal__item img{transition:transform .25s ease;will-change:transform;cursor:zoom-in}
+.gal__item.is-zoom img{transform:scale(2);cursor:zoom-out}
+.gal__pista.is-zoom{scroll-snap-type:none;overflow-x:hidden}
+@media(prefers-reduced-motion:reduce){.gal__item img{transition:none}}

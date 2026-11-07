@@ -1,0 +1,39 @@
+/* Reserva de espacio mientras llega marca.json (corrección de salto de layout, 15/10/2026).
+   El contenido de cada bloque lo pinta JS cuando llega marca.json; hasta entonces estaba vacío y todo saltaba.
+   Aquí cada bloque conserva, desde el primer cuadro, la MISMA altura/ancho que tiene ya pintado: el diseño visible no cambia.
+   Las medidas son las del bloque terminado, por rango de ancho (se toma la menor del rango para no dejar huecos). */
+
+/* barra superior (todas las páginas): logo, enlaces y botones llegan después */
+.ds-nav__end{min-width:174px}
+#nav-logo{min-width:79px}
+@media (min-width:900px){ #nav-links{min-height:48px;min-width:289px} }
+
+/* ---------- INICIO ---------- */
+/* texto del héroe (kicker, título, bajada y botones) */
+.is-inicio .hero-txt{min-height:282px}
+@media (min-width:480px){ .is-inicio .hero-txt{min-height:303px} }
+@media (min-width:721px){ .is-inicio .hero-txt{min-height:343px} }
+@media (min-width:900px){ .is-inicio .hero-txt{min-height:422px} }
+@media (min-width:1024px){ .is-inicio .hero-txt{min-height:366px} }
+/* carrusel/fila de categorías (alto total ya pintado; el padding vertical es parte del alto) */
+.is-inicio .cats{min-height:calc(265px - 2 * var(--sec-y, 0px))}
+@media (min-width:480px){ .is-inicio .cats{min-height:calc(308px - 2 * var(--sec-y, 0px))} }
+@media (min-width:600px){ .is-inicio .cats{min-height:calc(365px - 2 * var(--sec-y, 0px))} }
+@media (min-width:721px){ .is-inicio .cats{min-height:calc(249px - 2 * var(--sec-y, 0px))} }
+@media (min-width:768px){ .is-inicio .cats{min-height:calc(261px - 2 * var(--sec-y, 0px))} }
+@media (min-width:900px){ .is-inicio .cats{min-height:calc(316px - 2 * var(--sec-y, 0px))} }
+@media (min-width:1024px){ .is-inicio .cats{min-height:calc(347px - 2 * var(--sec-y, 0px))} }
+@media (min-width:1200px){ .is-inicio .cats{min-height:calc(386px - 2 * var(--sec-y, 0px))} }
+
+/* ---------- CATÁLOGO ---------- */
+.pg-cat .cat-cab{min-height:131px}
+@media (min-width:480px){ .pg-cat .cat-cab{min-height:158px} }
+@media (min-width:600px){ .pg-cat .cat-cab{min-height:186px} }
+@media (min-width:721px){ .pg-cat .cat-cab{min-height:198px} }
+@media (min-width:900px){ .pg-cat .cat-cab{min-height:123px} }
+/* cuerpo: al menos una pantalla, así el pie no sube ni baja a la vista cuando llegan las tarjetas */
+.pg-cat .cat-cuerpo{min-height:100vh}
+.pg-cat .cat-panel__toggle{min-width:103px}
+.pg-cat #cat-grupo-h{min-height:25px;min-width:59px}
+.pg-cat #cat-conteo{min-height:18px;min-width:187px}
+@media (min-width:900px){ .pg-cat #cat-panel{min-height:712px} }

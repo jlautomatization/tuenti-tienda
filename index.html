@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- MAQUETA para revisión: el sitio todavía NO debe indexarse.
+     Quitar esta línea al publicar. Ver docs/TRASPASO_WEB.md §0.3 -->
+<meta name="robots" content="noindex, nofollow">
+<title>—</title>
+<meta name="description" content="">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%95%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- r3: Google Fonts (bloqueaba el render; Fraunces y Plex Mono no se usan) reemplazado por Manrope local en inicio.css -->
+<link rel="preload" href="fuentes/Anton-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="export-boutique/tokens.css">
+<link rel="stylesheet" href="export-boutique/componentes.css">
+<link rel="stylesheet" href="tienda.css">
+<link rel="stylesheet" href="landing.css">
+<link rel="stylesheet" href="rediseno.css">
+<link rel="stylesheet" href="sistema.css?v=20261029">
+<link rel="stylesheet" href="inicio.css?v=20261029d">
+<!-- r4 (29/10/2026): portada a pantalla completa con la escena de noche elegida por Jose; la primera foto se precarga -->
+<link rel="stylesheet" href="portada.css?v=20261029">
+<link rel="preload" as="image" href="img/w/896/tomas/con_mangas-30-blanca/T10E.webp" fetchpriority="high">
+<link rel="stylesheet" href="reserva.css">
+
+<style>
+/* Tematización del módulo de tienda con los tokens de TUENTI. */
+:root{
+  --t-bg:var(--c-bg); --t-panel:var(--c-surface); --t-text:var(--c-ink);
+  --t-muted:var(--c-muted); --t-line:var(--c-line);
+  /* --t-accent era var(--c-ink) y --t-accent-txt var(--c-on-dark): con la
+     paleta invertida los dos son BLANCO y el texto desaparecía. El acento del
+     módulo pasa al verde de la identidad. */
+  --t-accent:var(--c-accent); --t-accent-txt:var(--c-accent-ink);
+  /* --t-wa y --t-wa-txt los usa el botón flotante de WhatsApp en landing.css
+     y NO estaban declarados en ninguna parte: el botón salía sin fondo. */
+  --t-wa:var(--c-accent); --t-wa-txt:var(--c-accent-ink);
+  --t-radius:0; --t-font:var(--font); --t-ease:var(--ease);
+}
+</style>
+
+<!-- tienda.js NO se carga: su carrito no guarda talla ni referencia, agrupa por
+     nombre visible, no tiene vaciar/cantidad editable/subtotal, y su pie empuja a
+     un checkout con envío (F4). El carrito propio vive en app.js. El módulo queda
+     intacto en disco por si se retoma. Ver docs/TRASPASO_WEB.md §0.12 -->
+<script src="imagenes.js?v=20261029" defer></script>
+<script src="app.js?v=20261029k" defer></script>
+<script src="carrusel.js" defer></script>
+<script src="rotacion.js" defer></script>
+</head>
+<body class="ds is-inicio">
+
+<!-- Contenedor de página: por encima de ~1440px el contenido deja de estirarse
+     y queda centrado sobre el fondo. -->
+<div class="page">
+
+  <!-- 1 · barra de anuncio -->
+  <div class="ds-announce" id="anuncio" role="region" aria-label="Avisos"></div>
+
+  <!-- 2 · navegación -->
+  <nav class="ds-nav">
+    <div class="ds-wrap ds-nav__in">
+      <button class="ds-nav__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span></button>
+      <div class="ds-nav__links" id="nav-links"></div>
+      <a class="ds-nav__logo" href="#top" id="nav-logo"></a>
+      <div class="ds-nav__end">
+        <button class="t-cart-btn" aria-label="Ver carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span class="t-count" data-n="0"></span></button>
+        <a class="ds-btn ds-btn--outline ds-btn--sm" id="nav-cta" href="#contacto"></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3 · héroe -->
+  <header class="hero" id="top">
+    <!-- r4 (29/10/2026): la foto a sangre (dos capas que se funden: cebra → azotea) -->
+    <div class="portada" id="hero-foto" aria-hidden="true"></div>
+    <div class="ds-wrap hero-in">
+      <div class="hero-txt">
+        <p class="hero-kicker" id="hero-kicker"></p>
+        <h1 id="hero-titulo"></h1>
+        <p class="baja" id="hero-baja"></p>
+        <div class="hero-btns">
+          <a class="ds-btn ds-btn--light" id="hero-btn" href="catalogo.html"></a>
+          <a class="ds-btn ds-btn--outline" id="hero-wa" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+    </div>
+    <span class="hero-sello" id="hero-sello"></span>
+  </header>
+
+  <!-- 4 · franja de categorías (las seis) -->
+  <section class="cats" id="cats" aria-label="Categorías"></section>
+
+  <!-- 4b · r4 (29/10/2026): «así se ven puestas»: tomas de producto en modelo (cuerpo entero; con el cursor, la prenda sola). 0 créditos. -->
+  <section class="vitrina" id="vitrina" aria-labelledby="vit-titulo">
+    <div class="ds-wrap vit-cab" data-reveal>
+      <p class="hero-kicker" id="vit-kicker"></p>
+      <h2 class="ds-title" id="vit-titulo"></h2>
+    </div>
+    <div class="vit-pista" id="vit-pista"></div>
+    <div class="ds-wrap vit-pie" data-reveal><a class="ds-btn ds-btn--outline" id="vit-btn" href="catalogo.html"></a></div>
+  </section>
+
+  <!-- 5 · redes: Instagram + TikTok. Los seis reels ya cargados. -->
+  <section id="redes">
+    <div class="ds-wrap">
+      <div class="red-cab" data-reveal>
+        <p class="hero-kicker" id="red-kicker"></p>
+        <h2 class="ds-title" id="red-titulo"></h2>
+        <a class="red-user" id="red-usuario" target="_blank" rel="noopener"></a>
+      </div>
+      <div class="perfil-wrap" data-reveal data-delay="1">
+        <p class="perfil-t">Lo último en Instagram</p>
+        <div class="perfil-embed" id="perfil-embed"></div>
+      </div>
+      <div class="reels" id="reels" data-reveal data-delay="1"></div>
+      <div class="redes-cta" id="redes-cta" data-reveal data-delay="1"></div>
+    </div>
+  </section>
+
+
+  <!-- 7 · nuevos diseños: el contador manda -->
+  <section class="proximo" id="proximo">
+    <div class="prox-teaser" id="prox-teaser" data-reveal>
+      <i class="hb hb1"></i><i class="hb hb2"></i>
+      <div class="prox-capa">
+        <div class="ds-wrap prox-in">
+          <p class="prox-label" id="prox-label"></p>
+          <h2 class="prox-titulo" id="prox-titulo"></h2>
+          <div class="prox-fotos" id="prox-fotos" aria-hidden="true"></div>
+          <div class="prox-reloj" id="prox-reloj" role="timer" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · historia (diseño aprobado por Jose: marco lima inclinado, «Veinte, / veinte») -->
+  <section class="historia" id="historia">
+    <i class="hist-blob" aria-hidden="true"></i>
+    <div class="ds-wrap hist-in">
+      <div class="hist-foto" id="hist-foto" data-reveal></div>
+      <div class="hist-cuerpo" data-reveal data-delay="1">
+        <h2 id="hist-titulo"></h2>
+        <div class="hist-texto" id="hist-texto"></div>
+        <a class="hist-btn" id="hist-btn" href="catalogo.html"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · promesas -->
+  <section class="promesas">
+    <div class="ds-wrap" id="promesas"></div>
+  </section>
+
+  <!-- 10 · dónde y cuándo (r3: un solo dibujo propio que abre Google Maps; abierto/cerrado en hora de Bogotá; WhatsApp) -->
+  <section id="local" class="loc">
+    <div class="ds-wrap">
+      <h2 class="ds-title loc-titulo" id="local-titulo"></h2>
+      <div class="loc-grid">
+        <div class="loc-info" data-reveal>
+          <div class="abre" id="abre" role="status" aria-live="polite" style="display:none"><span class="punto" aria-hidden="true"></span><span id="abre-txt"></span></div>
+          <div class="dir">
+            <p class="ds-eyebrow" id="dir-label"></p>
+            <p class="val" id="dir-val"></p>
+          </div>
+          <div id="horario" class="loc-horario"></div>
+          <div class="loc-btns">
+            <a class="loc-btn loc-btn--wa" id="btn-voy" target="_blank" rel="noopener"></a>
+          </div>
+        </div>
+        <div class="loc-visual" data-reveal data-delay="1">
+          <a class="loc-mapa" id="loc-mapa" target="_blank" rel="noopener">
+            <svg class="lm" viewBox="0 0 320 240" role="img" aria-label="Dibujo esquemático del recorrido hasta el local" focusable="false">
+              <defs><pattern id="lm-puntos" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2"/></pattern></defs>
+              <rect class="lm-fondo" width="320" height="240"/>
+              <path id="lm-ruta" class="lm-ruta" d="M34 140C78 140 92 108 126 102S190 94 212 74S240 56 248 48"/>
+              <g id="lm-nodos"></g>
+              <g id="lm-pin" class="lm-pin"><circle class="lm-onda"/><circle class="lm-onda lm-onda--2"/><path class="lm-pin__f" d="M24 2C12.4 2 3 11.4 3 23c0 15.6 21 39 21 39s21-23.4 21-39C45 11.4 35.6 2 24 2z"/><circle class="lm-pin__c" cx="24" cy="23" r="8"/></g>
+            </svg>
+            <span class="loc-mapa__chip" id="loc-mapa-chip"><span>Abrir en Google Maps</span><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 · contacto -->
+  <section class="cita" id="contacto">
+    <div class="ds-wrap" data-reveal>
+      <h2 class="ds-title" id="cont-titulo"></h2>
+      <p id="cont-texto"></p>
+      <div class="acc">
+        <a class="ds-btn ds-btn--light" id="contacto-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.2 1.1 1.1-4.1-.2-.4C6.4 18.9 6 17.2 6 15.5 6 9.7 10.7 5 16 5s10 4.7 10 10.5S21.3 25 16 25zm5.7-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+          <span id="cont-wa-txt"></span></a>
+        <a class="ds-btn ds-btn--ghost-dark" id="contacto-tel"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 · pie -->
+  <footer class="ds-footer">
+    <div class="ds-wrap">
+      <div class="ds-footer__top">
+        <span class="ds-footer__logo" id="pie-logo"></span>
+        <div class="ds-footer__cols" id="pie-cols"></div>
+      </div>
+      <div class="ds-footer__bottom"><span id="pie-nombre"></span><span id="pie-legal"></span></div>
+    </div>
+  </footer>
+
+</div><!-- /.page -->
+
+<!-- menú móvil (fuera de .page: es una capa fija) -->
+<div class="ds-menu__backdrop" id="menu-bd"></div>
+<aside class="ds-menu" id="menu" aria-label="Menú">
+  <div class="ds-menu__head">
+    <span class="ds-menu__logo" id="menu-logo"></span>
+    <button class="ds-menu__close" id="menu-x" type="button" aria-label="Cerrar menú">&times;</button>
+  </div>
+  <nav class="ds-menu__links" id="menu-links"></nav>
+  <div class="ds-menu__foot"><a class="ds-btn ds-btn--solid ds-btn--block" id="menu-cta" href="#contacto"></a></div>
+</aside>
+
+<!-- 13 · flotantes -->
+<div class="flota">
+  <button class="arriba" id="arriba" type="button" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  <a class="wa-flota" id="wa-flota" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.2 1.1 1.1-4.1-.2-.4C6.4 18.9 6 17.2 6 15.5 6 9.7 10.7 5 16 5s10 4.7 10 10.5S21.3 25 16 25zm5.7-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg></a>
+</div>
+
+<!-- r4c (29/10/2026 14:00:51): opciones de tarjeta de categoría para que Jose elija (?tarjetas=b o ?tarjetas=c). Jose eligió la B (29/10/2026 14:03:33, «Va la opción B.»): sin parámetro = B; ?tarjetas=a = la de las 13:45. -->
+<script>(function(){var t=new URLSearchParams(location.search).get("tarjetas")||"b";var c=document.getElementById("cats");if(c&&(t==="b"||t==="c"))c.classList.add("cats--"+t);})();</script>
+<!-- r4d (29/10/2026 14:04:08): vitrina con el estilo de la B (?vitrina=b), para que Jose compare. Jose (29/10/2026 14:07:22): «La vitrina va con el estilo B.» → por defecto B; ?vitrina=a = la de anoche. -->
+<script>(function(){if(new URLSearchParams(location.search).get("vitrina")!=="a"){var v=document.getElementById("vitrina");if(v)v.classList.add("vitrina--b");}})();</script>
+</body>
+</html>

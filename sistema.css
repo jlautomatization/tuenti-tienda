@@ -1,0 +1,71 @@
+/* sistema.css · REDISEÑO 3 · una sola escala (15/10/2026 16:01:46, hora de date) · PROPUESTA, no aplicada.
+   Paleta y tipografía = las aprobadas (rediseno_1 y rediseno_2_nuevos): #1B1D1E / #B3C300, Anton + Caveat + Manrope.
+   Regla: ningún valor de espacio, letra, radio o sombra fuera de estas variables. */
+:root{
+  /* paleta */
+  --s-bg:#1B1D1E; --s-panel:#26292b; --s-line:#34383b; --s-lime:#B3C300; --s-ink:#fff; --s-mut:#cfd3d4; --s-on-lime:#1B1D1E;
+  /* espaciado: 8 pasos */
+  --e1:4px; --e2:8px; --e3:12px; --e4:16px; --e5:24px; --e6:32px; --e7:48px; --e8:64px;
+  /* ritmo vertical de sección: celular / computador */
+  --sec-y:var(--e7);
+  /* tipografía: 6 tamaños de texto + 3 de título (Anton) */
+  --f-xs:12px; --f-sm:14px; --f-md:16px; --f-lg:18px; --f-xl:24px; --f-script:28px;
+  --f-h3:24px; --f-h2:clamp(32px,8vw,48px); --f-h1:clamp(40px,11vw,72px);
+  --lh-txt:1.55; --lh-tit:1.05;
+  /* forma */
+  --r:16px; --r-pill:999px;
+  /* una sola sombra */
+  --sh:0 8px 24px rgba(0,0,0,.28);
+  /* contenedor */
+  --w:1120px; --gut:20px;
+  /* táctil */
+  --tap:48px;
+}
+@media(min-width:900px){:root{--sec-y:var(--e8);--gut:40px}}
+html{-webkit-text-size-adjust:100%}
+body.ds{background:var(--s-bg);color:var(--s-ink)}
+/* contenedor único */
+.ds-wrap{max-width:var(--w);margin-inline:auto;padding-inline:var(--gut)}
+/* botones y enlaces táctiles: mínimo 48 px (el diagnóstico midió 537 de 544 por debajo de 44 en el catálogo) */
+.ds-btn,.t-cart-btn,.ds-nav__burger,.ds-menu__close,.arriba,.wa-flota,button.como,.cat-limpiar,.cat-panel__toggle{min-height:var(--tap);min-width:var(--tap)}
+.ds-btn{font-size:var(--f-sm);border-radius:var(--r-pill)}
+/* ningún texto por debajo de 12 px */
+.ds-announce,.ds-announce *{font-size:var(--f-xs)!important}
+
+/* ---- cáscara común (anuncio, nav, pie) · movida de inicio.css el 15/10/2026 16:43:11 para que las 4 páginas se vean iguales (defecto ALTA 1-2 del QA) ---- */
+@font-face{font-family:Manrope;src:url('fuentes/Manrope-variable-latin.woff2') format('woff2');font-weight:400 800;font-display:swap}
+/* ---------- 1 · anuncio: UNA línea (≤40 px) ---------- */
+.ds-announce{height:40px;padding:0;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  white-space:nowrap;letter-spacing:.06em;text-transform:uppercase;font-size:var(--f-xs)}
+.ds-announce__pista{display:flex;align-items:center;width:max-content}
+.ds-announce__t{display:inline-block;padding-inline:var(--e5);font-size:var(--f-xs);line-height:1}
+.ds-announce.rueda{justify-content:flex-start}
+.ds-announce.rueda .ds-announce__pista{animation:anuncio-rueda var(--dur,24s) linear infinite}
+.ds-announce.rueda:hover .ds-announce__pista{animation-play-state:paused}
+@keyframes anuncio-rueda{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .ds-announce.rueda .ds-announce__pista{animation:none}
+  .ds-announce.rueda{overflow-x:auto;scrollbar-width:none}
+  .ds-announce.rueda::-webkit-scrollbar{display:none}
+  .ds-announce.rueda .ds-announce__t[aria-hidden]{display:none}
+}
+
+/* ---------- 2 · nav ≤ 64 px ---------- */
+.ds-nav__in{grid-template-columns:var(--tap) 1fr auto;height:63px;padding:0;gap:var(--e2)}  /* 63 + 1 px de borde = 64 */
+.ds-nav__burger{width:var(--tap);height:var(--tap);margin:0}
+.ds-nav__logo{font-size:var(--f-h3);justify-self:center;line-height:1;display:inline-flex;align-items:center;min-height:var(--tap);padding-inline:var(--e2)}
+.ds-footer__logo,.ds-menu__logo{font-size:var(--f-h3)}
+.ds-menu__close{font-size:var(--f-xl)}
+.ds-nav__end{gap:var(--e2)}
+.t-cart-btn{width:var(--tap);height:var(--tap);display:inline-grid;place-items:center}
+#nav-cta{min-height:var(--tap);padding:0 var(--e4);font-size:var(--f-xs);letter-spacing:.08em}
+@media (min-width:721px){
+  .ds-nav__in{grid-template-columns:1fr auto 1fr;height:71px}
+  .ds-nav__links{gap:var(--e5)}
+  .ds-nav__links a{font-size:var(--f-sm);display:inline-flex;align-items:center;min-height:var(--tap);letter-spacing:.08em}
+}
+
+.ds-footer{padding:var(--e7) 0 var(--e6)}
+.ds-footer__col a{display:flex;align-items:center;min-height:var(--tap);font-size:var(--f-sm);padding:0}
+.ds-footer__col b{font-size:var(--f-xs)}
+.ds-footer__bottom{font-size:var(--f-xs)}

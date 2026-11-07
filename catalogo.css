@@ -1,0 +1,397 @@
+/* catalogo.css · REDISEÑO 3 · catálogo, ficha, legal, carrito, popup de registro y flotantes.
+   Se carga DESPUÉS de sistema.css. Solo usa sus variables de espacio, letra, radio y sombra.
+   Las páginas de catálogo/ficha/legal lo enlazan; en el inicio lo pide app.js (cajón, popup, avisos). */
+
+/* ---------- utilidades ---------- */
+.pg-ficha .ds-pdp__label[id="pdp-label-detalles"]{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+body.hoja-abierta{overflow:hidden}
+:where(a,button,input,select,summary,[tabindex]):focus-visible{outline:3px solid var(--s-lime);outline-offset:2px}
+
+/* ---------- cabecera de las páginas internas ---------- */
+.pg-cat .cat-cab,.pg-legal .legal-cab{padding-top:var(--e6);padding-bottom:var(--e4)}
+.pg-cat h1.ds-title,.pg-legal h1.ds-title{font-size:var(--f-h1);line-height:var(--lh-tit)}
+.pg-cat .cat-cuerpo{padding-top:0;padding-bottom:var(--sec-y)}
+.pg-ficha section,.pg-legal .legal-cuerpo{padding-top:var(--e4);padding-bottom:var(--sec-y)}
+
+/* nav y pie de las páginas internas: táctiles 48 px */
+.pg-cat .ds-nav__links a,.pg-ficha .ds-nav__links a,.pg-legal .ds-nav__links a,
+.ds-menu__links a{display:inline-flex;align-items:center;min-height:var(--tap);font-size:var(--f-sm)}
+.ds-footer__col a{display:flex;min-width:var(--tap)}
+.ds-nav__logo{display:inline-flex;align-items:center;min-height:var(--tap)}
+.ds-footer__col b,.ds-footer__bottom{font-size:var(--f-xs)}
+
+/* ---------- buscador + filtros ---------- */
+.pg-cat .cat-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--e4)}
+.pg-cat .cat-barra{display:flex;gap:var(--e2);align-items:stretch}
+.pg-cat .cat-grupo--buscar{flex:1 1 auto;min-width:0;margin:0}
+.cat-buscar-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cat-buscar{display:flex;align-items:center;gap:var(--e2);min-height:var(--tap);padding:0 var(--e4);
+  background:var(--s-panel);border:1px solid var(--s-line);border-radius:var(--r-pill)}
+.cat-buscar:focus-within{border-color:var(--s-lime)}
+.cat-buscar svg{width:20px;height:20px;flex:none;color:var(--s-lime)}
+.cat-buscar input{flex:1 1 auto;min-width:0;height:var(--tap);border:0;background:none;outline:0;
+  font-family:inherit;font-size:var(--f-md);color:var(--s-ink)}
+.cat-buscar input::placeholder{color:var(--s-mut)}
+.cat-panel__toggle{display:inline-flex;align-items:center;gap:var(--e2);flex:0 0 auto;width:auto;
+  min-height:var(--tap);padding:0 var(--e4);background:var(--s-panel);color:var(--s-ink);
+  border:1px solid var(--s-line);border-radius:var(--r-pill);font-size:var(--f-sm);font-weight:800}
+.cat-panel__toggle::after{display:none}
+.cat-panel__n{min-width:24px;height:24px;padding:0 var(--e1);display:inline-grid;place-items:center;
+  border-radius:var(--r-pill);background:var(--s-lime);color:var(--s-on-lime);font-size:var(--f-xs);font-weight:800}
+
+.cat-grupo{margin:0 0 var(--e4);display:flex;flex-wrap:wrap;gap:var(--e2)}
+.cat-grupo .ds-pdp__label{flex:0 0 100%;margin:0;font-size:var(--f-xs);letter-spacing:.08em;color:var(--s-mut)}
+.cat-op{position:relative;display:inline-flex;align-items:center;gap:var(--e2);min-height:var(--tap);
+  padding:0 var(--e4);border:1px solid var(--s-line);border-radius:var(--r-pill);cursor:pointer;
+  font-size:var(--f-sm);color:var(--s-ink);background:transparent}
+.cat-op input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.cat-op__caja{display:none}
+.cat-op__txt{font-weight:600}
+.cat-op__n{margin-left:0;font-family:inherit;font-size:var(--f-xs);letter-spacing:0;color:var(--s-mut)}
+.cat-op:has(input:checked){background:var(--s-lime);border-color:var(--s-lime);color:var(--s-on-lime)}
+.cat-op:has(input:checked) .cat-op__txt{color:var(--s-on-lime);font-weight:800}
+.cat-op:has(input:checked) .cat-op__n{color:var(--s-on-lime)}
+.cat-op:has(input:disabled){opacity:.45;cursor:not-allowed}
+.cat-op:has(input:focus-visible){outline:3px solid var(--s-lime);outline-offset:2px}
+.cat-acciones{display:flex;gap:var(--e2);padding:var(--e3) 0}
+.cat-acciones .ds-btn{min-height:var(--tap);flex:1 1 0;font-size:var(--f-sm);border-radius:var(--r-pill)}
+.cat-limpiar{width:auto}
+.cat-fondo{display:none}
+
+@media(max-width:899px){
+  .pg-cat .cat-panel__in{display:none}
+  .pg-cat .cat-panel__in.abierto{display:block;position:fixed;left:0;right:0;bottom:0;z-index:200;
+    max-height:56vh;overflow-y:auto;padding:var(--e4) var(--gut) 0;background:var(--s-panel);
+    border-top:1px solid var(--s-line);border-radius:var(--r) var(--r) 0 0;box-shadow:var(--sh)}
+  .pg-cat .cat-acciones{position:sticky;bottom:0;background:var(--s-panel);padding-bottom:max(var(--e3),env(safe-area-inset-bottom))}
+  .cat-fondo.abierto{display:block;position:fixed;inset:0;z-index:190;background:rgba(0,0,0,.5)}
+}
+@media(min-width:900px){
+  .pg-cat .cat-layout{grid-template-columns:272px minmax(0,1fr);gap:var(--e7);align-items:start}
+  .pg-cat .cat-panel{position:sticky;top:calc(var(--e8) + var(--e4))}
+  .pg-cat .cat-panel__toggle{display:none}
+  .pg-cat .cat-panel__in{display:block;padding-top:var(--e4)}
+  .pg-cat .cat-aplicar{display:none}
+}
+
+/* ---------- resultados y tarjetas ---------- */
+.pg-cat .ds-group-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:var(--e2) var(--e4);
+  padding-bottom:var(--e3);margin-bottom:var(--e5);border-bottom:1px solid var(--s-lime)}
+.pg-cat .ds-group-head h2{font-family:var(--font-display);font-weight:400;font-size:var(--f-h3);
+  letter-spacing:.03em;text-transform:uppercase;line-height:var(--lh-tit)}
+.pg-cat .ds-group-count{margin-left:auto;font-family:inherit;font-size:var(--f-sm);letter-spacing:0;color:var(--s-mut)}
+.pg-cat .ds-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e5) var(--e3)}
+@media(min-width:721px){.pg-cat .ds-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e6) var(--e4)}}
+@media(min-width:1100px){.pg-cat .cat-layout .ds-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+.pg-cat .ds-card,.pdp-mas .ds-card{display:flex;flex-direction:column;cursor:default;min-width:0}
+.pg-cat .ds-card__media,.pdp-mas .ds-card__media{width:100%;aspect-ratio:1/1;min-height:0;border-radius:var(--r);background:var(--s-panel)}
+.pg-cat .ds-card__body,.pdp-mas .ds-card__body{display:flex;flex-direction:column;flex:1 1 auto;gap:var(--e1);margin-top:var(--e3);min-width:0}
+.pg-cat .ds-card__tag,.pdp-mas .ds-card__tag{align-self:flex-start;margin:0;padding:var(--e1) var(--e3);border-radius:var(--r-pill);
+  background:var(--s-panel);color:var(--s-mut);border:1px solid var(--s-line);
+  font-size:var(--f-xs);font-weight:700;letter-spacing:.04em}
+.pg-cat .ds-card__title,.pdp-mas .ds-card__title{margin:0;font-family:var(--font);font-size:var(--f-md);font-weight:800;line-height:1.4;
+  letter-spacing:0;text-transform:none}
+.pg-cat .ds-card__title a,.pdp-mas .ds-card__title a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  min-height:calc(2 * 1.4em);color:inherit;text-decoration:none}
+.pg-cat .ds-card__price,.pdp-mas .ds-card__price{margin:0;font-family:inherit;font-size:var(--f-md);font-weight:800;color:var(--s-lime)}
+.pg-cat .ds-card__desc,.pdp-mas .ds-card__desc{margin:0;font-size:var(--f-xs);color:var(--s-mut)}
+.pg-cat .ds-card__dots,.pdp-mas .ds-card__dots{margin:var(--e1) 0 0}
+.ds-card__cambiar{display:flex;align-items:center;gap:var(--e2);width:100%;min-height:var(--tap);
+  padding:0 var(--e3);background:none;border:1px solid var(--s-line);border-radius:var(--r-pill);
+  color:var(--s-ink);font-size:var(--f-sm);cursor:pointer;text-align:left}
+.ds-card__cambiar:hover{border-color:var(--s-lime)}
+.ds-card__sw{flex:none;width:16px;height:16px;border-radius:var(--r-pill);border:1px solid var(--s-mut);background:var(--s-line)}
+.ds-card__sw--sin{background:transparent}
+.ds-card__sw-t{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pg-cat .pedido-acc,.pdp-mas .pedido-acc{margin-top:auto;padding-top:var(--e2)}
+.pg-cat .ds-card__dots + .pedido-acc,.pdp-mas .ds-card__dots + .pedido-acc{margin-top:auto}
+
+.cat-mas{display:flex;justify-content:center;margin-top:var(--e6)}
+.cat-mas[hidden]{display:none}
+.cat-mas .ds-btn{min-height:var(--tap);padding:0 var(--e6);font-size:var(--f-sm);border-radius:var(--r-pill)}
+.pg-cat .cat-vacio{border:1px dashed var(--s-line);border-radius:var(--r);padding:var(--e7) var(--e4)}
+.pg-cat .cat-vacio h3{font-size:var(--f-h3)}
+.pg-cat .cat-vacio p{font-size:var(--f-md)}
+
+/* ---------- botones de pedido (tarjeta y ficha) ---------- */
+.pedido-acc{display:flex;gap:var(--e2);align-items:stretch}
+.pedido-acc .pedido-add{flex:1 1 auto;min-height:var(--tap);padding:0 var(--e3);font-size:var(--f-sm);
+  line-height:1.15;border-radius:var(--r-pill);text-transform:none;letter-spacing:0;font-weight:800}
+.pedido-wa--icono{flex:0 0 var(--tap);width:var(--tap);min-height:var(--tap);border-radius:var(--r-pill)}
+.pedido-wa--icono svg{width:22px;height:22px}
+.pedido-acc--ficha{display:grid;grid-template-columns:1fr 1fr;gap:var(--e2)}
+.pedido-acc--ficha .ds-btn{min-height:var(--tap);width:auto;padding:0 var(--e3);font-size:var(--f-sm);
+  line-height:1.15;border-radius:var(--r-pill);text-transform:none;letter-spacing:0;font-weight:800}
+.pedido-acc--ficha .pedido-wa svg{width:20px;height:20px;flex:none}
+@media(min-width:721px){.pedido-acc--ficha{grid-template-columns:1fr}}
+
+/* ---------- ficha ---------- */
+.pg-ficha .volver{display:inline-flex;align-items:center;gap:var(--e2);min-height:var(--tap);margin:0;
+  font-size:var(--f-sm);font-weight:800;text-transform:none;letter-spacing:0;color:var(--s-mut)}
+.pg-ficha .volver:hover{color:var(--s-ink)}
+.pg-ficha .ds-pdp{gap:var(--e5)}
+.pg-ficha .ds-pdp__info{gap:var(--e4)}
+.pg-ficha .ds-gallery__main{border-radius:var(--r);background:var(--s-panel);aspect-ratio:1/1;width:100%}
+.pg-ficha .ds-gallery__thumbs{gap:var(--e2);margin-top:var(--e2)}
+.pg-ficha .ds-gallery__thumb{flex:0 0 64px;min-height:var(--tap);border-radius:var(--r);background:var(--s-panel)}
+.pg-ficha .ds-gallery__thumb.is-on{border-color:var(--s-lime)}
+.pg-ficha .ds-pdp__title{font-family:var(--font-display);font-weight:400;font-size:var(--f-h2);
+  letter-spacing:.03em;text-transform:uppercase;line-height:var(--lh-tit)}
+.pg-ficha .pdp-cat{margin:0 0 var(--e2);padding:var(--e1) var(--e3);border-radius:var(--r-pill);
+  background:var(--s-panel);color:var(--s-mut);border:1px solid var(--s-line);font-size:var(--f-xs);font-weight:700}
+.pg-ficha .ds-price--lg{font-family:inherit;font-size:var(--f-xl);font-weight:800;color:var(--s-lime)}
+.pg-ficha .ds-ref{font-size:var(--f-xs)}
+.pg-ficha .ds-pdp__block{padding-top:var(--e3);border-top:1px solid var(--s-line)}
+.pg-ficha .ds-pdp__label{font-size:var(--f-xs);letter-spacing:.08em;color:var(--s-mut);margin-bottom:var(--e2)}
+.pg-ficha .ds-pdp__row{font-size:var(--f-sm)}
+.pg-ficha .ds-colors{gap:var(--e2)}
+.pg-ficha .ds-color{width:var(--tap);height:var(--tap);min-width:var(--tap)}
+.pg-ficha .ds-color--texto{width:auto;padding:0 var(--e4);border-radius:var(--r-pill);background:transparent;
+  color:var(--s-ink);font-family:inherit;font-size:var(--f-sm);font-weight:700;text-transform:capitalize;
+  border:1px solid var(--s-mut);box-shadow:none}
+.pg-ficha .ds-color--texto.is-on{background:var(--s-lime);border-color:var(--s-lime);color:var(--s-on-lime);box-shadow:none}
+.pg-ficha .ds-colors__nombre{flex:0 0 100%;margin:0;font-size:var(--f-xs);color:var(--s-mut)}
+.pg-ficha .ds-size{min-width:var(--tap);min-height:var(--tap);border-radius:var(--r-pill);font-size:var(--f-sm)}
+@media(max-width:720px){
+  .pg-ficha .ds-wa{padding:var(--e3) var(--gut);padding-bottom:max(var(--e3),env(safe-area-inset-bottom));
+    background:var(--s-bg);border-top:1px solid var(--s-line)}
+  .pg-ficha .ds-wa__price{display:none}
+  .pg-ficha .ds-wa-pad{height:calc(var(--tap) + var(--e5))}
+  .flota.flota--ficha{bottom:calc(var(--tap) + var(--e5) + var(--e4))}
+}
+
+/* ---------- flotantes ---------- */
+.flota{right:var(--e4);bottom:var(--e4)}
+.wa-flota{width:var(--tap);height:var(--tap);box-shadow:var(--sh)}
+
+/* ---------- contraste del botón «Ver en Instagram» (inicio) ---------- */
+.ds a.reel__ph{color:var(--s-on-lime)}
+
+/* ---------- aviso ---------- */
+.aviso-pedido{bottom:calc(var(--tap) + var(--e6));border-radius:var(--r-pill);font-size:var(--f-sm);
+  letter-spacing:0;text-transform:none;padding:var(--e3) var(--e5)}
+
+/* ---------- carrito (cajón) ---------- */
+.car{width:min(440px,100vw);background:var(--s-bg);border-left:1px solid var(--s-line)}
+.car__cab{padding:var(--e3) var(--e5)}
+.car__t{font-size:var(--f-h3);line-height:var(--lh-tit)}
+.car__x{width:var(--tap);height:var(--tap);font-size:var(--f-xl)}
+.car__cuerpo{padding:var(--e4) var(--e5);gap:var(--e4)}
+.car__pie{padding:var(--e4) var(--e5);gap:var(--e2)}
+.car-vacio{font-size:var(--f-md)}
+.car-item{grid-template-columns:64px minmax(0,1fr) auto;gap:var(--e3);padding-bottom:var(--e4);border-bottom:1px solid var(--s-line)}
+.car-item__foto{width:64px;height:64px;border-radius:var(--r);background:var(--s-panel)}
+.car-item__t{font-size:var(--f-sm);letter-spacing:0;text-transform:none;font-weight:800}
+.car-item__m{font-size:var(--f-xs)}
+.car-item__ref{font-family:inherit;font-size:var(--f-xs);letter-spacing:0}
+.car-item__sub{font-family:inherit;font-size:var(--f-md);font-weight:800}
+.car-item__der{gap:var(--e1)}
+.car-item__quitar{min-height:var(--tap);min-width:var(--tap);padding:0 var(--e2);border:0;font-size:var(--f-xs);
+  text-transform:none;letter-spacing:0;text-decoration:underline;color:var(--s-mut)}
+.car-qty{margin-top:var(--e2);border-radius:var(--r-pill);overflow:hidden;border:1px solid var(--s-line)}
+.car-qty button{width:var(--tap);height:var(--tap);font-size:var(--f-lg)}
+.car-qty input{width:56px;height:var(--tap);font-family:inherit;font-size:var(--f-md);font-weight:800}
+.car-total{font-size:var(--f-sm);letter-spacing:0;text-transform:none;color:var(--s-mut)}
+.car-total__n{font-family:inherit;font-size:var(--f-xl);font-weight:800}
+.car-enviar{min-height:var(--tap);font-size:var(--f-sm);border-radius:var(--r-pill);text-transform:none;letter-spacing:0}
+.car-vaciar{min-height:var(--tap);font-size:var(--f-sm);letter-spacing:0;text-transform:none;text-decoration:underline}
+.car-confirma{display:grid;grid-template-columns:1fr 1fr;gap:var(--e2);align-items:center;
+  padding:var(--e3);border:1px solid var(--s-lime);border-radius:var(--r)}
+.car-confirma span{grid-column:1/-1;font-size:var(--f-sm);font-weight:700}
+.car-confirma .ds-btn{min-height:var(--tap);font-size:var(--f-sm);border-radius:var(--r-pill);padding:0 var(--e3);text-transform:none;letter-spacing:0}
+
+/* ---------- popup de registro: tarjeta inferior compacta en celular ----------
+   [PENDIENTE: decisión de Jose] solo cambia la presentación; lógica, textos y casilla Ley 1581 intactos. */
+.reg__x{width:var(--tap);height:var(--tap);top:var(--e1);right:var(--e1);font-size:var(--f-xl)}
+.reg__t{font-size:var(--f-h3);line-height:var(--lh-tit)}
+.reg__p{font-size:var(--f-sm)}
+.reg-campo span{font-size:var(--f-xs)}
+.reg-campo input{min-height:var(--tap);font-size:var(--f-md);border-radius:var(--r)}
+.reg-datos{font-size:var(--f-xs);min-height:var(--tap);align-items:center}
+.reg-error{font-size:var(--f-sm)}
+.reg-enviar,.reg-luego{min-height:var(--tap);font-size:var(--f-sm);border-radius:var(--r-pill);text-transform:none;letter-spacing:0}
+@media(max-width:640px){
+  .reg-fondo{display:none}
+  .reg{left:var(--e3);right:var(--e3);top:auto;bottom:calc(var(--tap) + var(--e5) + var(--e4));
+    width:auto;max-height:45vh;padding:var(--e4) var(--e4) var(--e2);border-radius:var(--r);
+    box-shadow:var(--sh);transform:translateY(16px)}
+  .reg.abierto{transform:none}
+  .reg__t{max-width:none;padding-right:var(--tap)}
+  .reg-campo{margin-top:var(--e2)}
+  .reg-datos{margin-top:var(--e3)}
+  .reg-enviar{margin-top:var(--e3)}
+  .reg-luego{margin-top:0}
+}
+
+/* ---------- legal ---------- */
+.pg-legal .legal-aviso{margin-top:var(--e4);padding:var(--e3) var(--e4);border-radius:var(--r);font-size:var(--f-sm)}
+.pg-legal .legal-fecha{font-family:inherit;font-size:var(--f-xs);margin-top:var(--e3)}
+.pg-legal .legal-indice{gap:var(--e2);margin-top:var(--e4)}
+.pg-legal .legal-indice a{display:inline-flex;align-items:center;min-height:var(--tap);padding:0 var(--e4);
+  border-radius:var(--r-pill);font-size:var(--f-sm);font-weight:700}
+.pg-legal .legal-doc{margin-top:var(--e7);padding-top:var(--e7)}
+.pg-legal .legal-doc h2.ds-title{font-size:var(--f-h2);line-height:var(--lh-tit)}
+.pg-legal .legal-doc .ds-intro,.pg-legal .legal-sec p,.pg-legal .legal-sec li{font-size:var(--f-md);line-height:var(--lh-txt)}
+.pg-legal .legal-sec{margin-top:var(--e5)}
+.pg-legal .legal-sec h3{font-family:var(--font);font-size:var(--f-lg);font-weight:800;letter-spacing:0;text-transform:none}
+.pg-legal .legal-sec a,.pg-legal .legal-aviso a{display:inline-block;min-height:var(--tap);line-height:var(--tap)}
+
+/* contador del carrito en la nav: nunca bajo 12 px */
+.t-count{font-size:var(--f-xs);min-width:20px;height:20px}
+.pg-cat .cat-grupo--buscar .cat-buscar{flex:1 1 100%;min-width:0}
+.cat-panel__n[hidden]{display:none}
+
+/* ficha de un diseño retirado «por ahora» */
+.ficha-retirada{display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--e4);padding:var(--e7) var(--e4)}
+.ficha-retirada h3{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:var(--f-h2);line-height:var(--lh-tit);color:var(--s-ink)}
+.ficha-retirada p{font-size:var(--f-lg);line-height:var(--lh-txt);color:var(--s-mut);max-width:44ch}
+.ficha-retirada__btns{display:flex;flex-wrap:wrap;gap:var(--e3);justify-content:center;margin-top:var(--e2)}
+
+/* grupo de filtro vacío (p. ej. Género cuando solo queda un valor): sin espacio */
+.cat-grupo:empty{display:none}
+
+/* r4 (28/10/2026): tarjeta con tomas: al pasar el cursor, la prenda sola se funde con la modelo (escritorio, 0 créditos).
+   29/10/2026: una foto «puesta» por color (lleva is-on la del color que se ve) y botón «Puesta / Prenda» en celular. */
+.ds-card__img--puesta{opacity:0;transition:opacity .35s ease;object-fit:cover;object-position:50% 18%}
+.ds-card__media .ds-card__img--puesta.is-on{opacity:0}
+.ds-card__media.ver-puesta .ds-card__img--puesta.is-on{opacity:1}
+.ds-card__media.ver-puesta .ds-card__img.is-on:not(.ds-card__img--puesta){opacity:0}
+.ds-card__puesta{position:absolute;left:var(--e2);bottom:var(--e2);z-index:3;min-height:var(--tap);padding:0 var(--e4);
+  border:1px solid var(--s-line);border-radius:var(--r-pill);background:rgba(27,29,30,.82);color:var(--s-ink);
+  font-family:inherit;font-size:var(--f-xs);font-weight:800;letter-spacing:.04em;cursor:pointer}
+.ds-card__puesta[aria-pressed="true"]{background:var(--s-lime);border-color:var(--s-lime);color:var(--s-on-lime)}
+.ds-card__puesta[hidden]{display:none}
+@media(hover:hover) and (pointer:fine){.ds-card__puesta{display:none}}
+
+/* r4 (29/10/2026): fila de categorías siempre a la vista + precio de lo que se ve */
+.cat-chips{display:flex;gap:var(--e2);overflow-x:auto;scrollbar-width:none;padding-bottom:var(--e2);margin-bottom:var(--e3);-webkit-overflow-scrolling:touch}
+.cat-chips::-webkit-scrollbar{display:none}
+.cat-chip{flex:none;display:inline-flex;align-items:center;gap:var(--e2);min-height:var(--tap);padding:0 var(--e4);
+  border:1px solid var(--s-line);border-radius:var(--r-pill);background:transparent;color:var(--s-ink);
+  font-family:inherit;font-size:var(--f-sm);font-weight:700;cursor:pointer;white-space:nowrap}
+.cat-chip small{font-size:var(--f-xs);color:var(--s-mut);font-weight:600}
+.cat-chip:hover{border-color:var(--s-lime)}
+.cat-chip[aria-pressed="true"]{background:var(--s-lime);border-color:var(--s-lime);color:var(--s-on-lime)}
+.cat-chip[aria-pressed="true"] small{color:var(--s-on-lime)}
+.pg-cat .cat-precio{font-family:inherit;font-size:var(--f-md);font-weight:800;color:var(--s-lime);letter-spacing:0;text-transform:none}
+.pg-cat .cat-precio:empty{display:none}
+
+/* r4 (29/10/2026): «Más <categoría>» en la ficha: tarjetas iguales a las del catálogo */
+.pdp-mas{margin-top:var(--e8);padding-top:var(--e6);border-top:1px solid var(--s-line)}
+.pdp-mas[hidden]{display:none}
+.pdp-mas__t{font-size:var(--f-h3);line-height:var(--lh-tit);margin-bottom:var(--e5)}
+.pdp-mas .ds-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e5) var(--e3)}
+@media(min-width:721px){.pdp-mas .ds-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--e6) var(--e4)}}
+
+/* ---------- r4e (29/10/2026 14:12:43): catálogo «como las referencias» que mandó Jose (Strada, Wanaawaa, Navissi), con los colores de TUENTI.
+   Jose: «no me gusta para nada como se ve mira estas referencias para que busques inspiracion».
+   Forma copiada: título centrado; arriba solo buscar y «Filtros» (el panel sale de lado, ya no ocupa la columna izquierda);
+   categorías como pestañas de texto; rejilla de 4 (2 en celular) con fotos altas de la modelo y poco espacio entre ellas;
+   debajo de la foto solo el nombre en mayúscula pequeña, el precio y cuántos colores. Sin etiqueta, sin botones.
+   ?catalogo=a = el de anoche. ---------- */
+.cat-ref .cat-cab{padding-top:var(--e6);padding-bottom:var(--e3)}
+.cat-ref .cat-cab .ds-title{text-align:center;font-size:clamp(28px,4vw,44px)}
+.cat-ref .cat-cuerpo .ds-wrap.cat-layout{max-width:1440px;padding-inline:clamp(16px,2vw,32px);display:block}
+.cat-ref .cat-panel{position:static}
+.cat-ref .cat-barra{justify-content:space-between;align-items:center;margin-bottom:var(--e3)}
+.cat-ref .cat-grupo--buscar{flex:0 1 320px}
+.cat-ref .cat-panel__toggle{display:inline-flex;border:0;background:none;padding:0 var(--e2);text-transform:uppercase;
+  font-size:var(--f-sm);letter-spacing:.08em;font-weight:700;color:var(--s-ink)}
+.cat-ref .cat-panel__toggle::before{content:"";width:18px;height:12px;flex:none;
+  background:linear-gradient(currentColor,currentColor) 0 0/100% 2px no-repeat,linear-gradient(currentColor,currentColor) 0 5px/70% 2px no-repeat,linear-gradient(currentColor,currentColor) 0 10px/40% 2px no-repeat}
+.cat-ref .cat-panel__in{display:none}
+.cat-ref .cat-panel__in.abierto{display:block;position:fixed;top:0;right:0;bottom:0;left:auto;width:min(380px,100vw);max-height:none;z-index:200;
+  overflow-y:auto;padding:var(--e6) var(--e5) 0;background:var(--s-panel);border:0;border-left:1px solid var(--s-line);border-radius:0;box-shadow:var(--sh)}
+.cat-ref .cat-aplicar{display:inline-flex}
+.cat-ref .cat-acciones{position:sticky;bottom:0;background:var(--s-panel);padding-bottom:max(var(--e3),env(safe-area-inset-bottom))}
+.cat-ref .cat-fondo.abierto{display:block;position:fixed;inset:0;z-index:190;background:rgba(0,0,0,.55)}
+.cat-ref .cat-chips{justify-content:center;gap:var(--e5);border-bottom:1px solid var(--s-line);margin-bottom:var(--e4);padding-bottom:0}
+.cat-ref .cat-chip{background:none;border:0;border-bottom:2px solid transparent;border-radius:0;padding:0 var(--e1);
+  text-transform:uppercase;font-size:var(--f-sm);letter-spacing:.08em;font-weight:600;color:var(--s-mut)}
+.cat-ref .cat-chip small{display:none}
+.cat-ref .cat-chip:hover{color:var(--s-ink);border-color:transparent}
+.cat-ref .cat-chip[aria-pressed="true"]{background:none;color:var(--s-ink);border-bottom-color:var(--s-lime)}
+@media(max-width:720px){.cat-ref .cat-chips{justify-content:flex-start;gap:var(--e4)}}
+.cat-ref .ds-group-head{border-bottom:0;margin-bottom:var(--e4);padding-bottom:0}
+.cat-ref .ds-group-head h2{font-size:var(--f-lg)}
+.cat-ref .cat-precio{font-size:var(--f-sm)}
+body.cat-ref.pg-cat .ds-grid,body.cat-ref.pg-cat .cat-layout .ds-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e6) 6px}
+@media(min-width:900px){body.cat-ref.pg-cat .ds-grid,body.cat-ref.pg-cat .cat-layout .ds-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--e7) 8px}}
+.cat-ref .ds-card__media{aspect-ratio:4/5;border-radius:0;background:#fff}
+.cat-ref .ds-card__img{object-fit:cover}
+.cat-ref .ds-card__body{margin-top:var(--e3);gap:2px;padding-inline:2px}
+.cat-ref .ds-card__tag,.cat-ref .ds-card__puesta,.cat-ref .ds-card .pedido-acc,.cat-ref .ds-card__dots{display:none}
+.cat-ref .ds-card__title{font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;line-height:1.35}
+.cat-ref .ds-card__price{font-size:13px;font-weight:700;color:var(--s-lime)}
+.cat-ref .ds-card__desc{font-size:12px;color:var(--s-mut)}
+@media(min-width:900px){.cat-ref .ds-card__title,.cat-ref .ds-card__price{font-size:14px}}
+.cat-ref #cat-panel{min-height:0!important}
+/* r4e: la foto de la modelo aparece de una (sin fundido al cargar: si el fundido se quedaba a medias la tarjeta salía en blanco); el fundido queda solo al pasar el cursor */
+.cat-ref .ds-card__img{transition:none}
+.cat-ref .ds-card:hover .ds-card__img{transition:opacity .3s ease}
+
+/* r4f (29/10/2026 14:21:49): de entrada la PRENDA SOLA (decisión de Jose 15/10/2026 22:52:02, recordada hoy). La toma de la prenda es cuadrada:
+   va entera sobre blanco (contain), sin recortar las mangas; la foto real del lote 3 sigue llenando la tarjeta. */
+.cat-ref .ds-card__img[src*="tomas/"]:not(.ds-card__img--puesta){object-fit:contain;padding:0}
+/* r4g (29/10/2026 14:30:55): la fila «Más <categoría>» de la ficha usa la misma tarjeta del catálogo aprobado (body.cat-ref en producto.html); la etiqueta de categoría de arriba de la ficha se sigue viendo. */
+.pg-ficha.cat-ref .pdp-cat{display:inline-flex}
+
+/* ---------- r4h (29/10/2026 14:35:42): FICHA rediseñada «como las referencias» (Strada, Wanaawaa, Navissi), colores de TUENTI.
+   Jose: «muestrame un rediseno a ver como se veria». Forma copiada: miniaturas en columna a la izquierda de la foto grande
+   (en celular, debajo), foto sin etiquetas encima, nombre en letra sobria (no gigante), precio, color, y los botones ANTES
+   de los detalles (material, estampado, envío, cambios), que van compactos. Prenda sola primero (regla del 15/10).
+   ?ficha=a = la de antes. ---------- */
+.ficha-ref .volver{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--s-mut);font-weight:600}
+.ficha-ref .volver::before{content:"‹ "}
+.ficha-ref .gal__vista,.ficha-ref .gal__n{display:none}
+.ficha-ref .ds-gallery__main.gal-on{border-radius:0}
+.ficha-ref .pdp-cat{background:none!important;border:0!important;padding:0!important;font-size:12px;letter-spacing:.1em;color:var(--s-mut);text-transform:uppercase}
+.ficha-ref .ds-pdp__title{font-family:var(--font);font-weight:700;font-size:22px;line-height:1.3;letter-spacing:.03em;text-transform:uppercase;margin-top:var(--e2)}
+.ficha-ref .ds-price--lg{font-size:22px}
+.ficha-ref .ds-ref{display:none}
+.ficha-ref .ds-pdp__info{display:flex;flex-direction:column}
+.ficha-ref .ds-pdp__block:has(#pdp-detalles){order:9}
+.ficha-ref .ds-pdp__label{font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.ficha-ref #pdp-detalles{font-size:13px}
+.ficha-ref #pdp-detalles dt,.ficha-ref #pdp-detalles dd{font-size:13px;line-height:1.55}
+@media(min-width:900px){
+  .ficha-ref .ds-wrap{max-width:1320px}
+  .ficha-ref .ds-pdp{grid-template-columns:minmax(0,1.3fr) minmax(320px,.7fr);gap:56px}
+  .ficha-ref .ds-gallery{display:grid;grid-template-columns:84px minmax(0,1fr);gap:12px;align-items:start}
+  .ficha-ref .ds-gallery__thumbs{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:10px;margin:0;overflow:visible}
+  .ficha-ref .ds-gallery__thumb{width:84px;height:105px;flex:none;border-radius:0}
+  .ficha-ref .ds-gallery__main{grid-column:2;grid-row:1}
+  .ficha-ref .ds-wa{order:5}
+  .ficha-ref .ds-wa .ds-btn{width:100%;min-height:52px}
+  .ficha-ref .ds-wa__in > div{display:grid;gap:10px}
+}
+
+/* ---------- r4i (29/10/2026 14:37:55): columna derecha de la ficha «como las referencias» (Jose: «debes de rediseñar también la otra parte de la tarjeta»).
+   Color en una línea («COLOR: BEIGE») con círculos más grandes y anillo lima; dos botones del mismo ancho, altos, uno sobre otro;
+   los detalles en desplegables con + / − (como la «Descripción» de Strada). ---------- */
+.ficha-ref .ds-colors__nombre{display:none}
+.ficha-ref #pdp-label-color b{color:var(--s-ink);font-weight:700}
+.ficha-ref .ds-colors{gap:12px}
+.ficha-ref .ds-color{width:36px;height:36px;border:1px solid var(--s-line);box-shadow:none}
+.ficha-ref .ds-color.is-on{box-shadow:0 0 0 2px var(--s-bg),0 0 0 4px var(--s-lime)}
+.ficha-ref .ds-pdp__block:has(#pdp-detalles) > .ds-pdp__label,.ficha-ref #pdp-detalles{display:none}
+.ficha-ref .pdp-acord{border-top:1px solid var(--s-line)}
+.ficha-ref .pdp-acord__i{border-bottom:1px solid var(--s-line)}
+.ficha-ref .pdp-acord__i summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:var(--tap);
+  font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--s-ink)}
+.ficha-ref .pdp-acord__i summary::-webkit-details-marker{display:none}
+.ficha-ref .pdp-acord__i summary::after{content:"+";font-size:20px;font-weight:400;color:var(--s-lime);line-height:1}
+.ficha-ref .pdp-acord__i[open] summary::after{content:"−"}
+.ficha-ref .pdp-acord__c{margin:0 0 var(--e4)}
+.ficha-ref .pdp-acord__c .ds-pdp__row{display:flex;justify-content:space-between;gap:var(--e4);padding:6px 0;border:0}
+.ficha-ref .pdp-acord__c dt{font-size:13px;color:var(--s-mut)}
+.ficha-ref .pdp-acord__c dd{font-size:13px;line-height:1.6;text-align:right;margin:0;color:var(--s-ink)}
+.ficha-ref .pdp-acord__i:not(:first-child) .pdp-acord__c dt{display:none}
+.ficha-ref .pdp-acord__i:not(:first-child) .pdp-acord__c dd{text-align:left;color:var(--s-mut)}
+@media(min-width:900px){
+  .ficha-ref .ds-wa .pedido-acc{display:grid;grid-template-columns:1fr;gap:10px}
+  .ficha-ref .ds-wa .pedido-acc .ds-btn{width:100%;min-height:54px;font-size:15px;letter-spacing:.02em}
+  .ficha-ref .ds-pdp__info{gap:var(--e5)}
+}
+.ficha-ref .ds-wa-pad{order:10}

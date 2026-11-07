@@ -1,0 +1,713 @@
+/* ================================================================
+   TUENTI · landing.css
+   Piezas de página que no están en componentes.css. Compartido por
+   index.html y catalogo.html.
+
+   Móvil primero. Los tamaños de imagen se controlan con aspect-ratio
+   por breakpoint, NUNCA con alto en píxeles: vertical en móvil,
+   panorámico en escritorio.
+   ================================================================ */
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+
+/* Contenedor de página: por encima de 1440px el contenido deja de
+   estirarse y queda centrado. */
+.page{max-width:1440px;margin-inline:auto;position:relative;
+  background:var(--c-bg);overflow:clip}
+
+section{padding:var(--sp-section) 0}
+
+[data-reveal]{opacity:0;transform:translateY(22px);
+  transition:opacity var(--dur-slow) var(--ease),transform var(--dur-slow) var(--ease)}
+[data-reveal].in{opacity:1;transform:none}
+[data-reveal][data-delay="1"]{transition-delay:.09s}
+[data-reveal][data-delay="2"]{transition-delay:.18s}
+
+/* ================================================================
+   HÉROE  ·  vertical en móvil, panorámico en escritorio
+   ================================================================ */
+/* `width:100%` es obligatorio junto a aspect-ratio + min-height: sin él, cuando
+   el mínimo de alto manda, el navegador ensancha la caja para conservar el ratio
+   y la sección se sale del contenedor. */
+.hero{position:relative;width:100%;aspect-ratio:3/4;min-height:460px;
+  overflow:hidden;display:flex;align-items:flex-end}
+.hero-capa{position:absolute;inset:0;background-size:cover;
+  background-position:center 30%;opacity:0;transition:opacity 1.4s var(--ease)}
+.hero-capa.on{opacity:1}
+.hero::after{content:"";position:absolute;inset:0;background:var(--overlay-hero)}
+.hero-in{position:relative;z-index:2;color:#fff;padding:0 0 clamp(2rem,5vw,4rem)}
+.hero-in .ds-eyebrow{color:rgba(255,255,255,.85)}
+.hero-in h1{font-family:var(--font-display);font-weight:var(--w-bold);
+  font-size:var(--fs-h1);line-height:var(--lh-hero);letter-spacing:var(--tr-tight);
+  margin:.8rem 0 0;color:#fff}
+.hero-in .baja{max-width:40ch;margin-top:1rem;color:rgba(255,255,255,.9);font-size:var(--fs-lead)}
+.hero-in .ds-btn{margin-top:1.6rem}
+
+/* ================================================================
+   FRANJA DE CATEGORÍAS  ·  las seis
+   Móvil: carrusel horizontal. Escritorio: filas.
+   Prenda a sangre, nombre abajo a la izquierda, sin tarjeta ni marco.
+
+   Sin velo plano. Antes la foto llevaba filter:brightness(.72), que
+   apagaba la prenda entera para dar contraste a una sola palabra. Ahora
+   el nombre baja al pie y el contraste lo da --overlay-cat, un degradado
+   que solo densifica la banda inferior. El encuadre de la foto
+   (object-position:center 38%) deja la prenda arriba, fuera del degradado.
+   ================================================================ */
+.cats{padding:0;display:flex;gap:2px;background:var(--c-line-soft);
+  overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch}
+.cats::-webkit-scrollbar{display:none}
+.cat{position:relative;flex:0 0 74%;aspect-ratio:4/5;scroll-snap-align:start;
+  overflow:hidden;background:var(--c-fill);display:flex;align-items:flex-end}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:center 38%;transition:transform 1s var(--ease)}
+.cat:hover img{transform:scale(1.05)}
+.cat::after{content:"";position:absolute;inset:0;background:var(--overlay-cat);
+  pointer-events:none}
+/* Texto grande a efectos de WCAG: ≥18.66px en negrita (14pt bold), así el
+   umbral AA que le aplica es 3:1 y no 4.5:1. Con --fs-body (16px) NO lo era. */
+.cat span{position:relative;z-index:2;color:#fff;font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:var(--tr-wide);
+  font-size:clamp(1.2rem,2.4vw,1.45rem);line-height:1.2;
+  padding:0 1rem 1.1rem}
+
+/* ================================================================
+   COLECCIÓN
+   ================================================================ */
+.col-mas-fila{display:flex;justify-content:center;margin-top:var(--sp-7)}
+.col-mas-fila .ds-btn{min-width:min(320px,100%)}
+
+/* ================================================================
+   PRODUCTO DESTACADO
+   ================================================================ */
+.destacado{background:var(--c-surface);border-block:1px solid var(--c-line)}
+.destacado .in{display:grid;grid-template-columns:1fr;gap:var(--sp-6);align-items:center}
+/* Se adapta al número de colores del diseño destacado: con una rejilla fija de
+   3 columnas, un diseño de un solo color dejaba dos huecos vacíos. */
+.destacado .fotos{display:grid;gap:2px;
+  grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr))}
+.destacado .fotos div{aspect-ratio:1/1;background:var(--c-fill);overflow:hidden}
+.destacado .fotos img{width:100%;height:100%;object-fit:contain}
+.destacado .txt p{color:var(--c-muted);max-width:44ch;margin-top:1rem}
+.destacado .txt .ds-btn{margin-top:1.6rem}
+
+/* ================================================================
+   PRÓXIMO DISEÑO
+   ================================================================ */
+.proximo{background:var(--c-surface);border-block:1px solid var(--c-line)}
+.prox-teaser{position:relative;overflow:hidden;border:1px solid var(--c-line)}
+.prox-fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.prox-fotos div{aspect-ratio:3/4;overflow:hidden;background:var(--c-fill)}
+/* blur fuerte: el diseño no se puede adivinar */
+.prox-fotos img{width:100%;height:100%;object-fit:cover;
+  filter:blur(26px) saturate(.7) brightness(.62);transform:scale(1.25)}
+.prox-capa{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:.9rem;text-align:center;
+  padding:1.4rem;color:var(--c-on-dark);background:rgba(0,0,0,.34)}
+.prox-candado{display:grid;place-items:center;width:52px;height:52px;
+  border:1px solid rgba(255,255,255,.45);border-radius:var(--radius-pill);
+  color:var(--c-on-dark)}
+.prox-candado svg{width:24px;height:24px}
+.prox-label{font-size:var(--fs-eyebrow);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:var(--tr-eyebrow);color:rgba(255,255,255,.85)}
+
+/* reloj */
+.prox-reloj{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+.prox-caja{min-width:62px;padding:.5rem .4rem;border:1px solid rgba(255,255,255,.32);
+  background:rgba(0,0,0,.42)}
+.prox-caja b{display:block;font-family:var(--font-mono);font-weight:var(--w-medium);
+  font-size:1.5rem;line-height:1.15;letter-spacing:.02em;
+  font-variant-numeric:tabular-nums;color:var(--c-on-dark)}
+.prox-caja span{display:block;margin-top:.2rem;font-family:var(--font-mono);
+  font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.7)}
+
+/* estado «ya llegaron» */
+.prox-llego{display:flex;flex-direction:column;align-items:center;gap:.7rem}
+.prox-llego h3{font-family:var(--font-display);font-weight:var(--w-bold);
+  font-size:var(--fs-h3);color:var(--c-on-dark)}
+.prox-llego p{color:rgba(255,255,255,.85);font-size:.9rem;max-width:36ch}
+.prox-llego .ds-btn{margin-top:.4rem}
+
+/* cuadrícula de videos e imágenes de modelos */
+.prox-media-cab{margin-top:var(--sp-7)}
+.prox-media-t{font-family:var(--font-display);font-weight:var(--w-bold);
+  font-size:var(--fs-h3);line-height:var(--lh-tight);margin-top:.4rem}
+.prox-media{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;
+  margin-top:var(--sp-5)}
+.prox-slot{position:relative;aspect-ratio:4/5;overflow:hidden;
+  background:var(--c-fill);display:grid;place-items:center}
+.prox-slot img,.prox-slot video{width:100%;height:100%;object-fit:cover}
+.prox-slot--vacio{background:var(--c-bg);border:1px dashed var(--c-line);
+  flex-direction:column;gap:.5rem;padding:1rem;text-align:center}
+/* el marcador no puede recortarse en las casillas estrechas de móvil */
+.prox-slot--vacio .ds-missing{white-space:normal;max-width:100%;overflow-wrap:anywhere}
+.prox-slot__tipo{position:absolute;top:.5rem;left:.5rem;font-family:var(--font-mono);
+  font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--c-muted)}
+
+/* ================================================================
+   BANNER DE HISTORIA
+   ================================================================ */
+/* Mismo criterio que el héroe: sin velo plano. Antes era rgba(0,0,0,.34)
+   sobre la foto completa con el texto centrado — apagaba la prenda de punta
+   a punta. Ahora el bloque de texto baja a la esquina inferior izquierda y
+   --overlay-banner concentra ahí la densidad, dejando limpia la zona alta
+   y derecha, que es donde queda la prenda con object-position:center 32%. */
+.banner{position:relative;width:100%;aspect-ratio:4/5;min-height:420px;
+  display:flex;align-items:flex-end;overflow:hidden;color:#fff;padding:0}
+.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:center 32%}
+.banner::after{content:"";position:absolute;inset:0;background:var(--overlay-banner);
+  pointer-events:none}
+.banner-in{position:relative;z-index:2;padding:0 0 clamp(2rem,5vw,4rem);
+  text-align:left}
+.banner-in .ds-eyebrow{color:rgba(255,255,255,.85)}
+.banner-in h2{font-family:var(--font-display);font-weight:var(--w-bold);
+  font-size:var(--fs-banner);line-height:var(--lh-tight);letter-spacing:var(--tr-tight);
+  margin-top:.6rem;color:#fff}
+.banner-in p{max-width:44ch;margin:1rem 0 0;color:rgba(255,255,255,.9)}
+.banner-in .ds-btn{margin-top:1.6rem}
+
+/* ================================================================
+   PROMESAS
+   ================================================================ */
+.promesas{border-block:1px solid var(--c-line);background:var(--c-bg);padding:0}
+.promesas .ds-wrap{display:grid;grid-template-columns:1fr;gap:0}
+.promesa{text-align:center;padding:1.4rem 1rem;border-bottom:1px solid var(--c-line-soft)}
+.promesa:last-child{border-bottom:0}
+.promesa b{display:block;font-weight:var(--w-bold);text-transform:uppercase;
+  letter-spacing:.12em;font-size:.8rem}
+.promesa span{display:block;margin-top:.5rem;color:var(--c-muted);font-size:.85rem}
+
+/* ================================================================
+   LOCAL
+   ================================================================ */
+.local-in{display:grid;grid-template-columns:1fr;gap:var(--sp-6);align-items:stretch}
+.hfila{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;
+  border-bottom:1px solid var(--c-line-soft);font-size:.9rem}
+.hfila:last-child{border-bottom:0}
+.hfila .d{color:var(--c-muted);text-transform:uppercase;letter-spacing:.06em;font-size:.78rem}
+.hfila .h{font-family:var(--font-mono);font-size:.8rem;line-height:1.3;letter-spacing:.02em}
+.abre{display:inline-flex;gap:.5rem;align-items:center;font-size:.7rem;font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:.12em;color:var(--c-muted);margin-bottom:1.4rem}
+.abre .punto{width:7px;height:7px;border-radius:var(--radius-pill);background:var(--c-faint)}
+.abre.abierto .punto{background:var(--c-ok)}
+.abre.cerrado .punto{background:var(--c-alert)}
+.dir{margin-top:1.8rem}
+.dir .val{font-size:var(--fs-lead);margin-top:.3rem}
+.como{display:inline-flex;gap:.4rem;margin-top:1rem;font-size:.72rem;font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:.1em;color:var(--c-ink);
+  border:0;border-bottom:1px solid var(--c-ink);padding-bottom:.15rem;background:none;cursor:pointer}
+.mapa{aspect-ratio:4/3;background:var(--c-fill);border:1px solid var(--c-line);
+  display:grid;place-items:center;padding:1rem}
+.mapa iframe{width:100%;height:100%;border:0;filter:var(--img-map)}
+
+/* ================================================================
+   CONTACTO
+   ================================================================ */
+.cita{text-align:center;background:var(--c-dark);color:var(--c-on-dark)}
+.cita .ds-eyebrow{color:var(--c-on-dark-muted)}
+.cita .ds-title{color:var(--c-on-dark);margin-top:.8rem}
+.cita p{color:var(--c-on-dark-muted);max-width:44ch;margin:1.1rem auto 2rem}
+.cita .acc{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+
+/* ================================================================
+   INSTAGRAM
+   ================================================================ */
+.red-usuario{margin-top:.4rem;font-family:var(--font-mono);font-size:var(--fs-small);
+  line-height:1.3;letter-spacing:.08em;color:var(--c-muted)}
+.redes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:var(--sp-6)}
+.rg{position:relative;aspect-ratio:1;overflow:hidden;background:var(--c-fill);display:block}
+.rg img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.rg:hover img{transform:scale(1.06)}
+.rg .ic{position:absolute;inset:0;display:grid;place-items:center;color:#fff;opacity:0;
+  background:rgba(0,0,0,.4);transition:opacity var(--dur-fast)}
+.rg:hover .ic{opacity:1}
+.rg .ic svg{width:26px;height:26px}
+.rg__falta{position:absolute;left:.35rem;bottom:.35rem;z-index:3}
+.redes-cta{display:flex;gap:.8rem;justify-content:center;margin-top:var(--sp-6);flex-wrap:wrap}
+
+/* ================================================================
+   FILTROS DEL CATÁLOGO
+   ================================================================ */
+.filtros-barra{position:sticky;top:0;z-index:60;background:var(--c-veil);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--c-line);
+  padding:.9rem 0 .2rem}
+.filtros-barra .ds-filters{margin-bottom:0}
+.cat-vacio{border:1px dashed var(--c-line);padding:clamp(2.4rem,8vw,4rem) 1.4rem;
+  text-align:center;display:flex;flex-direction:column;align-items:center;gap:.8rem}
+.cat-vacio h3{font-family:var(--font-display);font-weight:var(--w-bold);
+  font-size:var(--fs-h3);line-height:var(--lh-tight)}
+.cat-vacio p{color:var(--c-muted);max-width:42ch;font-size:.95rem}
+.cat-vacio .ds-btn{margin-top:.6rem}
+
+/* ================================================================
+   FLOTANTES
+   ================================================================ */
+.flota{position:fixed;right:1.3rem;bottom:1.3rem;z-index:80;
+  display:flex;flex-direction:column;gap:.7rem;align-items:flex-end}
+.wa-flota{display:grid;place-items:center;width:52px;height:52px;border-radius:var(--radius-pill);
+  background:var(--t-wa);color:var(--t-wa-txt);box-shadow:0 14px 30px -10px rgba(0,0,0,.4);
+  transition:transform var(--dur) var(--ease-out)}
+.wa-flota:hover{transform:translateY(-2px) scale(1.05)}
+.wa-flota svg{width:26px;height:26px}
+.wa-flota[aria-disabled="true"]{background:var(--c-bg);color:var(--c-alert);
+  border:1px dashed var(--c-alert);box-shadow:none;cursor:not-allowed}
+.arriba{width:46px;height:46px;display:grid;place-items:center;cursor:pointer;
+  background:var(--c-veil);color:var(--c-ink);border:1px solid var(--c-line);
+  opacity:0;transform:translateY(10px);pointer-events:none;transition:var(--dur) var(--ease)}
+.arriba.ver{opacity:1;transform:none;pointer-events:auto}
+.arriba svg{width:18px;height:18px}
+
+/* ================================================================
+   VISOR DE FOTO
+   ================================================================ */
+.lightbox{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:4vh 4vw;
+  background:rgba(0,0,0,.92);backdrop-filter:blur(8px);cursor:zoom-out;
+  opacity:0;transition:opacity .35s var(--ease)}
+.lightbox.open{display:grid;opacity:1}
+.lightbox img{max-width:100%;max-height:92vh;transform:scale(.96);transition:transform var(--dur) var(--ease-out)}
+.lightbox.open img{transform:none}
+.lightbox .cerrar{position:fixed;top:1.4rem;right:1.6rem;width:44px;height:44px;
+  display:grid;place-items:center;background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.3);color:#fff;cursor:pointer}
+
+/* ================================================================
+   TABLET  ·  ≥721px
+   La imagen se vuelve menos vertical y las categorías pasan a filas.
+   ================================================================ */
+@media(min-width:721px){
+  .hero{aspect-ratio:16/10;min-height:520px}
+  .hero-capa{background-position:center 28%}
+
+  .cats{display:grid;grid-template-columns:repeat(2,1fr);overflow:visible}
+  .cat{flex:none;aspect-ratio:3/2}
+
+  .destacado .in{grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+  .promesas .ds-wrap{grid-template-columns:repeat(3,1fr);gap:2rem}
+  .promesa{padding:2.4rem 1rem;border-bottom:0}
+  .local-in{grid-template-columns:1fr 1.1fr;gap:clamp(2rem,5vw,4rem)}
+  .mapa{aspect-ratio:auto;min-height:380px}
+  .mapa iframe{min-height:380px}
+  .banner{aspect-ratio:16/9;min-height:460px}
+  .prox-media{grid-template-columns:repeat(3,1fr)}
+  .redes-grid{grid-template-columns:repeat(6,1fr)}
+}
+
+/* ================================================================
+   ESCRITORIO  ·  ≥1200px
+   Aquí la foto es claramente panorámica.
+   ================================================================ */
+@media(min-width:1200px){
+  .hero{aspect-ratio:21/9;min-height:560px;max-height:760px}
+  .hero-capa{background-position:center 26%}
+
+  .cats{grid-template-columns:repeat(3,1fr)}
+  .cat{aspect-ratio:3/2}
+
+  .banner{aspect-ratio:21/9;min-height:480px;max-height:640px}
+  .prox-fotos div{aspect-ratio:16/9}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none}
+  .hero-capa{transition:none}
+}
+
+/* ================================================================
+   WORDMARK  ·  TU + ENTI
+   La identidad parte TUENTI en TU·EN·TI y pinta «EN TI» en el verde
+   de acento. Es el uso principal del acento en toda la página; el
+   resto del wordmark queda en blanco.
+   ================================================================ */
+.wm-acento{color:var(--c-accent)}
+
+/* ================================================================
+   SECCIÓN EN CLARO  ·  alternancia blanco / negro
+   Redefine los tokens de color SOLO dentro de la sección. Todo lo
+   que ya usa var(--c-…) se invierte sin tocar una sola regla más.
+
+   ⚠ El verde lima sobre blanco da 1,37:1. NO sirve como texto.
+   Por eso aquí el precio vuelve a tinta y el verde queda para
+   líneas, bordes e iconos, que es lo que permite la identidad.
+   ================================================================ */
+.sec--claro{
+  --c-bg:#FFFFFF;
+  --c-surface:#F4F4F4;
+  --c-fill:#EDEDED;
+  --c-ink:#000000;
+  --c-muted:rgba(0,0,0,.72);
+  --c-faint:rgba(0,0,0,.58);
+  --c-on-dark:#000000;
+  --c-on-dark-muted:rgba(0,0,0,.72);
+  --c-on-dark-faint:rgba(0,0,0,.58);
+  --c-line:rgba(0,0,0,.18);
+  --c-line-soft:rgba(0,0,0,.10);
+  --c-line-on-dark:rgba(0,0,0,.18);
+  --c-veil:rgba(255,255,255,.92);
+  /* #FF6B4A da 2,82:1 sobre blanco y falla AA. Sobre claro, rojo oscuro. */
+  --c-alert:#C4341A;
+  background:#FFFFFF;
+  color:#000000;
+}
+/* El precio es lo único que cambia de criterio entre modos: en negro va
+   en verde, en claro vuelve a tinta porque el verde no pasa contraste. */
+.sec--claro .ds-price,
+.sec--claro .ds-card__price{color:var(--c-ink)}
+
+/* ================================================================
+   REDES  ·  Instagram + TikTok
+   ================================================================ */
+.red-cab{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;
+  margin-bottom:var(--sp-6)}
+.red-usuario{margin:0;font-family:var(--font-mono);font-size:var(--fs-small);
+  line-height:1.3;letter-spacing:.08em;color:var(--c-muted)}
+
+/* ================================================================
+   DESTACADO  ·  solo la prenda
+   Sin antetítulo, sin título, sin texto, sin precio. La foto sola.
+   ================================================================ */
+.destacado{background:var(--c-bg);border-block:1px solid var(--c-line);padding:0}
+.dest-prenda{display:block;position:relative;width:100%;
+  aspect-ratio:4/5;min-height:420px;overflow:hidden;background:var(--c-fill)}
+.dest-prenda img{width:100%;height:100%;object-fit:contain;display:block}
+
+/* ================================================================
+   NUEVOS DISEÑOS  ·  el contador es el protagonista
+   ================================================================ */
+.proximo{padding:0;border-block:1px solid var(--c-line)}
+.prox-teaser{position:relative;overflow:hidden;border:0;
+  min-height:min(88vh,720px);display:grid}
+.prox-fotos{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.prox-fotos div{overflow:hidden;background:var(--c-fill)}
+.prox-fotos img{width:100%;height:100%;object-fit:cover;
+  filter:blur(30px) saturate(.6) brightness(.5);transform:scale(1.3)}
+.prox-capa{position:relative;z-index:2;display:grid;place-items:center;
+  text-align:center;padding:var(--sp-section) 0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,.78))}
+.prox-in{display:flex;flex-direction:column;align-items:center;gap:1.4rem}
+.prox-titulo{font-family:var(--font-display);font-weight:var(--w-bold);
+  font-size:var(--fs-h2);line-height:var(--lh-tight);letter-spacing:var(--tr-tight);
+  max-width:18ch;color:#fff}
+.prox-label{font-size:var(--fs-eyebrow);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:var(--tr-eyebrow);
+  color:rgba(255,255,255,.85)}
+
+/* el reloj: la pieza más grande de la sección */
+.prox-reloj{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+.prox-caja{min-width:clamp(74px,20vw,124px);padding:.9rem .6rem;
+  border:1px solid var(--c-accent);background:rgba(0,0,0,.45)}
+.prox-caja b{display:block;font-family:var(--font-mono);font-weight:var(--w-medium);
+  font-size:clamp(2rem,7vw,3.6rem);line-height:1.05;letter-spacing:.01em;
+  font-variant-numeric:tabular-nums;color:var(--c-accent)}
+.prox-caja span{display:block;margin-top:.35rem;font-family:var(--font-mono);
+  font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.72)}
+.prox-llego{display:flex;flex-direction:column;align-items:center;gap:.9rem}
+.prox-llego h3{font-family:var(--font-display);font-weight:var(--w-bold);
+  font-size:var(--fs-h2);color:#fff}
+.prox-llego p{color:rgba(255,255,255,.85);max-width:36ch}
+
+@media(min-width:721px){
+  .dest-prenda{aspect-ratio:16/9;min-height:520px}
+}
+@media(min-width:1200px){
+  .dest-prenda{aspect-ratio:21/9;min-height:560px;max-height:760px}
+}
+
+/* ================================================================
+   CATÁLOGO  ·  buscador + panel de filtros
+   Escritorio: panel fijo a la izquierda. Móvil: colapsable arriba.
+   ================================================================ */
+.cat-cab{padding-bottom:var(--sp-5)}
+.cat-cuerpo{padding-top:0}
+.cat-layout{display:grid;grid-template-columns:1fr;gap:var(--sp-5)}
+
+.cat-panel__toggle{display:flex;width:100%;align-items:center;justify-content:space-between;
+  gap:.6rem;padding:.85rem 1rem;cursor:pointer;
+  font-family:var(--font);font-size:var(--fs-nav);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:var(--tr-label);
+  color:var(--c-ink);background:none;border:1px solid var(--c-line);
+  border-radius:var(--radius)}
+.cat-panel__toggle:hover{border-color:var(--c-accent)}
+.cat-panel__toggle::after{content:"";width:8px;height:8px;flex:none;
+  border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translate(-2px,-2px);transition:transform var(--dur-fast) var(--ease)}
+.cat-panel__toggle[aria-expanded="true"]::after{transform:rotate(-135deg) translate(-2px,-2px)}
+.cat-panel__n{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;
+  padding:.1rem .4rem;background:var(--c-accent);color:var(--c-accent-ink)}
+.cat-panel__in{display:none;padding-top:var(--sp-4)}
+.cat-panel__in.abierto{display:block}
+
+.cat-grupo{margin-bottom:var(--sp-5)}
+.cat-grupo .ds-pdp__label{display:block;margin-bottom:var(--sp-3)}
+
+/* buscador */
+.cat-buscar{display:flex;align-items:center;gap:.6rem;
+  border:1px solid var(--c-line);padding:.7rem .9rem}
+.cat-buscar:focus-within{border-color:var(--c-accent)}
+.cat-buscar svg{width:16px;height:16px;flex:none;color:var(--c-accent)}
+.cat-buscar input{flex:1 1 auto;min-width:0;border:0;background:none;outline:none;
+  font-family:var(--font);font-size:var(--fs-body);color:var(--c-ink)}
+.cat-buscar input::placeholder{color:var(--c-faint)}
+.cat-buscar input::-webkit-search-cancel-button{filter:invert(1)}
+.sec--claro .cat-buscar input::-webkit-search-cancel-button{filter:none}
+
+/* opciones: casillas rectas, sin color de relleno salvo el activo */
+.cat-op{display:flex;align-items:center;gap:.6rem;padding:.42rem 0;cursor:pointer;
+  font-size:.9rem;color:var(--c-muted)}
+.cat-op:hover{color:var(--c-ink)}
+.cat-op input{position:absolute;opacity:0;width:0;height:0}
+.cat-op__caja{width:15px;height:15px;flex:none;border:1px solid var(--c-line);
+  display:grid;place-items:center;transition:all var(--dur-fast) var(--ease)}
+.cat-op__caja::after{content:"";width:7px;height:7px;background:var(--c-accent);
+  transform:scale(0);transition:transform var(--dur-fast) var(--ease)}
+.cat-op input:checked + .cat-op__caja{border-color:var(--c-accent)}
+.cat-op input:checked + .cat-op__caja::after{transform:scale(1)}
+.cat-op input:checked ~ .cat-op__txt{color:var(--c-ink);font-weight:var(--w-semibold)}
+.cat-op input:focus-visible + .cat-op__caja{outline:2px solid var(--c-ink);outline-offset:2px}
+.cat-op__n{margin-left:auto;font-family:var(--font-mono);font-size:.7rem;
+  letter-spacing:.06em;color:var(--c-faint)}
+
+.cat-limpiar{width:100%;padding:.7rem 1rem;cursor:pointer;
+  font-family:var(--font);font-size:var(--fs-nav);font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:var(--tr-label);
+  color:var(--c-ink);background:none;border:1px solid var(--c-line)}
+.cat-limpiar:hover{border-color:var(--c-accent)}
+
+@media(min-width:900px){
+  .cat-layout{grid-template-columns:250px 1fr;gap:clamp(2rem,4vw,3.5rem);
+    align-items:start}
+  .cat-panel{position:sticky;top:calc(var(--sp-6) + 2.5rem)}
+  .cat-panel__toggle{display:none}
+  .cat-panel__in{display:block;padding-top:0}
+}
+
+/* ================================================================
+   TÍTULO DE LA SECCIÓN DE FOTOS
+   «Porque el colombiano se sabe poner la camiseta» es bastante más
+   largo que el titular anterior. Con --fs-h2 a 375px topaba en 32px
+   y salía en cuatro líneas, la última de una sola palabra.
+
+   · clamp propio, con mínimo más bajo (26px a 375px).
+   · max-width en ch para que el salto lo mande la medida, no la caja.
+   · text-wrap:balance reparte las líneas y evita la palabra huérfana
+     (si el navegador no lo soporta, simplemente no lo aplica).
+   Sigue en Fraunces y en caja de frase: solo cambia el tamaño.
+   ================================================================ */
+#red-titulo{font-size:clamp(1.6rem,4.6vw,3.1rem);max-width:19ch;text-wrap:balance}
+.red-cab{align-items:baseline}
+@media(max-width:520px){
+  .red-cab{flex-direction:column;gap:.5rem}
+}
+
+/* ================================================================
+   ACCIONES DE PEDIDO  ·  peso visual
+   El verde es ACENTO, no fondo dominante: la acción de acumular va
+   en contorno y solo la principal (WhatsApp) va sólida.
+   ================================================================ */
+/* Agregar al pedido: contorno verde, fondo transparente, texto de tinta.
+   Al hover se rellena de verde con texto del fondo. */
+.ds-btn--acento-linea{background:transparent;color:var(--c-ink);
+  border-color:var(--c-accent)}
+.ds-btn--acento-linea:hover{background:var(--c-accent);color:var(--c-accent-ink);
+  border-color:var(--c-accent)}
+/* Pedir por WhatsApp: sólido verde. Es la acción principal. */
+.ds-btn--acento{background:var(--c-accent);color:var(--c-accent-ink);
+  border-color:var(--c-accent)}
+.ds-btn--acento:hover{background:transparent;color:var(--c-ink)}
+.ds-btn--acento svg{fill:currentColor}
+
+.pedido-acc{display:flex;gap:.5rem;align-items:stretch;margin-top:var(--sp-3)}
+.pedido-acc .pedido-add{flex:1 1 auto;padding:.8rem 1rem;font-size:var(--fs-nav)}
+
+/* en la tarjeta, WhatsApp es solo el icono: acompaña, no compite */
+.pedido-wa--icono{flex:0 0 auto;width:44px;display:grid;place-items:center;cursor:pointer;
+  background:transparent;color:var(--c-ink);
+  border:1px solid var(--c-line);border-radius:var(--radius);
+  transition:border-color var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease)}
+.pedido-wa--icono:hover{border-color:var(--c-accent);color:var(--c-accent)}
+.pedido-wa--icono svg{width:17px;height:17px;fill:currentColor}
+
+/* en la ficha van los dos, uno al lado del otro */
+.pedido-acc--ficha{margin-top:0;flex-wrap:wrap}
+.pedido-acc--ficha .ds-btn{flex:1 1 12rem}
+.pedido-acc--ficha .pedido-wa{gap:.5rem}
+.pedido-acc--ficha .pedido-wa svg{width:18px;height:18px}
+
+/* aviso de «agregado», discreto y efímero */
+.aviso-pedido{position:fixed;left:50%;bottom:1.4rem;transform:translate(-50%,1rem);
+  z-index:120;max-width:min(92vw,30rem);padding:.7rem 1.1rem;
+  background:var(--c-accent);color:var(--c-accent-ink);
+  font-size:var(--fs-nav);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:var(--tr-label);
+  opacity:0;pointer-events:none;transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease)}
+.aviso-pedido.ver{opacity:1;transform:translate(-50%,0)}
+
+/* ================================================================
+   CARRITO  ·  cajón editable
+   Cierra por WhatsApp. Envío y pasarela de pago son F4, no esta fase.
+   ================================================================ */
+.car-fondo{position:fixed;inset:0;z-index:150;background:rgba(0,0,0,.6);
+  opacity:0;pointer-events:none;transition:opacity var(--dur) var(--ease)}
+.car-fondo.abierto{opacity:1;pointer-events:auto}
+
+.car{position:fixed;top:0;right:0;bottom:0;z-index:160;
+  width:min(420px,100vw);display:flex;flex-direction:column;
+  background:var(--c-bg);border-left:1px solid var(--c-line);
+  transform:translateX(100%);transition:transform var(--dur) var(--ease-out)}
+.car.abierto{transform:none}
+
+.car__cab{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:var(--sp-5);border-bottom:1px solid var(--c-line)}
+.car__t{font-family:var(--font-display);font-weight:var(--w-bold);font-size:1.4rem;
+  line-height:1.1;color:var(--c-ink)}
+.car__x{width:40px;height:40px;padding:0;border:0;background:none;cursor:pointer;
+  color:var(--c-ink);font-size:1.6rem;line-height:1}
+.car__x:hover{color:var(--c-accent)}
+.car__cuerpo{flex:1 1 auto;overflow-y:auto;padding:var(--sp-5);
+  display:flex;flex-direction:column;gap:var(--sp-5)}
+.car__pie{flex:0 0 auto;padding:var(--sp-5);border-top:1px solid var(--c-line);
+  display:flex;flex-direction:column;gap:.7rem}
+
+.car-vacio{color:var(--c-muted);margin-bottom:var(--sp-4)}
+
+/* una línea */
+.car-item{display:grid;grid-template-columns:64px 1fr auto;gap:.9rem;align-items:start}
+.car-item__foto{width:64px;height:64px;object-fit:contain;background:var(--c-fill)}
+.car-item__in{min-width:0;display:flex;flex-direction:column;gap:.25rem}
+.car-item__t{font-size:var(--fs-label);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:.06em;color:var(--c-ink)}
+.car-item__m{font-size:var(--fs-small);color:var(--c-muted)}
+.car-item__ref{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.06em;
+  color:var(--c-faint);word-break:break-all}
+.car-item__der{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
+.car-item__sub{font-family:var(--font-mono);font-weight:var(--w-medium);
+  font-size:var(--fs-label);letter-spacing:.02em;color:var(--c-accent);white-space:nowrap}
+.car-item__quitar{padding:0;border:0;background:none;cursor:pointer;
+  font-family:var(--font);font-size:.68rem;text-transform:uppercase;
+  letter-spacing:var(--tr-label);color:var(--c-muted);
+  border-bottom:1px solid var(--c-line)}
+.car-item__quitar:hover{color:var(--c-alert);border-bottom-color:var(--c-alert)}
+
+/* cantidad: dos botones y un campo editable */
+.car-qty{display:inline-flex;align-items:stretch;margin-top:.35rem;
+  border:1px solid var(--c-line);width:max-content}
+.car-qty button{width:30px;padding:0;border:0;background:none;cursor:pointer;
+  color:var(--c-ink);font-size:1rem;line-height:1}
+.car-qty button:hover{background:var(--c-accent);color:var(--c-accent-ink)}
+.car-qty input{width:44px;border:0;border-inline:1px solid var(--c-line);
+  background:none;text-align:center;
+  font-family:var(--font-mono);font-size:var(--fs-small);color:var(--c-ink);
+  -moz-appearance:textfield;appearance:textfield}
+.car-qty input::-webkit-outer-spin-button,
+.car-qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.car-qty input:focus{outline:2px solid var(--c-accent);outline-offset:-2px}
+
+.car-total{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  font-size:var(--fs-nav);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:var(--tr-label);color:var(--c-muted)}
+.car-total__n{font-family:var(--font-mono);font-size:1.15rem;letter-spacing:.02em;
+  color:var(--c-accent);text-transform:none}
+.car-enviar{width:100%;gap:.5rem}
+.car-enviar svg{width:18px;height:18px;fill:currentColor}
+.car-vaciar{padding:.6rem;border:0;background:none;cursor:pointer;
+  font-family:var(--font);font-size:var(--fs-nav);text-transform:uppercase;
+  letter-spacing:var(--tr-label);color:var(--c-muted)}
+.car-vaciar:hover{color:var(--c-alert)}
+
+/* ================================================================
+   PÁGINA LEGAL
+   Tres documentos BORRADOR. El contenido vive en legal.json.
+   ================================================================ */
+.legal-cab{padding-bottom:var(--sp-5)}
+.legal-cab .ds-intro{margin-top:var(--sp-3)}
+.legal-aviso{margin-top:var(--sp-5);padding:.9rem 1.1rem;
+  border:1px dashed var(--c-alert);color:var(--c-alert);
+  font-size:var(--fs-small);line-height:1.5;max-width:64ch}
+.legal-fecha{margin-top:var(--sp-3);font-family:var(--font-mono);
+  font-size:var(--fs-small);letter-spacing:.06em;color:var(--c-faint)}
+.legal-indice{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:var(--sp-5)}
+.legal-indice a{padding:.55rem 1rem;border:1px solid var(--c-line);
+  font-size:var(--fs-nav);font-weight:var(--w-semibold);
+  text-transform:uppercase;letter-spacing:var(--tr-label);color:var(--c-ink)}
+.legal-indice a:hover{border-color:var(--c-accent);color:var(--c-accent)}
+
+.legal-cuerpo{padding-top:0}
+.legal-doc{padding-top:var(--sp-7);margin-top:var(--sp-7);
+  border-top:1px solid var(--c-accent);scroll-margin-top:5rem}
+.legal-doc:first-child{margin-top:0;padding-top:var(--sp-5);border-top:0}
+.legal-doc .ds-intro{margin-top:var(--sp-3);max-width:62ch}
+
+.legal-sec{margin-top:var(--sp-6);max-width:66ch}
+.legal-sec h3{font-size:var(--fs-h3);font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:.06em;color:var(--c-ink);
+  padding-bottom:.5rem;border-bottom:1px solid var(--c-line-soft)}
+.legal-sec p{margin-top:var(--sp-3);color:var(--c-muted);line-height:var(--lh-body)}
+.legal-sec .legal-lt{color:var(--c-ink);font-weight:var(--w-semibold)}
+.legal-sec ul{margin:var(--sp-3) 0 0;padding-left:1.2rem;color:var(--c-muted);
+  line-height:var(--lh-body)}
+.legal-sec li{margin-top:.35rem}
+.legal-sec li::marker{color:var(--c-accent)}
+/* lo que la ley obliga a destacar: retracto y beneficio */
+.legal-sec--destacada{border-left:2px solid var(--c-accent);
+  padding:.2rem 0 .2rem 1.1rem}
+
+/* ================================================================
+   REGISTRO
+   Casilla de datos obligatoria y SIN premarcar (Ley 1581 de 2012).
+   ================================================================ */
+.reg-fondo{position:fixed;inset:0;z-index:170;background:rgba(0,0,0,.66);
+  opacity:0;pointer-events:none;transition:opacity var(--dur) var(--ease)}
+.reg-fondo.abierto{opacity:1;pointer-events:auto}
+.reg{position:fixed;z-index:180;left:50%;top:50%;
+  transform:translate(-50%,-46%) scale(.98);
+  width:min(430px,92vw);max-height:90vh;overflow-y:auto;
+  padding:var(--sp-6) var(--sp-5) var(--sp-5);
+  background:var(--c-surface);border:1px solid var(--c-line);
+  opacity:0;pointer-events:none;
+  transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease-out)}
+.reg.abierto{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+.reg__x{position:absolute;top:.5rem;right:.6rem;width:36px;height:36px;padding:0;
+  border:0;background:none;color:var(--c-ink);font-size:1.5rem;line-height:1;cursor:pointer}
+.reg__x:hover{color:var(--c-accent)}
+.reg__t{font-family:var(--font-display);font-weight:var(--w-bold);
+  font-size:1.5rem;line-height:1.1;color:var(--c-ink);max-width:16ch}
+.reg__p{margin-top:var(--sp-3);color:var(--c-muted);font-size:.95rem;line-height:1.55}
+.reg__p b{color:var(--c-accent);font-weight:var(--w-bold)}
+
+.reg-campo{display:block;margin-top:var(--sp-4)}
+.reg-campo span{display:block;margin-bottom:.35rem;font-size:var(--fs-eyebrow);
+  font-weight:var(--w-semibold);text-transform:uppercase;
+  letter-spacing:var(--tr-eyebrow);color:var(--c-muted)}
+.reg-campo input{width:100%;padding:.75rem .9rem;border:1px solid var(--c-line);
+  background:var(--c-bg);color:var(--c-ink);font-family:var(--font);
+  font-size:var(--fs-body);border-radius:var(--radius)}
+.reg-campo input:focus{outline:none;border-color:var(--c-accent)}
+
+.reg-datos{display:flex;gap:.7rem;align-items:flex-start;margin-top:var(--sp-5);
+  cursor:pointer;font-size:var(--fs-small);line-height:1.5;color:var(--c-muted)}
+.reg-datos input{position:absolute;opacity:0;width:0;height:0}
+.reg-datos__caja{flex:none;width:17px;height:17px;margin-top:1px;
+  border:1px solid var(--c-line);display:grid;place-items:center;
+  transition:border-color var(--dur-fast) var(--ease)}
+.reg-datos__caja::after{content:"";width:9px;height:9px;background:var(--c-accent);
+  transform:scale(0);transition:transform var(--dur-fast) var(--ease)}
+.reg-datos input:checked + .reg-datos__caja{border-color:var(--c-accent)}
+.reg-datos input:checked + .reg-datos__caja::after{transform:scale(1)}
+.reg-datos input:focus-visible + .reg-datos__caja{outline:2px solid var(--c-ink);outline-offset:2px}
+.reg-datos a{color:var(--c-accent);text-decoration:underline}
+
+.reg-error{margin-top:var(--sp-3);padding:.6rem .8rem;border:1px dashed var(--c-alert);
+  color:var(--c-alert);font-size:var(--fs-small);line-height:1.45}
+.reg-enviar{width:100%;margin-top:var(--sp-5)}
+.reg-luego{display:block;width:100%;margin-top:.7rem;padding:.6rem;border:0;
+  background:none;cursor:pointer;font-family:var(--font);font-size:var(--fs-nav);
+  text-transform:uppercase;letter-spacing:var(--tr-label);color:var(--c-muted)}
+.reg-luego:hover{color:var(--c-ink)}
