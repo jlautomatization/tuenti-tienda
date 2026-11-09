@@ -530,14 +530,6 @@
           "tarjeta": "tomas/con_mangas-3-blanca/T1q.jpg"
         },
         {
-          "color": "lila",
-          "hex": "#DFCBD3",
-          "tallas": null,
-          "fotos": [
-            "oct/con_mangas-3-lila-2.jpg"
-          ]
-        },
-        {
           "color": "negra",
           "hex": "#1C1B19",
           "tallas": null,
@@ -770,15 +762,6 @@
             }
           ],
           "tarjeta": "tomas/con_mangas-5-negra/T1q.jpg"
-        },
-        {
-          "color": "mostaza",
-          "hex": "#A87A40",
-          "tallas": null,
-          "fotos": [
-            "oct/con_mangas-5-mostaza-4.jpg",
-            "oct/con_mangas-5-mostaza2-5.jpg"
-          ]
         }
       ]
     },
@@ -2847,26 +2830,6 @@
             }
           ],
           "tarjeta": "tomas/con_mangas-44-negra/T1q.jpg"
-        }
-      ]
-    },
-    {
-      "id": "con-mangas-45-perrito-premium-pasta",
-      "diseno": "Perrito premium pasta",
-      "categoria": "Con mangas",
-      "tema": "Animales",
-      "precio_unidad": 33000,
-      "precio_mayor": 25000,
-      "licenciado": false,
-      "publicable_web": true,
-      "variantes": [
-        {
-          "color": "lila",
-          "hex": "#B4A3D6",
-          "tallas": null,
-          "fotos": [
-            "oct/con_mangas-45-lila-2.jpg"
-          ]
         }
       ]
     },
@@ -6613,14 +6576,6 @@
       "publicable_web": true,
       "variantes": [
         {
-          "color": "gris verdoso",
-          "hex": "#C2BFB6",
-          "tallas": null,
-          "fotos": [
-            "oct/oversize-1-gris-verdoso-1.jpg"
-          ]
-        },
-        {
           "color": "caqui",
           "hex": "#9E8C7E",
           "tallas": null,
@@ -7231,14 +7186,6 @@
       "publicable_web": true,
       "variantes": [
         {
-          "color": "verde oscuro",
-          "hex": "#223533",
-          "tallas": null,
-          "fotos": [
-            "oct/oversize-11-verde-oscuro-1.jpg"
-          ]
-        },
-        {
           "color": "blanca",
           "hex": "#F2F0EB",
           "tallas": null,
@@ -7530,30 +7477,6 @@
             }
           ],
           "tarjeta": "tomas/oversize-15-blanca/T1q.jpg"
-        },
-        {
-          "color": "gris verdoso",
-          "hex": "#B9AFA6",
-          "tallas": null,
-          "fotos": [
-            "oct/oversize-15-gris-verdoso-2.jpg"
-          ]
-        },
-        {
-          "color": "negra",
-          "hex": "#1C1B19",
-          "tallas": null,
-          "fotos": [
-            "oct/oversize-15-negra-3.jpg"
-          ]
-        },
-        {
-          "color": "café",
-          "hex": "#5E3D30",
-          "tallas": null,
-          "fotos": [
-            "oct/oversize-15-cafe-4.jpg"
-          ]
         }
       ]
     },
@@ -7731,14 +7654,6 @@
       "licenciado": false,
       "publicable_web": true,
       "variantes": [
-        {
-          "color": "celeste",
-          "hex": "#929CB3",
-          "tallas": null,
-          "fotos": [
-            "oct/oversize-18-celeste-1.jpg"
-          ]
-        },
         {
           "color": "negra",
           "hex": "#1C1B19",
@@ -11053,6 +10968,133 @@
               }
             ],
             "tarjeta": "tomas/sin_mangas-26-blanca/T1q.jpg"
+          }
+        }
+      ]
+    },
+    "colores_sin_foto_2026_11_09": {
+      "_nota": "Retirados por decisión de Jose 09/11/2026 16:01 «No, quítalos» (a «Los 9 colores sin foto del local, ¿se siguen vendiendo?»): no se siguen vendiendo. Se devuelven con herramientas/retirar_por_ahora.py devolver --lote colores_sin_foto_2026_11_09.",
+      "productos": [
+        {
+          "posicion": 39,
+          "producto": {
+            "id": "con-mangas-45-perrito-premium-pasta",
+            "diseno": "Perrito premium pasta",
+            "categoria": "Con mangas",
+            "tema": "Animales",
+            "precio_unidad": 33000,
+            "precio_mayor": 25000,
+            "licenciado": false,
+            "publicable_web": true,
+            "variantes": [
+              {
+                "color": "lila",
+                "hex": "#B4A3D6",
+                "tallas": null,
+                "fotos": [
+                  "oct/con_mangas-45-lila-2.jpg"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "variantes": [
+        {
+          "producto_id": "con-mangas-3-amore-as-de-corazones",
+          "posicion": 1,
+          "variante": {
+            "color": "lila",
+            "hex": "#DFCBD3",
+            "tallas": null,
+            "fotos": [
+              "oct/con_mangas-3-lila-2.jpg"
+            ]
+          }
+        },
+        {
+          "producto_id": "con-mangas-5-arctic-monkeys-onda-de-sonido",
+          "posicion": 3,
+          "variante": {
+            "color": "mostaza",
+            "hex": "#A87A40",
+            "tallas": null,
+            "fotos": [
+              "oct/con_mangas-5-mostaza-4.jpg",
+              "oct/con_mangas-5-mostaza2-5.jpg"
+            ]
+          }
+        },
+        {
+          "producto_id": "oversize-1-amore-as-de-corazones",
+          "posicion": 0,
+          "variante": {
+            "color": "gris verdoso",
+            "hex": "#C2BFB6",
+            "tallas": null,
+            "fotos": [
+              "oct/oversize-1-gris-verdoso-1.jpg"
+            ]
+          }
+        },
+        {
+          "producto_id": "oversize-11-la-poesie-paris",
+          "posicion": 0,
+          "variante": {
+            "color": "verde oscuro",
+            "hex": "#223533",
+            "tallas": null,
+            "fotos": [
+              "oct/oversize-11-verde-oscuro-1.jpg"
+            ]
+          }
+        },
+        {
+          "producto_id": "oversize-15-new-beginnings",
+          "posicion": 1,
+          "variante": {
+            "color": "gris verdoso",
+            "hex": "#B9AFA6",
+            "tallas": null,
+            "fotos": [
+              "oct/oversize-15-gris-verdoso-2.jpg"
+            ]
+          }
+        },
+        {
+          "producto_id": "oversize-15-new-beginnings",
+          "posicion": 2,
+          "variante": {
+            "color": "negra",
+            "hex": "#1C1B19",
+            "tallas": null,
+            "fotos": [
+              "oct/oversize-15-negra-3.jpg"
+            ]
+          }
+        },
+        {
+          "producto_id": "oversize-15-new-beginnings",
+          "posicion": 3,
+          "variante": {
+            "color": "café",
+            "hex": "#5E3D30",
+            "tallas": null,
+            "fotos": [
+              "oct/oversize-15-cafe-4.jpg"
+            ]
+          }
+        },
+        {
+          "producto_id": "oversize-18-perfectly-imperfect",
+          "posicion": 0,
+          "variante": {
+            "color": "celeste",
+            "hex": "#929CB3",
+            "tallas": null,
+            "fotos": [
+              "oct/oversize-18-celeste-1.jpg"
+            ]
           }
         }
       ]
