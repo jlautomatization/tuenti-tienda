@@ -18,9 +18,9 @@
       "precio_mayor — DECISIÓN APLAZADA. Cargado como dato (12+ unidades) pero NO se muestra en la web: es canal de WhatsApp. Ver TRASPASO_WEB.md §0.5."
     ],
     "tomas_web": {
-      "fecha": "2026-11-07 09:30:08",
-      "variantes_con_tomas": 191,
-      "conectadas_en_esta_corrida": 7,
+      "fecha": "2026-11-07 23:59:42",
+      "variantes_con_tomas": 196,
+      "conectadas_en_esta_corrida": 38,
       "origen": "web_tienda/propuestas/rediseno_4_mockup/imagenes_web (aprobadas por Jose)"
     },
     "r4_inicio": {
@@ -88,6 +88,9 @@
     "boton": "Ver el catálogo",
     "sello": "Nuevos cada miércoles y sábado",
     "fotos": [
+      "img/tomas/con_mangas-30-blanca/T3E.jpg"
+    ],
+    "fotos_noche_28_10": [
       "img/tomas/con_mangas-30-blanca/T10E.jpg",
       "img/tomas/con_mangas-30-blanca/T11E.jpg"
     ],
@@ -6623,7 +6626,34 @@
           "tallas": null,
           "fotos": [
             "oct/oversize-1-caqui-2.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-1-caqui/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-1-caqui/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-1-caqui/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-1-caqui/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-1-caqui/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-1-caqui/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-1-caqui/T1q.jpg"
         }
       ]
     },
@@ -6643,7 +6673,34 @@
           "tallas": null,
           "fotos": [
             "oct/oversize-2-celeste-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-2-celeste/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-2-celeste/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-2-celeste/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-2-celeste/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-2-celeste/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-2-celeste/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-2-celeste/T1q.jpg"
         },
         {
           "color": "negra",
@@ -6721,7 +6778,34 @@
           "tallas": null,
           "fotos": [
             "oct/oversize-2-cafe-4.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-2-cafe/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-2-cafe/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-2-cafe/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-2-cafe/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-2-cafe/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-2-cafe/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-2-cafe/T1q.jpg"
         }
       ]
     },
@@ -6976,7 +7060,34 @@
           "tallas": null,
           "fotos": [
             "oct/oversize-8-camel-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-8-camel/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-8-camel/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-8-camel/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-8-camel/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-8-camel/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-8-camel/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-8-camel/T1q.jpg"
         }
       ]
     },
@@ -7043,7 +7154,69 @@
           "tallas": null,
           "fotos": [
             "oct/oversize-10-verde-limon-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-10-verde-limon/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-10-verde-limon/T4E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-10-verde-limon/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-10-verde-limon/T1.jpg",
+              "vista": "Frente"
+            },
+            {
+              "foto": "tomas/oversize-10-verde-limon/T3E.jpg",
+              "vista": "Frente en modelo"
+            },
+            {
+              "foto": "tomas/oversize-10-verde-limon/T5E.jpg",
+              "vista": "Cuerpo entero"
+            }
+          ],
+          "tarjeta": "tomas/oversize-10-verde-limon/T2q.jpg"
+        },
+        {
+          "color": "azul",
+          "hex": "#8C9ADA",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-10-azul/T2.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-10-azul/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-10-azul/T4E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-10-azul/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-10-azul/T1.jpg",
+              "vista": "Frente"
+            },
+            {
+              "foto": "tomas/oversize-10-azul/T3E.jpg",
+              "vista": "Frente en modelo"
+            },
+            {
+              "foto": "tomas/oversize-10-azul/T5E.jpg",
+              "vista": "Cuerpo entero"
+            }
+          ],
+          "tarjeta": "tomas/oversize-10-azul/T2q.jpg"
         }
       ]
     },
@@ -7064,6 +7237,41 @@
           "fotos": [
             "oct/oversize-11-verde-oscuro-1.jpg"
           ]
+        },
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-11-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-11-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-11-blanca/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-11-blanca/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-11-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-11-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-11-blanca/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-11-blanca/T1q.jpg"
         }
       ]
     },
@@ -7079,11 +7287,38 @@
       "variantes": [
         {
           "color": "café",
-          "hex": "#47363A",
+          "hex": "#82727A",
           "tallas": null,
           "fotos": [
             "oct/oversize-12-cafe-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-12-cafe/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-12-cafe/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-12-cafe/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-12-cafe/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-12-cafe/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-12-cafe/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-12-cafe/T1q.jpg"
         }
       ]
     },
@@ -7220,7 +7455,34 @@
           "tallas": null,
           "fotos": [
             "oct/oversize-14-verde-agua-3.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-14-verde-agua/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-14-verde-agua/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-14-verde-agua/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-14-verde-agua/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-14-verde-agua/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-14-verde-agua/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-14-verde-agua/T1q.jpg"
         }
       ]
     },
@@ -7386,6 +7648,76 @@
             }
           ],
           "tarjeta": "tomas/oversize-17-blanca/T1q.jpg"
+        },
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-17-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-17-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-17-negra/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-17-negra/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-17-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-17-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-17-negra/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-17-negra/T1q.jpg"
+        },
+        {
+          "color": "café",
+          "hex": "#5C3F34",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-17-cafe/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-17-cafe/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-17-cafe/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-17-cafe/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-17-cafe/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-17-cafe/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-17-cafe/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-17-cafe/T1q.jpg"
         }
       ]
     },
@@ -7460,7 +7792,34 @@
           "tallas": null,
           "fotos": [
             "oct/oversize-19-azul-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-19-azul/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-19-azul/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-19-azul/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-19-azul/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-19-azul/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-19-azul/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-19-azul/T1q.jpg"
         }
       ]
     },
@@ -7555,6 +7914,76 @@
             }
           ],
           "tarjeta": "tomas/oversize-21-blanca/T1q.jpg"
+        },
+        {
+          "color": "verde",
+          "hex": "#66695A",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-21-verde/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-21-verde/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-21-verde/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-21-verde/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-21-verde/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-21-verde/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-21-verde/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-21-verde/T1q.jpg"
+        },
+        {
+          "color": "verde amarillo claro",
+          "hex": "#DDE3BC",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-21-verde-amarillo-claro/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-21-verde-amarillo-claro/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-21-verde-amarillo-claro/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-21-verde-amarillo-claro/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-21-verde-amarillo-claro/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-21-verde-amarillo-claro/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-21-verde-amarillo-claro/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-21-verde-amarillo-claro/T1q.jpg"
         }
       ]
     },
@@ -7731,6 +8160,452 @@
             }
           ],
           "tarjeta": "tomas/oversize-24-beige/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "oversize-25-polo-bear-esquiador",
+      "diseno": "Polo bear esquiador",
+      "categoria": "Oversize",
+      "tema": "Personajes",
+      "precio_unidad": 40000,
+      "precio_mayor": 35000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "lavanda",
+          "hex": "#929DC6",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-25-lavanda/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-25-lavanda/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-25-lavanda/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-25-lavanda/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-25-lavanda/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-25-lavanda/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-25-lavanda/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-25-lavanda/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "oversize-26-mafalda-pinche-monday",
+      "diseno": "Mafalda pinche monday",
+      "categoria": "Oversize",
+      "tema": "Personajes",
+      "precio_unidad": 40000,
+      "precio_mayor": 35000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-26-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-26-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-26-negra/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-26-negra/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-26-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-26-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-26-negra/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-26-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "oversize-27-mafalda-ser-uno-mismo",
+      "diseno": "Mafalda ser uno mismo",
+      "categoria": "Oversize",
+      "tema": "Personajes",
+      "precio_unidad": 40000,
+      "precio_mayor": 35000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-27-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-27-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-27-negra/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-27-negra/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-27-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-27-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-27-negra/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-27-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "oversize-28-snoopy-y-mafalda",
+      "diseno": "Snoopy y mafalda",
+      "categoria": "Oversize",
+      "tema": "Personajes",
+      "precio_unidad": 40000,
+      "precio_mayor": 35000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-28-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-28-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-28-negra/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-28-negra/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-28-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-28-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-28-negra/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-28-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "oversize-29-polo-bear-bicicleta",
+      "diseno": "Polo bear bicicleta",
+      "categoria": "Oversize",
+      "tema": "Personajes",
+      "precio_unidad": 40000,
+      "precio_mayor": 35000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "beige",
+          "hex": "#D9CDBB",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-29-beige/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-29-beige/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-29-beige/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-29-beige/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-29-beige/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-29-beige/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-29-beige/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-29-beige/T1q.jpg"
+        },
+        {
+          "color": "caqui",
+          "hex": "#9E8C7E",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-29-caqui/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-29-caqui/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-29-caqui/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-29-caqui/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-29-caqui/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-29-caqui/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-29-caqui/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-29-caqui/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "oversize-30-snoopy-pajaritos",
+      "diseno": "Snoopy pajaritos",
+      "categoria": "Oversize",
+      "tema": "Personajes",
+      "precio_unidad": 40000,
+      "precio_mayor": 35000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "caqui",
+          "hex": "#9E8C7E",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-30-caqui/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-30-caqui/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-30-caqui/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-30-caqui/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-30-caqui/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-30-caqui/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-30-caqui/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-30-caqui/T1q.jpg"
+        },
+        {
+          "color": "verde",
+          "hex": "#66695A",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-30-verde/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-30-verde/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-30-verde/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-30-verde/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-30-verde/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-30-verde/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-30-verde/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-30-verde/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "oversize-31-polo-bear-jinete",
+      "diseno": "Polo bear jinete",
+      "categoria": "Oversize",
+      "tema": "Personajes",
+      "precio_unidad": 40000,
+      "precio_mayor": 35000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "crema",
+          "hex": "#E9E3D4",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-31-crema/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-31-crema/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-31-crema/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-31-crema/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-31-crema/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-31-crema/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-31-crema/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-31-crema/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "oversize-32-polo-bear-bufanda",
+      "diseno": "Polo bear bufanda",
+      "categoria": "Oversize",
+      "tema": "Personajes",
+      "precio_unidad": 40000,
+      "precio_mayor": 35000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "café",
+          "hex": "#5E3D30",
+          "tallas": null,
+          "fotos": [
+            "tomas/oversize-32-cafe/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/oversize-32-cafe/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/oversize-32-cafe/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/oversize-32-cafe/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/oversize-32-cafe/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/oversize-32-cafe/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/oversize-32-cafe/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/oversize-32-cafe/T1q.jpg"
         }
       ]
     },

@@ -1,0 +1,181 @@
+/* estilo-blanco.css · estilo A «Blanco galería» · APROBADO por Jose 09/11/2026 14:33 («A · Blanco galería»); pase con su «Dale» de las 14:50.
+   Página blanca, letras carbón, lima de TUENTI solo en el logo y en los botones de WhatsApp; portada clara con la modelo de estudio.
+   Es el tema-claro.css de estilos_premium_2026-11-09/ (probado ahí) con esta cabecera: desde la línea 5 es idéntico (md5). Actualizado 09/11/2026 15:19:05: correccion de Jose 15:18, todo blanco (retracta el negro de las 15:02).
+   Para volver a como estaba: quitar la línea <link … estilo-blanco.css> de los 4 HTML y devolver marca.json → hero.fotos (respaldo). */
+:root{
+  --c-bg:#FFFFFF; --c-surface:#F5F4F1; --c-fill:#FFFFFF; --c-dark:#1B1D1E; --c-veil:rgba(255,255,255,.96);
+  --c-ink:#1B1D1E; --c-muted:rgba(27,29,30,.66); --c-faint:rgba(27,29,30,.54);
+  --c-line:rgba(27,29,30,.12); --c-line-soft:rgba(27,29,30,.07);
+  --s-bg:#FFFFFF; --s-panel:#F5F4F1; --s-line:#E6E4DF; --s-ink:#1B1D1E; --s-mut:#5F6466; --s-on-lime:#1B1D1E;
+  --sh:0 10px 30px rgba(27,29,30,.10);
+}
+body.ds{background:#fff;color:#1B1D1E}
+
+/* anuncio: franja fina carbón, letra pequeña y espaciada (ya no grita en lima) */
+.ds-announce{background:#1B1D1E!important;color:#fff!important;font-weight:600!important;height:32px!important;letter-spacing:.18em!important}
+body.ds.is-inicio{--chrome:96px}
+@media(min-width:900px){body.ds.is-inicio{--chrome:103px}}
+
+/* nav blanca con línea finita */
+.ds-nav{background:rgba(255,255,255,.96)!important;border-bottom:1px solid #ECEAE6!important;color:#1B1D1E}
+.ds-nav a,.ds-nav button{color:#1B1D1E}
+.ds-nav__burger span,.ds-nav__burger span::before,.ds-nav__burger span::after{background:#1B1D1E!important}
+.ds-nav .ds-btn--outline,.ds-nav .ds-btn{border-color:#1B1D1E!important;color:#1B1D1E!important}
+
+/* portada CLARA: la modelo de estudio (misma Guns N' Roses blanca de la portada de noche) sobre el blanco de la página */
+.is-inicio .hero{background:#fff}
+.is-inicio .portada{background:#fff;-webkit-mask-image:none!important;mask-image:none!important}
+.is-inicio .portada .hero-capa{background-image:url("img/tomas/con_mangas-30-blanca/T3E.jpg")!important;background-size:contain!important;
+  background-repeat:no-repeat!important;background-position:100% 100%!important;opacity:1!important}
+.is-inicio .portada .hero-capa+.hero-capa{display:none}
+.is-inicio .hero::before{display:none}
+.is-inicio .hero-in,.hero-in{color:#1B1D1E}
+.is-inicio .hero-in h1,.hero-in h1{color:#1B1D1E!important;text-shadow:none!important;letter-spacing:.01em}
+.is-inicio .hero-in .baja,.hero-in .baja{color:rgba(27,29,30,.72)!important;text-shadow:none!important}
+.is-inicio .hero-kicker{font-family:var(--font)!important;font-size:12px!important;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#5F6466!important}
+.is-inicio .hero-sello{display:none}
+.hero .ds-btn--light,.hero .ds-btn{background:#1B1D1E!important;border-color:#1B1D1E!important;color:#fff!important}
+.hero .ds-btn--outline{background:transparent!important;color:#1B1D1E!important;border:1px solid #1B1D1E!important}
+.hero .ds-btn--light:hover{background:#B3C300!important;border-color:#B3C300!important;color:#1B1D1E!important}
+@media(max-width:899px){
+  .is-inicio .portada .hero-capa{background-size:cover!important;background-position:50% 0!important}
+  .is-inicio .hero::before{display:block;background:linear-gradient(to top,#fff 0%,rgba(255,255,255,.94) 30%,rgba(255,255,255,0) 52%)}
+}
+@media(min-width:900px){
+  .is-inicio .portada{width:58%}
+}
+
+/* categorías y vitrina: sin cajas, la foto se funde con la página */
+.is-inicio .cats>.cat img,.vitrina--b .vit-item img{border-radius:0!important}
+.is-inicio .cats.cats--b>.cat .cat-n{color:#1B1D1E;font-size:clamp(18px,1.6vw,22px)}
+.is-inicio .cats.cats--b>.cat .cat-p{color:#5F6466}
+.is-inicio .cats.cats--b>.cat:hover .cat-n,.vitrina--b .vit-item:hover .vit-txt b{color:#1B1D1E;text-decoration:underline;text-underline-offset:6px;text-decoration-color:#B3C300;text-decoration-thickness:2px}
+.vitrina{background:#fff!important}
+.ds-title,.is-inicio h2{color:#1B1D1E}
+.prox-label,.perfil-t,.is-inicio .prox-label,.is-inicio .perfil-t,[class*="kicker"]{font-family:var(--font)!important;font-size:12px!important;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#5F6466!important}
+.vitrina .ds-btn--outline,.vit-pie .ds-btn{border:1px solid #1B1D1E!important;color:#1B1D1E!important;background:transparent!important}
+
+/* catálogo */
+.cat-ref .ds-card__media{background:#fff}
+.cat-ref .ds-card__title{color:#1B1D1E;font-weight:600}
+.cat-ref .ds-card__price{color:#1B1D1E!important;font-weight:700}
+.cat-ref .ds-card__desc{color:#7A7F82}
+.cat-ref .cat-chip[aria-pressed="true"]{color:#1B1D1E;border-bottom-color:#1B1D1E}
+.cat-precio{color:#1B1D1E!important}
+.cat-ref .cat-panel__toggle{color:#1B1D1E}
+.pg-cat h1,.pg-cat .ds-title{color:#1B1D1E}
+
+/* ficha */
+.pg-ficha .ds-gallery__main.gal-on,.gal__item,.pg-ficha .ds-gallery__thumbs.is-tomas .ds-gallery__thumb{background:#fff}
+.gal__vista,.gal__n{background:rgba(255,255,255,.9)!important;color:#1B1D1E!important;border:1px solid #E6E4DF}
+
+/* pie claro */
+.ds-footer{background:#F5F4F1!important;color:#1B1D1E!important;border-top:1px solid #E6E4DF}
+.ds-footer a,.ds-footer span{color:inherit}
+
+/* lo que quedaba con blanco fijo sobre oscuro */
+.prox-caja{border-color:rgba(27,29,30,.16)!important}
+.prox-llego p,.banner-in p,.banner-in .ds-eyebrow{color:rgba(27,29,30,.8)!important}
+
+/* ajustes tras la primera captura (09/11/2026) */
+.page{background:#fff!important}
+.is-inicio .cats.cats--b>.cat::after{display:none}
+.cat .cat-n{color:#1B1D1E!important}
+.cat .cat-p{color:#5F6466!important}
+/* la foto de la modelo trae un borde apenas gris: se funde hacia la izquierda */
+@media(min-width:900px){
+  .is-inicio .portada{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 14%)!important;mask-image:linear-gradient(to right,transparent 0,#000 14%)!important}
+}
+/* el fondo de las fotos mide 251-254 (no 255): +2 % de luz para que el cuadro no se note sobre el blanco de la página */
+.cat-ref .ds-card__img,.is-inicio .cats>.cat img,.vitrina .vit-item img,.gal__item img,.pg-ficha .ds-gallery__thumb img,.is-inicio .portada .hero-capa{filter:brightness(1.02)}
+
+/* ajustes de la ficha y la portada tras la segunda captura (09/11/2026) */
+@media(min-width:900px){ .is-inicio .portada{width:47%} }
+.ds-price{color:#1B1D1E!important}
+.pedido-add,.ds-btn--acento-linea{color:#1B1D1E!important;border-color:#1B1D1E!important;background:transparent!important}
+.pedido-add:hover,.ds-btn--acento-linea:hover{background:#1B1D1E!important;color:#fff!important}
+.gal__flecha{background:rgba(255,255,255,.92)!important;color:#1B1D1E!important;border:1px solid #E6E4DF!important}
+.ds-gallery__thumb.is-on{border-color:#1B1D1E!important}
+.ds-color.is-on{box-shadow:0 0 0 2px #fff,0 0 0 3px #1B1D1E!important;border-color:#E6E4DF!important}
+.pg-ficha .ds-btn--outline,.pdp-mas .ds-btn--outline{color:#1B1D1E!important;border-color:#1B1D1E!important}
+.ds-acc summary::after,.pdp-det summary::after{color:#1B1D1E}
+/* celular: el velo blanco sube un poco para que el antetítulo no quede encima del jean */
+@media(max-width:899px){.is-inicio .hero::before{background:linear-gradient(to top,#fff 0%,rgba(255,255,255,.96) 38%,rgba(255,255,255,0) 58%)}}
+
+/* ---------- secciones de más abajo del inicio (09/11/2026, después de la elección de Jose) ----------
+   Tenían el fondo oscuro escrito a mano (#26292B, #1B1D1E, #141617) y quedaban con letra carbón encima. */
+#redes{background:#F5F4F1!important}
+#proximo{background:#fff!important;border-block:1px solid #ECEAE6!important}
+.promesas{background:#F5F4F1!important;border-block:1px solid #ECEAE6!important;color:#1B1D1E!important}
+.promesas *{color:#1B1D1E}
+.promesas p,.promesas small,.promesas span{color:#5F6466!important}
+#contacto,.cita{background:#F5F4F1!important;color:#1B1D1E!important}
+#contacto .ds-title,.cita .ds-title{color:#1B1D1E!important}
+#contacto p,.cita p{color:#5F6466!important}
+#contacto .ds-btn--light{background:#B3C300!important;border-color:#B3C300!important;color:#1B1D1E!important}
+#contacto .ds-btn--outline,#contacto .ds-btn:not(.ds-btn--light){background:transparent!important;border:1px solid #1B1D1E!important;color:#1B1D1E!important}
+.ds-footer__col b,.is-inicio .ds-footer__col b{color:#5F6466!important}
+.ds-footer__col a{color:#1B1D1E!important}
+.ds-footer__logo,.ds-footer__bottom,.ds-footer__bottom *{color:#1B1D1E!important}
+
+/* adornos lima (manchas redondas) fuera: en galería no van */
+.hist-blob,#redes [class*="blob"],#proximo [class*="blob"],.hb{display:none!important}
+
+/* títulos y acentos lima sobre blanco: no se leen (contraste 1,9:1) → carbón */
+#redes .ds-title,#redes h2{color:#1B1D1E!important}
+#redes .ds-btn--outline,#redes a.ds-btn:not(.ds-btn--acento):not(.ds-btn--light),.redes-cta a{border-color:#1B1D1E!important;color:#1B1D1E!important}
+.redes-cta a:first-child{background:#1B1D1E!important;border-color:#1B1D1E!important;color:#fff!important}
+.prox-titulo,#proximo h2{color:#1B1D1E!important}
+#proximo b,#proximo .prox-teaser,#proximo [class*="sub"]{color:#1B1D1E!important}
+.prox-caja{background:#F5F4F1!important;border:0!important}
+.prox-caja b{color:#1B1D1E!important}
+.prox-caja small,.prox-caja span{color:#5F6466!important}
+.prox-fotos>*{border-color:#1B1D1E!important;border-width:1px!important}
+.historia h2,.historia h2 *{color:#1B1D1E!important}
+.historia h2 span,.historia h2 em{text-decoration:underline;text-decoration-color:#B3C300;text-decoration-thickness:6px;text-underline-offset:8px}
+.hist-foto{border:0!important;box-shadow:none!important}
+.historia .hist-cuerpo [class*="firma"],.historia .hist-texto p:last-of-type em,.historia [style*="Caveat"],.historia .ds-hand,.historia .mano{color:#1B1D1E!important}
+.hist-btn{background:#1B1D1E!important;border-color:#1B1D1E!important;color:#fff!important}
+.hist-btn:hover{background:#B3C300!important;border-color:#B3C300!important;color:#1B1D1E!important}
+.loc .hfila b,.loc .hfila strong,.loc .hfila span:last-child{color:#1B1D1E!important}
+.loc .hfila.hoy{border-left-color:#1B1D1E!important;background:#F5F4F1!important}
+.loc-mapa__chip{background:#1B1D1E!important;color:#fff!important}
+.loc-btn:not(.loc-btn--wa){border-color:#1B1D1E!important;color:#1B1D1E!important}
+/* lo que la revisión por color encontró (09/11/2026) */
+#proximo span{color:#1B1D1E!important}
+.prox-fotos b{color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.historia span.cierre{color:#1B1D1E!important}
+.loc span.h{color:#1B1D1E!important;font-weight:700}
+.red-user,.reel{border-color:#E6E4DF!important}
+/* ventana de registro (10 % de descuento) clara */
+.reg{background:#fff!important;color:#1B1D1E!important;box-shadow:0 20px 60px rgba(27,29,30,.25)!important}
+.reg *{color:#1B1D1E}
+.reg b{color:#1B1D1E!important}
+.reg input{background:#F5F4F1!important;color:#1B1D1E!important;border:1px solid #E6E4DF!important}
+.reg-enviar{color:#1B1D1E!important}
+/* catálogo: botones con borde y carrito (letra blanca sobre blanco) */
+main .ds-btn--outline,.page .ds-btn--outline,.cat-limpia,.cat-limpiar{color:#1B1D1E!important;border-color:#1B1D1E!important;background:transparent!important}
+.car,.car *{color:#1B1D1E}
+.car__t,.car__x,.car-vacio{color:#1B1D1E!important}
+.reg label span,.reg span{color:#1B1D1E!important}
+
+/* CAUSA de los textos blancos sobre blanco (09/11/2026): app.js copia el bloque «tokens» de marca.json como estilo en línea en <html>,
+   y eso le gana a :root. Con !important la variable del estilo A manda. Las de «sobre oscuro» (menú del celular) siguen blancas. */
+:root{
+  --c-bg:#FFFFFF!important; --c-surface:#F5F4F1!important; --c-fill:#FFFFFF!important; --c-dark:#1B1D1E!important; --c-veil:rgba(255,255,255,.96)!important;
+  --c-ink:#1B1D1E!important; --c-muted:rgba(27,29,30,.66)!important; --c-faint:rgba(27,29,30,.54)!important;
+  --c-line:rgba(27,29,30,.12)!important; --c-line-soft:rgba(27,29,30,.07)!important;
+}
+.ds-ref{color:#7A7F82!important}
+#redes .redes-cta a.ds-btn.ds-btn--solid-ig{color:#fff!important}
+
+/* mancha lima de «Síguenos» (es un ::before) y signos «?» de las cartas (los pisaba #proximo b) */
+#redes::before{display:none!important}
+#proximo .prox-fotos b{color:#fff!important;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.reel__ph{background:#E6E4DF!important}
+
+/* ---------- CORRECCIÓN DE JOSE 09/11/2026 15:18 («mentira mejor todo blaco y ya»): retracta la de las 15:02 (negro intercalado,
+   que queda en tema-claro.css.bak-*-con-negro). Síguenos, promesas, Escríbenos y el pie van en BLANCO como el resto de la página;
+   los separa una línea finita. Los textos y botones vuelven a los de carbón de más arriba. ---------- */
+html body #redes,html body .promesas,html body #contacto,html body .cita,html body .ds-footer{background:#fff!important}
+html body #redes,html body #contacto,html body .ds-footer{border-top:1px solid #ECEAE6!important}
