@@ -18,9 +18,9 @@
       "precio_mayor — DECISIÓN APLAZADA. Cargado como dato (12+ unidades) pero NO se muestra en la web: es canal de WhatsApp. Ver TRASPASO_WEB.md §0.5."
     ],
     "tomas_web": {
-      "fecha": "2026-11-07 23:59:42",
-      "variantes_con_tomas": 196,
-      "conectadas_en_esta_corrida": 38,
+      "fecha": "2026-11-12 08:34:25",
+      "variantes_con_tomas": 230,
+      "conectadas_en_esta_corrida": 35,
       "origen": "web_tienda/propuestas/rediseno_4_mockup/imagenes_web (aprobadas por Jose)"
     },
     "r4_inicio": {
@@ -481,6 +481,41 @@
             }
           ],
           "tarjeta": "tomas/con_mangas-2-blanca/T1q.jpg"
+        },
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-2-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-2-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-2-negra/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-2-negra/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-2-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-2-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-2-negra/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-2-negra/T1q.jpg"
         }
       ]
     },
@@ -762,6 +797,41 @@
             }
           ],
           "tarjeta": "tomas/con_mangas-5-negra/T1q.jpg"
+        },
+        {
+          "color": "caqui",
+          "hex": "#C4B086",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-5-caqui/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-5-caqui/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-5-caqui/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-5-caqui/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-5-caqui/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-5-caqui/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-5-caqui/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-5-caqui/T1q.jpg"
         }
       ]
     },
@@ -2701,6 +2771,41 @@
             }
           ],
           "tarjeta": "tomas/con_mangas-42-verde/T1q.jpg"
+        },
+        {
+          "color": "beige",
+          "hex": "#D9CDBB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-42-beige/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-42-beige/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-42-beige/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-42-beige/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-42-beige/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-42-beige/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-42-beige/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-42-beige/T1q.jpg"
         }
       ]
     },
@@ -3334,6 +3439,41 @@
             }
           ],
           "tarjeta": "tomas/con_mangas-55-negra/T1q.jpg"
+        },
+        {
+          "color": "verde oliva",
+          "hex": "#6E775C",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-55-verde-oliva/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-55-verde-oliva/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-55-verde-oliva/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-55-verde-oliva/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-55-verde-oliva/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-55-verde-oliva/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-55-verde-oliva/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-55-verde-oliva/T1q.jpg"
         }
       ]
     },
@@ -3569,6 +3709,41 @@
             }
           ],
           "tarjeta": "tomas/con_mangas-60-negra/T1q.jpg"
+        },
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-60-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-60-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-60-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-60-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-60-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-60-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-60-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-60-blanca/T1q.jpg"
         }
       ]
     },
@@ -4335,6 +4510,1040 @@
       ]
     },
     {
+      "id": "con-mangas-74-guns-n-roses-rosa-en-circulo",
+      "diseno": "Guns n' roses rosa en círculo",
+      "categoria": "Con mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-74-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-74-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-74-blanca/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-74-blanca/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-74-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-74-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-74-blanca/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-74-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-75-rolling-stones-lengua-al-centro",
+      "diseno": "Rolling stones lengua al centro",
+      "categoria": "Con mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "mostaza",
+          "hex": "#C09E69",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-75-mostaza/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-75-mostaza/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-75-mostaza/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-75-mostaza/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-75-mostaza/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-75-mostaza/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-75-mostaza/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-75-mostaza/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-76-hard-rock-disco",
+      "diseno": "Hard rock disco",
+      "categoria": "Con mangas",
+      "tema": "Frases",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-76-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-76-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-76-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-76-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-76-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-76-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-76-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-76-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-77-scorpions-escorpion-de-canciones",
+      "diseno": "Scorpions escorpión de canciones",
+      "categoria": "Con mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-77-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-77-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-77-negra/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-77-negra/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-77-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-77-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-77-negra/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-77-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-78-made-in-colombia",
+      "diseno": "Made in colombia",
+      "categoria": "Con mangas",
+      "tema": "Frases",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": false,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-78-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-78-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-78-negra/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-78-negra/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-78-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-78-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-78-negra/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-78-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-79-gato-anonymous",
+      "diseno": "Gato anonymous",
+      "categoria": "Con mangas",
+      "tema": "Animales",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": false,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "naranja",
+          "hex": "#E58046",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-79-naranja/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-79-naranja/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-79-naranja/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-79-naranja/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-79-naranja/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-79-naranja/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-79-naranja/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-79-naranja/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-80-pantera-flores",
+      "diseno": "Pantera flores",
+      "categoria": "Con mangas",
+      "tema": "Animales",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": false,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "lima",
+          "hex": "#EAFB7C",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-80-lima/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-80-lima/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-80-lima/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-80-lima/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-80-lima/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-80-lima/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-80-lima/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-80-lima/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-81-snoopy-nyc",
+      "diseno": "Snoopy NYC",
+      "categoria": "Con mangas",
+      "tema": "Personajes",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-81-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-81-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-81-negra/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-81-negra/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-81-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-81-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-81-negra/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-81-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-82-snoopy-astronauta",
+      "diseno": "Snoopy astronauta",
+      "categoria": "Con mangas",
+      "tema": "Personajes",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "celeste",
+          "hex": "#A8BAC9",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-82-celeste/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-82-celeste/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-82-celeste/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-82-celeste/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-82-celeste/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-82-celeste/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-82-celeste/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-82-celeste/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-83-snoopy-aviador",
+      "diseno": "Snoopy aviador",
+      "categoria": "Con mangas",
+      "tema": "Personajes",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-83-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-83-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-83-blanca/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-83-blanca/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-83-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-83-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-83-blanca/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-83-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-84-polo-bear-faro",
+      "diseno": "Polo bear faro",
+      "categoria": "Con mangas",
+      "tema": "Personajes",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "café",
+          "hex": "#827670",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-84-cafe/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-84-cafe/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-84-cafe/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-84-cafe/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-84-cafe/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-84-cafe/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-84-cafe/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-84-cafe/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-85-polo-bear-bicicleta",
+      "diseno": "Polo bear bicicleta",
+      "categoria": "Con mangas",
+      "tema": "Personajes",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "beige",
+          "hex": "#D9CDBB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-85-beige/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-85-beige/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-85-beige/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-85-beige/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-85-beige/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-85-beige/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-85-beige/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-85-beige/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-86-polo-bear-gabardina",
+      "diseno": "Polo bear gabardina",
+      "categoria": "Con mangas",
+      "tema": "Personajes",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "lavanda",
+          "hex": "#9CA0BD",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-86-lavanda/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-86-lavanda/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-86-lavanda/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-86-lavanda/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-86-lavanda/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-86-lavanda/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-86-lavanda/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-86-lavanda/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-87-kiss",
+      "diseno": "Kiss",
+      "categoria": "Con mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-87-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-87-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-87-blanca/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-87-blanca/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-87-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-87-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-87-blanca/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-87-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-88-cara-de-leopardo",
+      "diseno": "Cara de leopardo",
+      "categoria": "Con mangas",
+      "tema": "Animales",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": false,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-88-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-88-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-88-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-88-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-88-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-88-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-88-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-88-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-89-coldplay-flor",
+      "diseno": "Coldplay flor",
+      "categoria": "Con mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-89-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-89-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-89-negra/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-89-negra/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-89-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-89-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-89-negra/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-89-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-90-linkin-park-road-to-revolution",
+      "diseno": "Linkin park road to revolution",
+      "categoria": "Con mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-90-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-90-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-90-blanca/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-90-blanca/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-90-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-90-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-90-blanca/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-90-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-91-linkin-park-logo",
+      "diseno": "Linkin park logo",
+      "categoria": "Con mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-91-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-91-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-91-blanca/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-91-blanca/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-91-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-91-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-91-blanca/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-91-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-92-corazon-con-rayos",
+      "diseno": "Corazón con rayos",
+      "categoria": "Con mangas",
+      "tema": "Corazones",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": false,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-92-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-92-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-92-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-92-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-92-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-92-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-92-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-92-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-93-pinitas",
+      "diseno": "Piñitas",
+      "categoria": "Con mangas",
+      "tema": "Dibujos",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": false,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "lila",
+          "hex": "#DABFE2",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-93-lila/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-93-lila/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-93-lila/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-93-lila/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-93-lila/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-93-lila/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-93-lila/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-93-lila/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-94-guns-n-roses-letras-rosadas",
+      "diseno": "Guns n' roses letras rosadas",
+      "categoria": "Con mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-94-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-94-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-94-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-94-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-94-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-94-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-94-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-94-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-95-guns-n-roses-logo-rosado",
+      "diseno": "Guns n' roses logo rosado",
+      "categoria": "Con mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-95-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-95-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-95-negra/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-95-negra/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-95-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-95-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-95-negra/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-95-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
       "id": "sin-mangas-1-ac-dc-back-in-black",
       "diseno": "AC/DC back in black",
       "categoria": "Sin mangas",
@@ -4601,6 +5810,76 @@
             }
           ],
           "tarjeta": "tomas/sin_mangas-2-beige/T1q.jpg"
+        },
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/sin_mangas-2-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/sin_mangas-2-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/sin_mangas-2-blanca/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/sin_mangas-2-blanca/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/sin_mangas-2-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/sin_mangas-2-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/sin_mangas-2-blanca/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/sin_mangas-2-blanca/T1q.jpg"
+        },
+        {
+          "color": "mostaza",
+          "hex": "#CBAA6F",
+          "tallas": null,
+          "fotos": [
+            "tomas/sin_mangas-2-mostaza/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/sin_mangas-2-mostaza/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/sin_mangas-2-mostaza/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/sin_mangas-2-mostaza/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/sin_mangas-2-mostaza/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/sin_mangas-2-mostaza/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/sin_mangas-2-mostaza/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/sin_mangas-2-mostaza/T1q.jpg"
         }
       ]
     },
@@ -5471,6 +6750,41 @@
             }
           ],
           "tarjeta": "tomas/sin_mangas-21-blanca/T1q.jpg"
+        },
+        {
+          "color": "verde limón",
+          "hex": "#EDFC82",
+          "tallas": null,
+          "fotos": [
+            "tomas/sin_mangas-21-verde-limon/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/sin_mangas-21-verde-limon/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/sin_mangas-21-verde-limon/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/sin_mangas-21-verde-limon/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/sin_mangas-21-verde-limon/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/sin_mangas-21-verde-limon/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/sin_mangas-21-verde-limon/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/sin_mangas-21-verde-limon/T1q.jpg"
         }
       ]
     },
@@ -5686,6 +7000,53 @@
       ]
     },
     {
+      "id": "sin-mangas-25-queen-foto-de-la-banda",
+      "diseno": "Queen foto de la banda",
+      "categoria": "Sin mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "beige",
+          "hex": "#D3CAC6",
+          "tallas": null,
+          "fotos": [
+            "tomas/sin_mangas-25-beige/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/sin_mangas-25-beige/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/sin_mangas-25-beige/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/sin_mangas-25-beige/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/sin_mangas-25-beige/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/sin_mangas-25-beige/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/sin_mangas-25-beige/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/sin_mangas-25-beige/T1q.jpg"
+        }
+      ]
+    },
+    {
       "id": "sin-mangas-26-ramones-sello",
       "diseno": "Ramones sello",
       "categoria": "Sin mangas",
@@ -5799,6 +7160,41 @@
             }
           ],
           "tarjeta": "tomas/sin_mangas-26-verde/T1q.jpg"
+        },
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/sin_mangas-26-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/sin_mangas-26-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/sin_mangas-26-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/sin_mangas-26-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/sin_mangas-26-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/sin_mangas-26-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/sin_mangas-26-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/sin_mangas-26-blanca/T1q.jpg"
         }
       ]
     },
@@ -6022,6 +7418,100 @@
             }
           ],
           "tarjeta": "tomas/sin_mangas-30-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "sin-mangas-31-snoopy-tenis",
+      "diseno": "Snoopy tenis",
+      "categoria": "Sin mangas",
+      "tema": "Personajes",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/sin_mangas-31-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/sin_mangas-31-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/sin_mangas-31-blanca/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/sin_mangas-31-blanca/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/sin_mangas-31-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/sin_mangas-31-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/sin_mangas-31-blanca/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/sin_mangas-31-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "sin-mangas-32-guns-n-roses-letras-plateadas",
+      "diseno": "Guns n' roses letras plateadas",
+      "categoria": "Sin mangas",
+      "tema": "Bandas de rock",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/sin_mangas-32-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/sin_mangas-32-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/sin_mangas-32-blanca/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/sin_mangas-32-blanca/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/sin_mangas-32-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/sin_mangas-32-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/sin_mangas-32-blanca/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/sin_mangas-32-blanca/T1q.jpg"
         }
       ]
     },
@@ -10657,7 +12147,8 @@
                 "tarjeta": "tomas/sin_mangas-25-blanca/T1q.jpg"
               }
             ]
-          }
+          },
+          "nota_2026_11_12": "NO devolver con retirar_por_ahora.py: la tarjeta volvió el 12/11/2026 SOLO con la beige #D3CAC6 (Jose 12/11 01:59 «Sí, solo beige»); la blanca no vuelve. Devolver este lote entero duplicaría el id."
         }
       ],
       "variantes": [
@@ -10968,7 +12459,8 @@
               }
             ],
             "tarjeta": "tomas/sin_mangas-26-blanca/T1q.jpg"
-          }
+          },
+          "nota_2026_11_12": "NO devolver: la blanca de sin-mangas-26 volvió el 12/11/2026 con el sello ROBBY (Jose 12/11 03:08:39); las tomas de esta variante (sello JOHNNY) están en el respaldo del pase de las altas 34, no en img/tomas/sin_mangas-26-blanca."
         }
       ]
     },
