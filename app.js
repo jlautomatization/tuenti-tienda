@@ -431,7 +431,7 @@
       }), { rootMargin: '300px 0px' })
     : null;
 
-  function tarjeta(p, i, colorPref) {
+  function tarjeta(p, i, colorPref, sinDeslizar) {
     const vs = variantesConFoto(p);
     /* r4 (29/10/2026): si el catálogo está filtrado por color, la tarjeta arranca en ese color */
     const idx0 = Math.max(0, vs.findIndex(v => colorPref && colorPref.indexOf(v.color) >= 0));
@@ -568,6 +568,13 @@
 
     ver(idx0);
     listo = true;
+    /* r5 (12/11/2026): si la tarjeta arranca en un color que NO es el primero (catálogo filtrado por color; recomendados de la
+       ficha), su foto solo tenía data-src y nadie la pedía: la tarjeta salía en blanco (medido: catalogo.html?color=negra, 8 de las
+       primeras 24). Se pide aquí, «eager» porque la tarjeta todavía no está en la página (ver r4f). */
+    if (idx0 > 0) {
+      const im0 = imgs()[idx];
+      if (im0 && im0.dataset.src) { im0.loading = 'eager'; im0.src = im0.dataset.src; delete im0.dataset.src; }
+    }
 
     if (REF && !tocable()) {
       /* r4f (29/10/2026 14:21:49): decisión de Jose del 15/10/2026 22:52:02, que él recordó hoy: la foto de entrada es la PRENDA SOLA;
@@ -581,8 +588,9 @@
         art.addEventListener('mouseenter', () => mostrarPuesta(true));
         art.addEventListener('mouseleave', () => mostrarPuesta(false));
       }
-    } else {
-      /* móvil: deslizar sobre la foto cambia de color */
+    } else if (!sinDeslizar) {
+      /* móvil: deslizar sobre la foto cambia de color
+         (r5 12/11/2026: en la fila de recomendados NO, porque ahí deslizar es pasar a la tarjeta siguiente) */
       let x0 = null;
       media.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
       media.addEventListener('touchend', e => {
@@ -1661,6 +1669,43 @@
     pintar(0);
   }
 
+  /* r5 (12/11/2026 02:10, Jose 02:03 «me gustaría que hubiera recomendados debajo y que sean diseños parecidos», «dale» 02:04):
+     «También te puede gustar». Devuelve hasta `max` diseños parecidos a `p`, solo con datos de marca.json (nombre, tema, categoría):
+       1.º la FAMILIA: los que empiezan por la misma palabra (Snoopy, Nirvana, Guns…) y, dentro del mismo tema, los que la llevan
+           en el nombre («Snoopy y mafalda» ↔ Mafalda);
+       2.º el mismo TEMA de la web (Personajes, Bandas de rock…), primero uno de cada personaje o banda para que haya variedad.
+     En los dos grupos va primero la misma categoría (con mangas, sin mangas, oversize…) y en el orden del catálogo a partir de este.
+     Nunca sale el que se está viendo ni dos veces el mismo estampado. La familia ocupa `famMax` puestos (4) y el resto es del tema;
+     si el tema no alcanza, la familia llena los puestos que sobren. */
+  function recomendados(p, visibles, max, famMax) {
+    max = max || 8; famMax = famMax == null ? 4 : famMax;
+    const plano = t => String(t == null ? '' : t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const SIN = { la: 1, las: 1, el: 1, los: 1, the: 1, my: 1, no: 1, you: 1, new: 1, a: 1, y: 1, de: 1, en: 1, con: 1, in: 1, is: 1 };
+    const palabras = x => plano(x.diseno).split(/[^a-z0-9/']+/).filter(Boolean);
+    const fam = x => { const w = palabras(x)[0] || ''; return SIN[w] ? '' : w; };
+    const fp = fam(p), wp = palabras(p);
+    const desde = Math.max(0, visibles.indexOf(p));
+    const orden = visibles.slice(desde + 1).concat(visibles.slice(0, desde))
+      .filter(x => x.id !== p.id && variantesConFoto(x).length);
+    const esFam = x => {
+      const fx = fam(x);
+      if (fp && fx === fp) return true;
+      if (x.tema !== p.tema) return false;
+      return (fp && palabras(x).indexOf(fp) > 0) || (fx && wp.indexOf(fx) > 0);
+    };
+    const catPrimero = l => l.filter(x => x.categoria === p.categoria).concat(l.filter(x => x.categoria !== p.categoria));
+    const familia = catPrimero(orden.filter(esFam));
+    let tema = catPrimero(orden.filter(x => !esFam(x) && x.tema === p.tema));
+    const vistos = {}, unos = [], resto = [];
+    tema.forEach(x => { const k = fam(x) || x.id; if (vistos[k]) resto.push(x); else { vistos[k] = 1; unos.push(x); } });
+    tema = unos.concat(resto);
+    const nombres = {};
+    const unico = l => l.filter(x => { const k = plano(x.diseno); if (nombres[k]) return false; nombres[k] = 1; return true; });
+    const F = unico(familia), T = unico(tema);
+    const nF = Math.min(F.length, Math.max(famMax, max - T.length));
+    return F.slice(0, nF).concat(T).slice(0, max);
+  }
+
   function pintarProducto(d) {
     anuncioMarquesina();
     const marca = d.marca || {}, nombre = marca.nombre || '';
@@ -1848,9 +1893,31 @@
 
     /* r4 (29/10/2026): «Más <categoría>»: hasta 4 diseños de la misma categoría, primero los que tienen tomas,
        en el orden del catálogo a partir de este (así cada ficha muestra otros). Tarjetas iguales a las del catálogo. */
+    /* r5 (12/11/2026): «También te puede gustar»: hasta 8 diseños parecidos (ver recomendados()). Tarjetas iguales a las del
+       catálogo; arrancan en el color que se está viendo si lo tienen. Celular: fila que se desliza de lado; computador: 4 por fila
+       (si salen menos de 8, una sola fila de 4 para no dejar una fila coja). */
+    const recoBox = $('pdp-reco'), recoGrid = $('pdp-reco-grid');
+    let recoIds = [];
+    if (recoBox && recoGrid) {
+      const recos = recomendados(p, visibles, 8, 4);
+      if (recos.length) {
+        recoBox.hidden = false;
+        recoBox.classList.toggle('pdp-reco--corta', recos.length < 8);
+        $('pdp-reco-t').textContent = f.recomendados_titulo || 'También te puede gustar';
+        const colorAhora = (vs[idx] || {}).color;
+        recos.forEach((x, i) => {
+          const c = tarjeta(x, i, colorAhora ? [colorAhora] : null, true);
+          c.removeAttribute('data-reveal'); c.removeAttribute('data-delay');
+          recoGrid.appendChild(c);
+        });
+        recoIds = recos.map(x => x.id);
+      }
+    }
+
     const masBox = $('pdp-mas'), masGrid = $('pdp-mas-grid');
     if (masBox && masGrid) {
-      const mismos = visibles.filter(x => x.categoria === p.categoria && x.id !== p.id);
+      /* r5: lo que ya salió arriba en «También te puede gustar» no se repite aquí */
+      const mismos = visibles.filter(x => x.categoria === p.categoria && x.id !== p.id && recoIds.indexOf(x.id) < 0);
       const desde = Math.max(0, visibles.indexOf(p));
       const orden = visibles.slice(desde + 1).concat(visibles.slice(0, desde)).filter(x => mismos.indexOf(x) >= 0);
       const conTomas = orden.filter(x => variantesConFoto(x).some(v => tomasDe(v)));

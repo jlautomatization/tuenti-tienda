@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="landing.css">
 <link rel="stylesheet" href="rediseno.css">
 <link rel="stylesheet" href="sistema.css?v=20261029">
-<link rel="stylesheet" href="catalogo.css?v=20261029n">
+<link rel="stylesheet" href="catalogo.css?v=20261112b">
 <link rel="stylesheet" href="galeria.css?v=20261029">
 <link rel="stylesheet" href="reserva.css">
 
@@ -42,7 +42,7 @@
      un checkout con envío (F4). El carrito propio vive en app.js. El módulo queda
      intacto en disco por si se retoma. Ver docs/TRASPASO_WEB.md §0.12 -->
 <script src="imagenes.js?v=20261029" defer></script>
-<script src="app.js?v=20261029k" defer></script>
+<script src="app.js?v=20261112a" defer></script>
 <link rel="stylesheet" href="estilo-blanco.css?v=20261109">
 </head>
 <body class="ds pg-ficha cat-ref ficha-ref">
@@ -118,6 +118,13 @@
           <div class="ds-wa-pad"></div>
         </div>
 
+      </div>
+
+      <!-- r5 (12/11/2026, Jose 02:03 «recomendados debajo y que sean diseños parecidos»): «También te puede gustar».
+           Hasta 8 diseños parecidos (misma familia o personaje, luego mismo tema); los arma recomendados() en app.js. -->
+      <div class="pdp-mas pdp-reco" id="pdp-reco" hidden>
+        <h2 class="ds-title pdp-mas__t" id="pdp-reco-t"></h2>
+        <div class="ds-grid" id="pdp-reco-grid"></div>
       </div>
 
       <!-- r4 (29/10/2026): otros diseños de la misma categoría (tarjetas del catálogo, primero los que tienen tomas) -->

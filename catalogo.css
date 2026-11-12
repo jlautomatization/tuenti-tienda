@@ -284,6 +284,22 @@ body.hoja-abierta{overflow:hidden}
 .pdp-mas .ds-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e5) var(--e3)}
 @media(min-width:721px){.pdp-mas .ds-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--e6) var(--e4)}}
 
+/* r5 (12/11/2026): «También te puede gustar» (recomendados) en la ficha. Mismas tarjetas que «Más <categoría>».
+   Celular: una fila que se desliza de lado (2 tarjetas y el borde de la tercera, para que se note que sigue).
+   Computador: 4 por fila; si salen menos de 8, una sola fila de 4. */
+.pdp-reco .ds-grid{display:flex;gap:var(--e3);overflow-x:auto;overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain;
+  /* la fila va de borde a borde de la pantalla y la primera tarjeta arranca alineada con el resto de la página,
+     sea cual sea el margen de la columna (50% = media columna, 50vw = media pantalla) */
+  margin-inline:calc(50% - 50vw);padding-inline:calc(50vw - 50%)}
+.pdp-reco .ds-grid::-webkit-scrollbar{display:none}
+.pdp-reco .ds-card{flex:0 0 44%}
+@media(min-width:721px){
+  .pdp-reco .ds-grid{display:grid;overflow:visible;margin-inline:0;padding-inline:0}
+  .pdp-reco .ds-card{flex:none}
+  .pdp-reco--corta .ds-card:nth-child(n+5){display:none}
+}
+
 /* ---------- r4e (29/10/2026 14:12:43): catálogo «como las referencias» que mandó Jose (Strada, Wanaawaa, Navissi), con los colores de TUENTI.
    Jose: «no me gusta para nada como se ve mira estas referencias para que busques inspiracion».
    Forma copiada: título centrado; arriba solo buscar y «Filtros» (el panel sale de lado, ya no ocupa la columna izquierda);
