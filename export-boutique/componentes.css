@@ -350,6 +350,9 @@
   transform:translateX(100%);transition:transform var(--dur) var(--ease-out);
   display:flex;flex-direction:column;gap:var(--sp-4);overflow-y:auto}
 .ds-menu.is-open{transform:none}
+/* 12/11/2026 (Jose «Sí, quítala»): con el menú cerrado su sombra se metía ~30 px en el borde derecho de la pantalla
+   (franja gris en celular, en todas las páginas). La sombra queda solo con el menú abierto. */
+.ds-menu:not(.is-open){box-shadow:none}
 .ds-menu__head{display:flex;align-items:center;justify-content:space-between;
   padding-bottom:var(--sp-4);border-bottom:1px solid var(--c-line)}
 .ds-menu__logo{font-family:var(--font);font-size:var(--fs-logo);font-weight:var(--w-black);
