@@ -18,9 +18,9 @@
       "precio_mayor — DECISIÓN APLAZADA. Cargado como dato (12+ unidades) pero NO se muestra en la web: es canal de WhatsApp. Ver TRASPASO_WEB.md §0.5."
     ],
     "tomas_web": {
-      "fecha": "2026-11-12 09:00:19",
-      "variantes_con_tomas": 230,
-      "conectadas_en_esta_corrida": 4,
+      "fecha": "2026-11-12 11:55:42",
+      "variantes_con_tomas": 233,
+      "conectadas_en_esta_corrida": 3,
       "origen": "web_tienda/propuestas/rediseno_4_mockup/imagenes_web (aprobadas por Jose)"
     },
     "r4_inicio": {
@@ -565,6 +565,41 @@
           "tarjeta": "tomas/con_mangas-3-blanca/T1q.jpg"
         },
         {
+          "color": "lila",
+          "hex": "#DFD3D9",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-3-lila/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-3-lila/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-3-lila/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-3-lila/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-3-lila/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-3-lila/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-3-lila/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-3-lila/T1q.jpg"
+        },
+        {
           "color": "negra",
           "hex": "#1C1B19",
           "tallas": null,
@@ -797,6 +832,41 @@
             }
           ],
           "tarjeta": "tomas/con_mangas-5-negra/T1q.jpg"
+        },
+        {
+          "color": "mostaza",
+          "hex": "#BC9158",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-5-mostaza/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-5-mostaza/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-5-mostaza/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-5-mostaza/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-5-mostaza/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-5-mostaza/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-5-mostaza/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-5-mostaza/T1q.jpg"
         },
         {
           "color": "caqui",
@@ -1833,39 +1903,39 @@
       "publicable_web": true,
       "variantes": [
         {
-          "color": "amarillo",
-          "hex": "#F1E4AF",
+          "color": "verde limón",
+          "hex": "#EDFC82",
           "tallas": null,
           "fotos": [
-            "oct/con_mangas-25-amarillo-1.jpg"
+            "tomas/con_mangas-25-verde-limon/T1.jpg"
           ],
           "tomas": [
             {
-              "foto": "tomas/con_mangas-25-amarillo/T1.jpg",
+              "foto": "tomas/con_mangas-25-verde-limon/T1.jpg",
               "vista": "Prenda"
             },
             {
-              "foto": "tomas/con_mangas-25-amarillo/T3E.jpg",
+              "foto": "tomas/con_mangas-25-verde-limon/T3E.jpg",
               "vista": "En modelo"
             },
             {
-              "foto": "tomas/con_mangas-25-amarillo/T5E.jpg",
+              "foto": "tomas/con_mangas-25-verde-limon/T5E.jpg",
               "vista": "Cuerpo entero"
             },
             {
-              "foto": "tomas/con_mangas-25-amarillo/T6.jpg",
+              "foto": "tomas/con_mangas-25-verde-limon/T6.jpg",
               "vista": "Detalle"
             },
             {
-              "foto": "tomas/con_mangas-25-amarillo/T2.jpg",
+              "foto": "tomas/con_mangas-25-verde-limon/T2.jpg",
               "vista": "Espalda"
             },
             {
-              "foto": "tomas/con_mangas-25-amarillo/T4E.jpg",
+              "foto": "tomas/con_mangas-25-verde-limon/T4E.jpg",
               "vista": "Espalda en modelo"
             }
           ],
-          "tarjeta": "tomas/con_mangas-25-amarillo/T1q.jpg"
+          "tarjeta": "tomas/con_mangas-25-verde-limon/T1q.jpg"
         }
       ]
     },
@@ -1880,39 +1950,39 @@
       "publicable_web": true,
       "variantes": [
         {
-          "color": "amarillo",
-          "hex": "#F1E4AF",
+          "color": "verde limón",
+          "hex": "#EDFC82",
           "tallas": null,
           "fotos": [
-            "oct/con_mangas-26-amarillo-1.jpg"
+            "tomas/con_mangas-26-verde-limon/T1.jpg"
           ],
           "tomas": [
             {
-              "foto": "tomas/con_mangas-26-amarillo/T1.jpg",
+              "foto": "tomas/con_mangas-26-verde-limon/T1.jpg",
               "vista": "Prenda"
             },
             {
-              "foto": "tomas/con_mangas-26-amarillo/T3G.jpg",
+              "foto": "tomas/con_mangas-26-verde-limon/T3G.jpg",
               "vista": "En modelo"
             },
             {
-              "foto": "tomas/con_mangas-26-amarillo/T5G.jpg",
+              "foto": "tomas/con_mangas-26-verde-limon/T5G.jpg",
               "vista": "Cuerpo entero"
             },
             {
-              "foto": "tomas/con_mangas-26-amarillo/T6.jpg",
+              "foto": "tomas/con_mangas-26-verde-limon/T6.jpg",
               "vista": "Detalle"
             },
             {
-              "foto": "tomas/con_mangas-26-amarillo/T2.jpg",
+              "foto": "tomas/con_mangas-26-verde-limon/T2.jpg",
               "vista": "Espalda"
             },
             {
-              "foto": "tomas/con_mangas-26-amarillo/T4G.jpg",
+              "foto": "tomas/con_mangas-26-verde-limon/T4G.jpg",
               "vista": "Espalda en modelo"
             }
           ],
-          "tarjeta": "tomas/con_mangas-26-amarillo/T1q.jpg"
+          "tarjeta": "tomas/con_mangas-26-verde-limon/T1q.jpg"
         }
       ]
     },
@@ -2935,6 +3005,53 @@
             }
           ],
           "tarjeta": "tomas/con_mangas-44-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "con-mangas-45-perrito-premium-pasta",
+      "diseno": "Perrito premium pasta",
+      "categoria": "Con mangas",
+      "tema": "Animales",
+      "precio_unidad": 33000,
+      "precio_mayor": 25000,
+      "licenciado": false,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "lila",
+          "hex": "#C0AAE1",
+          "tallas": null,
+          "fotos": [
+            "tomas/con_mangas-45-lila/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/con_mangas-45-lila/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/con_mangas-45-lila/T3E.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/con_mangas-45-lila/T5E.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/con_mangas-45-lila/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/con_mangas-45-lila/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/con_mangas-45-lila/T4E.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/con_mangas-45-lila/T1q.jpg"
         }
       ]
     },
@@ -12466,57 +12583,8 @@
     },
     "colores_sin_foto_2026_11_09": {
       "_nota": "Retirados por decisión de Jose 09/11/2026 16:01 «No, quítalos» (a «Los 9 colores sin foto del local, ¿se siguen vendiendo?»): no se siguen vendiendo. Se devuelven con herramientas/retirar_por_ahora.py devolver --lote colores_sin_foto_2026_11_09.",
-      "productos": [
-        {
-          "posicion": 39,
-          "producto": {
-            "id": "con-mangas-45-perrito-premium-pasta",
-            "diseno": "Perrito premium pasta",
-            "categoria": "Con mangas",
-            "tema": "Animales",
-            "precio_unidad": 33000,
-            "precio_mayor": 25000,
-            "licenciado": false,
-            "publicable_web": true,
-            "variantes": [
-              {
-                "color": "lila",
-                "hex": "#B4A3D6",
-                "tallas": null,
-                "fotos": [
-                  "oct/con_mangas-45-lila-2.jpg"
-                ]
-              }
-            ]
-          }
-        }
-      ],
+      "productos": [],
       "variantes": [
-        {
-          "producto_id": "con-mangas-3-amore-as-de-corazones",
-          "posicion": 1,
-          "variante": {
-            "color": "lila",
-            "hex": "#DFCBD3",
-            "tallas": null,
-            "fotos": [
-              "oct/con_mangas-3-lila-2.jpg"
-            ]
-          }
-        },
-        {
-          "producto_id": "con-mangas-5-arctic-monkeys-onda-de-sonido",
-          "posicion": 3,
-          "variante": {
-            "color": "mostaza",
-            "hex": "#A87A40",
-            "tallas": null,
-            "fotos": [
-              "oct/con_mangas-5-mostaza-4.jpg",
-              "oct/con_mangas-5-mostaza2-5.jpg"
-            ]
-          }
-        },
         {
           "producto_id": "oversize-1-amore-as-de-corazones",
           "posicion": 0,
@@ -12589,7 +12657,60 @@
             ]
           }
         }
-      ]
+      ],
+      "devueltos_2026_11_12": {
+        "_nota": "DEVUELTOS a la web 12/11/2026 con fotos nuevas de su foto del local (la de octubre no vuelve): Jose 12/11/2026 10:52 «estas si estan en el local hayq ue ponerlas en la web», «Quedan así» (HOJA_VUELVEN_3_…_v2) y «Dale» (PLAN_PASAR_A_WEB_VUELVEN_3_2026-11-12.md). El «No, quítalos» del 09/11 16:01 se preguntó con el dato equivocado («sin foto del local»).",
+        "entradas": [
+          {
+            "posicion": 39,
+            "producto": {
+              "id": "con-mangas-45-perrito-premium-pasta",
+              "diseno": "Perrito premium pasta",
+              "categoria": "Con mangas",
+              "tema": "Animales",
+              "precio_unidad": 33000,
+              "precio_mayor": 25000,
+              "licenciado": false,
+              "publicable_web": true,
+              "variantes": [
+                {
+                  "color": "lila",
+                  "hex": "#B4A3D6",
+                  "tallas": null,
+                  "fotos": [
+                    "oct/con_mangas-45-lila-2.jpg"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "producto_id": "con-mangas-3-amore-as-de-corazones",
+            "posicion": 1,
+            "variante": {
+              "color": "lila",
+              "hex": "#DFCBD3",
+              "tallas": null,
+              "fotos": [
+                "oct/con_mangas-3-lila-2.jpg"
+              ]
+            }
+          },
+          {
+            "producto_id": "con-mangas-5-arctic-monkeys-onda-de-sonido",
+            "posicion": 3,
+            "variante": {
+              "color": "mostaza",
+              "hex": "#A87A40",
+              "tallas": null,
+              "fotos": [
+                "oct/con_mangas-5-mostaza-4.jpg",
+                "oct/con_mangas-5-mostaza2-5.jpg"
+              ]
+            }
+          }
+        ]
+      }
     }
   },
   "pedido": {
