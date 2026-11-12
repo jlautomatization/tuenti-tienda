@@ -18,9 +18,9 @@
       "precio_mayor — DECISIÓN APLAZADA. Cargado como dato (12+ unidades) pero NO se muestra en la web: es canal de WhatsApp. Ver TRASPASO_WEB.md §0.5."
     ],
     "tomas_web": {
-      "fecha": "2026-11-12 08:34:25",
+      "fecha": "2026-11-12 09:00:19",
       "variantes_con_tomas": 230,
-      "conectadas_en_esta_corrida": 35,
+      "conectadas_en_esta_corrida": 4,
       "origen": "web_tienda/propuestas/rediseno_4_mockup/imagenes_web (aprobadas por Jose)"
     },
     "r4_inicio": {
@@ -5778,7 +5778,7 @@
         },
         {
           "color": "beige",
-          "hex": "#D9CDBB",
+          "hex": "#D3CAC6",
           "tallas": null,
           "fotos": [
             "oct/sin_mangas-2-beige-4.jpg"
@@ -5895,7 +5895,7 @@
       "variantes": [
         {
           "color": "beige",
-          "hex": "#D9CDBB",
+          "hex": "#D3CAC6",
           "tallas": null,
           "fotos": [
             "oct/sin_mangas-3-beige-1.jpg"
@@ -6413,7 +6413,7 @@
       "variantes": [
         {
           "color": "beige",
-          "hex": "#D9CDBB",
+          "hex": "#D3CAC6",
           "tallas": null,
           "fotos": [
             "oct/sin_mangas-13-beige-1.jpg"
@@ -7093,7 +7093,7 @@
         },
         {
           "color": "beige",
-          "hex": "#D9CDBB",
+          "hex": "#D3CAC6",
           "tallas": null,
           "fotos": [
             "oct/sin_mangas-26-beige-3.jpg"
