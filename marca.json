@@ -18,9 +18,9 @@
       "precio_mayor — DECISIÓN APLAZADA. Cargado como dato (12+ unidades) pero NO se muestra en la web: es canal de WhatsApp. Ver TRASPASO_WEB.md §0.5."
     ],
     "tomas_web": {
-      "fecha": "2026-11-12 11:55:42",
-      "variantes_con_tomas": 233,
-      "conectadas_en_esta_corrida": 3,
+      "fecha": "2026-11-12 23:05:57",
+      "variantes_con_tomas": 264,
+      "conectadas_en_esta_corrida": 34,
       "origen": "web_tienda/propuestas/rediseno_4_mockup/imagenes_web (aprobadas por Jose)"
     },
     "r4_inicio": {
@@ -4075,7 +4075,7 @@
       "variantes": [
         {
           "color": "verde",
-          "hex": "#496353",
+          "hex": "#818C8E",
           "tallas": null,
           "fotos": [
             "oct/con_mangas-63-verde-3.jpg"
@@ -7648,7 +7648,34 @@
           "tallas": null,
           "fotos": [
             "oct/clasicas-1-blanca-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-1-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-1-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-1-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-1-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-1-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-1-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-1-blanca/T1q.jpg"
         }
       ]
     },
@@ -7722,11 +7749,11 @@
               "vista": "Prenda"
             },
             {
-              "foto": "tomas/clasicas-3-negra/T3E.jpg",
+              "foto": "tomas/clasicas-3-negra/T3G.jpg",
               "vista": "En modelo"
             },
             {
-              "foto": "tomas/clasicas-3-negra/T5E.jpg",
+              "foto": "tomas/clasicas-3-negra/T5G.jpg",
               "vista": "Cuerpo entero"
             },
             {
@@ -7738,7 +7765,7 @@
               "vista": "Espalda"
             },
             {
-              "foto": "tomas/clasicas-3-negra/T4E.jpg",
+              "foto": "tomas/clasicas-3-negra/T4G.jpg",
               "vista": "Espalda en modelo"
             }
           ],
@@ -7805,11 +7832,38 @@
       "variantes": [
         {
           "color": "verde oliva",
-          "hex": "#6F6457",
+          "hex": "#8D8A85",
           "tallas": null,
           "fotos": [
             "oct/clasicas-5-verde-oliva-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-5-verde-oliva/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-5-verde-oliva/T4G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-5-verde-oliva/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-5-verde-oliva/T1.jpg",
+              "vista": "Frente"
+            },
+            {
+              "foto": "tomas/clasicas-5-verde-oliva/T3G.jpg",
+              "vista": "Frente en modelo"
+            },
+            {
+              "foto": "tomas/clasicas-5-verde-oliva/T5G.jpg",
+              "vista": "Cuerpo entero"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-5-verde-oliva/T2q.jpg"
         },
         {
           "color": "negra",
@@ -7911,7 +7965,34 @@
           "tallas": null,
           "fotos": [
             "oct/clasicas-7-blanca-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-7-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-7-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-7-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-7-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-7-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-7-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-7-blanca/T1q.jpg"
         }
       ]
     },
@@ -7970,11 +8051,38 @@
         },
         {
           "color": "azul",
-          "hex": "#507DBC",
+          "hex": "#5388D8",
           "tallas": null,
           "fotos": [
             "oct/clasicas-8-azul-3.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-8-azul/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-8-azul/T4G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-8-azul/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-8-azul/T1.jpg",
+              "vista": "Frente"
+            },
+            {
+              "foto": "tomas/clasicas-8-azul/T3G.jpg",
+              "vista": "Frente en modelo"
+            },
+            {
+              "foto": "tomas/clasicas-8-azul/T5G.jpg",
+              "vista": "Cuerpo entero"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-8-azul/T2q.jpg"
         }
       ]
     },
@@ -7994,7 +8102,34 @@
           "tallas": null,
           "fotos": [
             "oct/clasicas-9-vino-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-9-vino/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-9-vino/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-9-vino/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-9-vino/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-9-vino/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-9-vino/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-9-vino/T1q.jpg"
         }
       ]
     },
@@ -8010,11 +8145,38 @@
       "variantes": [
         {
           "color": "amarillo",
-          "hex": "#D5D26E",
+          "hex": "#D9E572",
           "tallas": null,
           "fotos": [
             "oct/clasicas-10-amarillo-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-10-amarillo/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-10-amarillo/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-10-amarillo/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-10-amarillo/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-10-amarillo/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-10-amarillo/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-10-amarillo/T1q.jpg"
         }
       ]
     },
@@ -8034,7 +8196,34 @@
           "tallas": null,
           "fotos": [
             "oct/clasicas-11-vino-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-11-vino/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-11-vino/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-11-vino/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-11-vino/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-11-vino/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-11-vino/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-11-vino/T1q.jpg"
         }
       ]
     },
@@ -8121,7 +8310,34 @@
           "tallas": null,
           "fotos": [
             "oct/clasicas-14-vino-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-14-vino/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-14-vino/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-14-vino/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-14-vino/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-14-vino/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-14-vino/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-14-vino/T1q.jpg"
         }
       ]
     },
@@ -8169,6 +8385,323 @@
             }
           ],
           "tarjeta": "tomas/clasicas-15-negra/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "clasicas-16-hard-rock-disco",
+      "diseno": "Hard rock disco",
+      "categoria": "Clásicas",
+      "tema": "Frases",
+      "precio_unidad": 35000,
+      "precio_mayor": 30000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/clasicas-16-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-16-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-16-negra/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-16-negra/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-16-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-16-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-16-negra/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-16-negra/T1q.jpg"
+        },
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/clasicas-16-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-16-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-16-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-16-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-16-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-16-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-16-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-16-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "clasicas-17-calavera-con-flores",
+      "diseno": "Calavera con flores",
+      "categoria": "Clásicas",
+      "tema": "Calaveras",
+      "precio_unidad": 35000,
+      "precio_mayor": 30000,
+      "licenciado": false,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/clasicas-17-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-17-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-17-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-17-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-17-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-17-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-17-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-17-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "clasicas-18-harley-davidson",
+      "diseno": "Harley davidson",
+      "categoria": "Clásicas",
+      "tema": "Frases",
+      "precio_unidad": 35000,
+      "precio_mayor": 30000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "lila",
+          "hex": "#9EABE6",
+          "tallas": null,
+          "fotos": [
+            "tomas/clasicas-18-lila/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-18-lila/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-18-lila/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-18-lila/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-18-lila/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-18-lila/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-18-lila/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-18-lila/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "clasicas-19-balenciaga",
+      "diseno": "Balenciaga",
+      "categoria": "Clásicas",
+      "tema": "Frases",
+      "precio_unidad": 35000,
+      "precio_mayor": 30000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "verde",
+          "hex": "#63A37A",
+          "tallas": null,
+          "fotos": [
+            "tomas/clasicas-19-verde/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-19-verde/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-19-verde/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-19-verde/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-19-verde/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-19-verde/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-19-verde/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-19-verde/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "clasicas-20-snoopy-the-snoopy-show",
+      "diseno": "Snoopy the snoopy show",
+      "categoria": "Clásicas",
+      "tema": "Personajes",
+      "precio_unidad": 35000,
+      "precio_mayor": 30000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "verde oliva",
+          "hex": "#858878",
+          "tallas": null,
+          "fotos": [
+            "tomas/clasicas-20-verde-oliva/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-20-verde-oliva/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/clasicas-20-verde-oliva/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-20-verde-oliva/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/clasicas-20-verde-oliva/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-20-verde-oliva/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-20-verde-oliva/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-20-verde-oliva/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "clasicas-21-hello-sunshine-flor",
+      "diseno": "Hello sunshine flor",
+      "categoria": "Clásicas",
+      "tema": "Frases",
+      "precio_unidad": 35000,
+      "precio_mayor": 30000,
+      "licenciado": false,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "verde limón",
+          "hex": "#C6D866",
+          "tallas": null,
+          "fotos": [
+            "tomas/clasicas-21-verde-limon/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/clasicas-21-verde-limon/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/clasicas-21-verde-limon/T4G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/clasicas-21-verde-limon/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/clasicas-21-verde-limon/T1.jpg",
+              "vista": "Frente"
+            },
+            {
+              "foto": "tomas/clasicas-21-verde-limon/T3G.jpg",
+              "vista": "Frente en modelo"
+            },
+            {
+              "foto": "tomas/clasicas-21-verde-limon/T5G.jpg",
+              "vista": "Cuerpo entero"
+            }
+          ],
+          "tarjeta": "tomas/clasicas-21-verde-limon/T2q.jpg"
         }
       ]
     },
@@ -10190,11 +10723,38 @@
       "variantes": [
         {
           "color": "naranja",
-          "hex": "#E09047",
+          "hex": "#DE8D4B",
           "tallas": null,
           "fotos": [
             "oct/blusones-2-naranja-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-2-naranja/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-2-naranja/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-2-naranja/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-2-naranja/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-2-naranja/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-2-naranja/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-2-naranja/T1q.jpg"
         }
       ]
     },
@@ -10230,11 +10790,38 @@
       "variantes": [
         {
           "color": "fucsia",
-          "hex": "#D34B6A",
+          "hex": "#CD5AA3",
           "tallas": null,
           "fotos": [
             "oct/blusones-4-fucsia-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-4-fucsia/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-4-fucsia/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-4-fucsia/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-4-fucsia/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-4-fucsia/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-4-fucsia/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-4-fucsia/T1q.jpg"
         }
       ]
     },
@@ -10250,11 +10837,38 @@
       "variantes": [
         {
           "color": "café",
-          "hex": "#87583B",
+          "hex": "#8E654A",
           "tallas": null,
           "fotos": [
             "oct/blusones-5-cafe-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-5-cafe/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-5-cafe/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-5-cafe/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-5-cafe/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-5-cafe/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-5-cafe/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-5-cafe/T1q.jpg"
         },
         {
           "color": "coral",
@@ -10262,7 +10876,34 @@
           "tallas": null,
           "fotos": [
             "oct/blusones-5-coral-2.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-5-coral/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-5-coral/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-5-coral/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-5-coral/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-5-coral/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-5-coral/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-5-coral/T1q.jpg"
         }
       ]
     },
@@ -10404,6 +11045,41 @@
             }
           ],
           "tarjeta": "tomas/blusones-8-negra/T1q.jpg"
+        },
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/blusones-8-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-8-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-8-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-8-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-8-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-8-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-8-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-8-blanca/T1q.jpg"
         }
       ]
     },
@@ -10419,11 +11095,38 @@
       "variantes": [
         {
           "color": "vino",
-          "hex": "#5E2233",
+          "hex": "#91304E",
           "tallas": null,
           "fotos": [
             "oct/blusones-9-vino-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-9-vino/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-9-vino/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-9-vino/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-9-vino/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-9-vino/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-9-vino/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-9-vino/T1q.jpg"
         }
       ]
     },
@@ -10600,6 +11303,41 @@
             }
           ],
           "tarjeta": "tomas/blusones-12-blanca/T1q.jpg"
+        },
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/blusones-12-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-12-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-12-negra/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-12-negra/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-12-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-12-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-12-negra/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-12-negra/T1q.jpg"
         }
       ]
     },
@@ -10744,11 +11482,73 @@
       "variantes": [
         {
           "color": "gris",
-          "hex": "#A6A8AF",
+          "hex": "#B2AFAE",
           "tallas": null,
           "fotos": [
             "oct/blusones-15-gris-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-15-gris/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-15-gris/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-15-gris/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-15-gris/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-15-gris/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-15-gris/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-15-gris/T1q.jpg"
+        },
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/blusones-15-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-15-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-15-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-15-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-15-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-15-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-15-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-15-blanca/T1q.jpg"
         }
       ]
     },
@@ -10768,7 +11568,34 @@
           "tallas": null,
           "fotos": [
             "oct/blusones-16-salmon-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-16-salmon/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-16-salmon/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-16-salmon/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-16-salmon/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-16-salmon/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-16-salmon/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-16-salmon/T1q.jpg"
         }
       ]
     },
@@ -10784,11 +11611,273 @@
       "variantes": [
         {
           "color": "celeste",
-          "hex": "#C7C3B9",
+          "hex": "#C0CCCE",
           "tallas": null,
           "fotos": [
             "oct/blusones-17-celeste-1.jpg"
-          ]
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-17-celeste/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-17-celeste/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-17-celeste/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-17-celeste/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-17-celeste/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-17-celeste/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-17-celeste/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "blusones-18-charlie-brown-y-snoopy",
+      "diseno": "Charlie brown y snoopy",
+      "categoria": "Blusones",
+      "tema": "Personajes",
+      "precio_unidad": 45000,
+      "precio_mayor": 38000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "coral",
+          "hex": "#D67878",
+          "tallas": null,
+          "fotos": [
+            "tomas/blusones-18-coral/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-18-coral/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-18-coral/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-18-coral/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-18-coral/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-18-coral/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-18-coral/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-18-coral/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "blusones-19-tom-contorno",
+      "diseno": "Tom contorno",
+      "categoria": "Blusones",
+      "tema": "Personajes",
+      "precio_unidad": 45000,
+      "precio_mayor": 38000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "amarillo",
+          "hex": "#EBD070",
+          "tallas": null,
+          "fotos": [
+            "tomas/blusones-19-amarillo/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-19-amarillo/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-19-amarillo/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-19-amarillo/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-19-amarillo/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-19-amarillo/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-19-amarillo/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-19-amarillo/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "blusones-20-queen-escudo",
+      "diseno": "Queen escudo",
+      "categoria": "Blusones",
+      "tema": "Bandas de rock",
+      "precio_unidad": 45000,
+      "precio_mayor": 38000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/blusones-20-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-20-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-20-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-20-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-20-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-20-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-20-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-20-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "blusones-21-ramones-sello",
+      "diseno": "Ramones sello",
+      "categoria": "Blusones",
+      "tema": "Bandas de rock",
+      "precio_unidad": 45000,
+      "precio_mayor": 38000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "blanca",
+          "hex": "#F2F0EB",
+          "tallas": null,
+          "fotos": [
+            "tomas/blusones-21-blanca/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-21-blanca/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-21-blanca/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-21-blanca/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-21-blanca/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-21-blanca/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-21-blanca/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-21-blanca/T1q.jpg"
+        }
+      ]
+    },
+    {
+      "id": "blusones-22-guns-n-roses-letras-y-rosas",
+      "diseno": "Guns n' roses letras y rosas",
+      "categoria": "Blusones",
+      "tema": "Bandas de rock",
+      "precio_unidad": 45000,
+      "precio_mayor": 38000,
+      "licenciado": true,
+      "publicable_web": true,
+      "variantes": [
+        {
+          "color": "negra",
+          "hex": "#1C1B19",
+          "tallas": null,
+          "fotos": [
+            "tomas/blusones-22-negra/T1.jpg"
+          ],
+          "tomas": [
+            {
+              "foto": "tomas/blusones-22-negra/T1.jpg",
+              "vista": "Prenda"
+            },
+            {
+              "foto": "tomas/blusones-22-negra/T3G.jpg",
+              "vista": "En modelo"
+            },
+            {
+              "foto": "tomas/blusones-22-negra/T5G.jpg",
+              "vista": "Cuerpo entero"
+            },
+            {
+              "foto": "tomas/blusones-22-negra/T6.jpg",
+              "vista": "Detalle"
+            },
+            {
+              "foto": "tomas/blusones-22-negra/T2.jpg",
+              "vista": "Espalda"
+            },
+            {
+              "foto": "tomas/blusones-22-negra/T4G.jpg",
+              "vista": "Espalda en modelo"
+            }
+          ],
+          "tarjeta": "tomas/blusones-22-negra/T1q.jpg"
         }
       ]
     }
